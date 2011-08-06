@@ -10,7 +10,7 @@ alias em='emacs -nw'
 # cd wikeo-project
 alias wik.cd='cd $HOME/repositories/pro/wikeo-core/wikeo-parent'
 
-# cd 
+# cd catalog-module
 alias wikcat.cd='cd $HOME/repositories/pro/catalog-module'
 
 # projectsion
