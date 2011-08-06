@@ -8,16 +8,7 @@ alias l='ls -CF'
 alias em='emacs -nw'
 
 # cd wikeo-project
-alias wik.cd='cd $HOME/repositories/pro/Wikeo-Project/adeo-parent'
-
-# cd webtop
-alias wt.cd='cd $HOME/repositories/pro/Wikeo-Project/webtop2/webtop-parent'
-
-# cd fitnesseTestLocal
-alias wikfit.cd='cd $HOME/repositories/pro/fitnesse'
-
-# cd fitnesseDevLocal
-alias fitdev.cd='cd $HOME/repositories/pro/fitnessedev'
+alias wik.cd='cd $HOME/repositories/pro/wikeo-core/wikeo-parent'
 
 # cd 
 alias wikcat.cd='cd $HOME/repositories/pro/catalog-module'
