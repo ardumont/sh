@@ -37,4 +37,4 @@ alias gitka='gitk --all'
 alias gst='git st'
 
 # git commit alias
-alias gcm='git commit -v'
+alias gci='git ci -v'
