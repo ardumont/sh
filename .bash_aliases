@@ -30,11 +30,12 @@ alias twit.cd='cd $HOME/repositories/perso/twitalyse'
 
 ################ Git aliases
 
-# gitk inside a git repository 
+# gitk --all
 alias gitka='gitk --all'
 
-# git status alias
+# git status
 alias gst='git st'
 
-# git commit alias
+# git commit -v
 alias gci='git ci -v'
+
