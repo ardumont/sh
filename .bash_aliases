@@ -22,6 +22,9 @@ alias pr.cd='cd $HOME/repositories/perso/ProjectionReloaded/pr-parent'
 # twitalize
 alias twit.cd='cd $HOME/repositories/perso/twitalyse'
 
+# cd into repository stumpwm
+alias stump.cd='cd $HOME/Dropbox/repositories/git/stumpwm/ardumont-stumpwm-config'
+
 ################ Git aliases
 
 # gitk --all
