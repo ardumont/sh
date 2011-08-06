@@ -27,5 +27,10 @@ alias pr.cd='cd $HOME/repositories/perso/ProjectionReloaded/pr-parent'
 # twitalize
 alias twit.cd='cd $HOME/repositories/perso/twitalyse'
 
+################ Git aliases
+
 # gitk inside a git repository 
 alias gitka='gitk --all'
+
+# git status alias
+alias gst='git st'
