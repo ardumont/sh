@@ -23,7 +23,7 @@ alias pr.cd='cd $HOME/repositories/perso/ProjectionReloaded/pr-parent'
 alias twit.cd='cd $HOME/repositories/perso/twitalyse'
 
 # cd into repository stumpwm
-alias stump.cd='cd $HOME/Dropbox/repositories/git/stumpwm/ardumont-stumpwm-config'
+alias stump.cd='cd $HOME/Dropbox/repositories/git/stumpwm-config'
 
 ################ Git aliases
 
@@ -31,8 +31,8 @@ alias stump.cd='cd $HOME/Dropbox/repositories/git/stumpwm/ardumont-stumpwm-confi
 alias gitka='gitk --all'
 
 # git status
-alias gst='git st'
+alias gst='git status'
 
 # git commit -v
-alias gci='git ci -v'
+alias gci='git commit -v'
 
