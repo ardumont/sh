@@ -26,4 +26,6 @@ ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.bash_aliases ~/
 # not synchronized on github
 ln -s $DROPBOX/.bash_history ~/
 
-
+# git-bash-completion
+rm ~/.git-completion.bash
+ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.git-completion.bash ~/
