@@ -23,6 +23,10 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "$HOME/work/bin" ] ; then
+    PATH="$HOME/work/bin:$PATH"
+fi
+
 if [ -d "$HOME/applications/wine" ] ; then
     PATH="$HOME/applications/wine:$PATH"
 fi
