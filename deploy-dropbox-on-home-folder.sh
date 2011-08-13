@@ -12,7 +12,7 @@ ln -s $DROPBOX/repositories/git/my-org-files ~/org
 
 # ~/.stumpwmrc
 rm ~/.stumpwmrc
-ln -s $DROPBOX/repositories/git/stumpwm-config/.stumpwmrc ~/
+ln -s $DROPBOX/repositories/git/stumpw-config/.stumpwmrc ~
 
 # ~/.bash*
 rm ~/.bashrc
