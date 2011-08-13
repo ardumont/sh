@@ -23,8 +23,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-if [ -d "$HOME/bin/wine" ] ; then
-    PATH="$HOME/bin/wine:$PATH"
+if [ -d "$HOME/applications/wine" ] ; then
+    PATH="$HOME/applications/wine:$PATH"
 fi
 
 if [ -d "/usr/lib/jvm/java-6-sun" ] ; then
