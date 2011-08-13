@@ -18,10 +18,12 @@ ln -s $DROPBOX/repositories/git/stumpw-config/.stumpwmrc ~
 rm ~/.bashrc
 rm ~/.bash_aliases
 rm ~/.profile
+rm ~/.bash_history
 
 ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.bashrc ~/
 ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.profile ~/
 ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.bash_aliases ~/
-
+# not synchronized on github
+ln -s $DROPBOX/.bash_history ~/
 
 
