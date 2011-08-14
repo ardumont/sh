@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DEST=~/Download/conkeror
+DEST=~/Downloads/conkeror
 URL=http://launchpadlibrarian.net/53257451/conkeror_0.9.2%2Bgit100804-1ubuntu1_all.deb
 
 # does the directory exist?
