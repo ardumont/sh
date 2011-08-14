@@ -33,3 +33,7 @@ ln -s $DROPBOX/repositories/git/slash-my-home-slash-bin/.git-completion.bash
 # For emacs
 ~/mv ~/.emacs.d/ ~/.emacs.d.clean-install
 ln -s ~/Dropbox/Documents/emacs.d ~/.emacs.d
+
+# For conkeror
+rm ~/.conkerorrc
+ln -s ~/Dropbox/repositories/git/conkeror-saner-defaults/.conkerorrc ~/
