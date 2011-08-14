@@ -9,7 +9,7 @@ function destroy-link() {
     fi
 }
 
-# 
+# To destroy a link or backup a directory (use: emacs)
 function destroy-link-or-backup-file() {
     if [ -h $1 ]; then
 	rm $1
