@@ -8,7 +8,7 @@ if [ ! -d $DEST ];
 then
     echo "Create the directory '$DEST' to download the file."
     # create it
-    mkdir -p ~/Download/conkeror
+    mkdir -p $DEST
 fi
 
 # go inside it
@@ -28,6 +28,8 @@ dpkg -l | grep conkeror
 if [ $? != 0 ];
 then
     echo "Conkeror is not installed! Install conkeror.".
+    # dependency on xulrunner 192
+    sudo apt-get install xulrunner-1.9.2
     # Install
     sudo dpkg -i conkeror_0.9.2+git100804-1ubuntu1_all.deb
     echo "Installation done!"
