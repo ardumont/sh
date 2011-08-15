@@ -87,5 +87,3 @@ fi
 if [ -f ~/bin/remap-alt-gr-and-capslock.sh ] && ! shopt -oq posix; then
     . ~/bin/remap-alt-gr-and-capslock.sh
 fi
-
-
