@@ -16,28 +16,27 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-
 # set PATH so it includes user's private bin if it exists
 # environment variables
 
 # Personal shell scripts
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin:$PATH"
 fi
 
 # Work shell scripts
 if [ -d "$HOME/work/bin" ] ; then
-    PATH="$HOME/work/bin:$PATH"
+    export PATH="$HOME/work/bin:$PATH"
 fi
 
 # Specific to wine (some times, it's useful... It has been a long time since i use this...)
 if [ -d "$HOME/applications/wine" ] ; then
-    PATH="$HOME/applications/wine:$PATH"
+    export PATH="$HOME/applications/wine:$PATH"
 fi
 
 # Specific folder for links on application launcher
 if [ -d "$HOME/applications/bin" ] ; then
-    PATH="$HOME/applications/bin:$PATH"
+    export PATH="$HOME/applications/bin:$PATH"
 fi
 
 # java config
