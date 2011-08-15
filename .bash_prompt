@@ -4,7 +4,7 @@
 prompt_command () {
     RET=$?
     if [ $RET -eq 0 ]; then # set an error string for the prompt, if applicable
-        ERRPROMPT=" "
+        ERRPROMPT=""
     else
         ERRPROMPT='($RET) '
     fi
