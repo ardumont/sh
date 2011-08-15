@@ -60,7 +60,26 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-     PS1='\[\033[0;37m\]\u@\h:\[\033[0;33m\]\w\[\033[0m\]\[\033[1;32m\]$(__git_ps1)\[\033[0m\] \$ '
+     #Black 0;30	
+     #Blue 0;34
+     #Green 0;32
+     #Cyan 0;36
+     #Red 0;31
+     #Purple 0;35
+     #Brown 0;33
+     #[Note: Replace 0 with 1 for dark color]
+
+     # start color login
+     ST_COL_LOGIN='\[\033[0;37m\]';
+     # start color path
+     ST_COL_PATH='\[\033[0;33m\]';
+     # start color for the prompt git
+     ST_COL_GITPS1='\[\033[1;32m\]'
+     # end of color for any start color
+     END_COL='\[\033[0m\]'
+
+     # At last, define the ps1
+     PS1="${ST_COL_LOGIN}\u@\h:${END_COL}${ST_COL_PATH}\w${END_COL}${ST_COL_GITPS1}$(__git_ps1)${END_COL} \$ "
    ;;
 *)
     ;;
