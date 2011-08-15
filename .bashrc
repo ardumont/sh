@@ -60,6 +60,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+     #White 0;37
      #Black 0;30	
      #Blue 0;34
      #Green 0;32
@@ -70,7 +71,7 @@ xterm*|rxvt*)
      #[Note: Replace 0 with 1 for dark color]
 
      # start color login
-     ST_COL_LOGIN='\[\033[0;37m\]';
+     ST_COL_LOGIN='\[\033[0;34m\]';
      # start color path
      ST_COL_PATH='\[\033[0;33m\]';
      # start color for the prompt git
@@ -113,6 +114,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# To remap my keyboard
 if [ -f ~/bin/remap-alt-gr-and-capslock.sh ] && ! shopt -oq posix; then
     . ~/bin/remap-alt-gr-and-capslock.sh
 fi
