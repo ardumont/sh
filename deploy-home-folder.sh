@@ -35,10 +35,12 @@ destroy-link ~/.bashrc
 destroy-link ~/.bash_aliases
 destroy-link ~/.profile
 destroy-link ~/.bash_history
+destroy-link ~/.bash_prompt
 
 ln -s $SRC/slash-my-home-slash-bin/.bashrc ~/
 ln -s $SRC/slash-my-home-slash-bin/.profile ~/
 ln -s $SRC/slash-my-home-slash-bin/.bash_aliases ~/
+ln -s $SRC/slash-my-home-slash-bin/.bash_prompt ~/
 # not synchronized on github
 ln -s ~/Dropbox/.bash_history ~/
 
