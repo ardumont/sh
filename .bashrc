@@ -60,7 +60,7 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
 #    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-     PS1='\[\033[0;37m\]\u@\h:\[\033[0;33m\]$(pwd)\[\033[0m\]\[\033[1;32m\]$(__git_ps1)\[\033[0m\] \$ '
+     PS1='\[\033[0;37m\]\u@\h:\[\033[0;33m\]\w\[\033[0m\]\[\033[1;32m\]$(__git_ps1)\[\033[0m\] \$ '
    ;;
 *)
     ;;
