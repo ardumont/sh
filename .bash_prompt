@@ -43,12 +43,7 @@ PROMPT_COMMAND=prompt_command
 
 # Format time just the way I likes it
 fmt_time () {
-    if [ `date +%p` = "PM" ]; then
-        meridiem="pm"
-    else
-        meridiem="am"
-    fi
-    date +"%l:%M:%S$meridiem"|sed 's/ //g'
+    date +"%H:%M:%S"
 }
 
 # Returns the last 2 fields of the working directory
@@ -59,9 +54,9 @@ pwdtail () {
 # Gets the current 1m avg CPU load
 chkload () {
     local CURRLOAD=`uptime|awk '{print $8}'`
-    if [ "$CURRLOAD" &gt; "1" ]; then
+    if [ "$CURRLOAD" -gt "1" ]; then
         local OUTP="HIGH"
-    elif [ "$CURRLOAD" &lt; "1" ]; then
+    elif [ "$CURRLOAD" -lt "1" ]; then
         local OUTP="NORMAL"
     else
         local OUTP="UNKNOWN"
