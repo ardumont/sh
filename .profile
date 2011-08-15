@@ -45,16 +45,18 @@ if [ -d "/usr/lib/jvm/java-6-sun" ] ; then
     export JAVA_HOME=/usr/lib/jvm/java-6-sun
 fi
 
-export WIKEO_HOME=/home/tony/repositories/pro/wikeo-core
-# Specific to use maven 3 which is not on the repository
-export M2_HOME=~/bin/apache-maven-3.0.3
+if [ -d "~/applications/apache-maven-3.0.3" ]; then
+    # Specific to use maven 3 which is not on the repository
+    export M2_HOME=~/bin/apache-maven-3.0.3
+    export PATH=$M2_HOME/bin:$PATH
+fi
+
+if [ -d "~/repositories/pro/wikeo-core" ]; then
+    export WIKEO_HOME=~/repositories/pro/wikeo-core
+fi
 
 # Editor
 export EDITOR='emacs -nw'
-
-# Update paths
-export PATH=~/bin/:$PATH
-export PATH=$M2_HOME/bin:$PATH
 
 # Languages setup
 export LANG="fr_FR.UTF-8"
