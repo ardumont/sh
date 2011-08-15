@@ -6,30 +6,38 @@ prompt_command () {
     if [ $RET -eq 0 ]; then # set an error string for the prompt, if applicable
         ERRPROMPT=" "
     else
-        ERRPROMPT=' ($RET) '
+        ERRPROMPT='($RET) '
     fi
 
     if [ "\$(type -t __git_ps1)" ]; then # if we're in a Git repo, show current branch
-        BRANCH="\$(__git_ps1 '[ %s ] ')"
+        BRANCH=" \$(__git_ps1 '(%s) ')" 
     fi
 
+    # setup preferences
     local TIME=`fmt_time` # format time for prompt string
     local LOAD=`uptime|awk '{min=NF-2;print $min}'`
+    # set the titlebar to the last 2 fields of pwd
+    local TITLEBAR='\[\e]2;`pwdtail`\a'
+
+    # colors
     local GREEN="\[\033[0;32m\]"
+    local DKGREEN="\[\033[1;32m\]"
     local CYAN="\[\033[0;36m\]"
-    local BCYAN="\[\033[1;36m\]"
+    local DKCYAN="\[\033[1;36m\]"
     local BLUE="\[\033[0;34m\]"
+    local DKBLUE="\[\033[1;34m\]"
     local GRAY="\[\033[0;37m\]"
     local DKGRAY="\[\033[1;30m\]"
     local WHITE="\[\033[1;37m\]"
     local RED="\[\033[0;31m\]"
+    local DKRED="\[\033[1;31m\]"
+
     # return color to Terminal setting for text color
     local DEFAULT="\[\033[0;39m\]"
-    # set the titlebar to the last 2 fields of pwd
-    local TITLEBAR='\[\e]2;`pwdtail`\a'
-    export PS1="${TITLEBAR}\]${CYAN}[ ${BCYAN}\u${GREEN}@${BCYAN}\
-\h${DKGRAY}(${LOAD}) ${WHITE}${TIME} ${CYAN}]${RED}$ERRPROMPT${GRAY}\
-\w\n${GREEN}${BRANCH}${DEFAULT}$ "
+
+    export PS1="${TITLEBAR}\]${DKBLUE}\u${DKBLUE}@${DKBLUE}\
+\h${DKCYAN}(${LOAD}) ${WHITE}${TIME} ${DKRED}$ERRPROMPT${DKBLUE}\
+\w${DKGREEN}${BRANCH}${DEFAULT}$ "
 }
 PROMPT_COMMAND=prompt_command
 
