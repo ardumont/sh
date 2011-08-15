@@ -4,9 +4,7 @@ SRC=~/Dropbox/repositories/git
 
 # To destroy a link
 function destroy-link() {
-    if [ -h $1 ]; then
-	rm $1
-    fi
+    [ -h $1 ] && rm $1
 }
 
 # To destroy a link or backup a directory (use: emacs)
