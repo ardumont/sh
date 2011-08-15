@@ -11,9 +11,9 @@
 # tree -> to have a good vision of your arborescence
 # deborphan -> delete some orphan packages
 # language-pack-en, language-pack-fr -> packages for the locales management -> you need to call this command after 'sudo dpkg-reconfigure locales'
-# 
+# gparted gui to manage disks
 sudo apt-get install maven2 git gitk chromium-browser localepurge tree deborphan \
-    language-pack-en language-pack-fr
+    language-pack-en language-pack-fr gparted
 
 # depending on the machine
 # linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
