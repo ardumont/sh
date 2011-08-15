@@ -56,35 +56,65 @@ else
 fi
 unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-     #White 0;37
-     #Black 0;30	
-     #Blue 0;34
-     #Green 0;32
-     #Cyan 0;36
-     #Red 0;31
-     #Purple 0;35
-     #Brown 0;33
-     #[Note: Replace 0 with 1 for dark color]
+# some intelligent method to set the prompt
+prompt_command () {
+    if [ $? -eq 0 ]; then # set an error string for the prompt, if applicable
+        ERRPROMPT=" "
+    else
+        ERRPROMPT='-&gt;($?) '
+    fi
 
-     # start color login
-     ST_COL_LOGIN='\[\033[0;34m\]';
-     # start color path
-     ST_COL_PATH='\[\033[0;33m\]';
-     # start color for the prompt git
-     ST_COL_GITPS1='\[\033[1;32m\]'
-     # end of color for any start color
-     END_COL='\[\033[0m\]'
+    if [ "\$(type -t __git_ps1)" ]; then # if we're in a Git repo, show current branch
+        BRANCH="\$(__git_ps1 '[ %s ] ')"
+    fi
 
-     # At last, define the ps1
-     PS1="${ST_COL_LOGIN}\u@\h:${END_COL}${ST_COL_PATH}\w${END_COL}${ST_COL_GITPS1}$(__git_ps1)${END_COL} \$ "
-   ;;
-*)
-    ;;
-esac
+    local TIME=`fmt_time` # format time for prompt string
+    local LOAD=`uptime|awk '{min=NF-2;print $min}'`
+    local GREEN="\[\033[0;32m\]"
+    local CYAN="\[\033[0;36m\]"
+    local BCYAN="\[\033[1;36m\]"
+    local BLUE="\[\033[0;34m\]"
+    local GRAY="\[\033[0;37m\]"
+    local DKGRAY="\[\033[1;30m\]"
+    local WHITE="\[\033[1;37m\]"
+    local RED="\[\033[0;31m\]"
+    # return color to Terminal setting for text color
+    local DEFAULT="\[\033[0;39m\]"
+    # set the titlebar to the last 2 fields of pwd
+    local TITLEBAR='\[\e]2;`pwdtail`\a'
+    export PS1="\[${TITLEBAR}\]${CYAN}[ ${BCYAN}\u${GREEN}@${BCYAN}\
+\h${DKGRAY}(${LOAD}) ${WHITE}${TIME} ${CYAN}]${RED}$ERRPROMPT${GRAY}\
+\w\n${GREEN}${BRANCH}${DEFAULT}$ "
+}
+PROMPT_COMMAND=prompt_command
+
+# Format time just the way I likes it
+fmt_time () {
+    if [ `date +%p` = "PM" ]; then
+        meridiem="pm"
+    else
+        meridiem="am"
+    fi
+    date +"%l:%M:%S$meridiem"|sed 's/ //g'
+}
+
+# Returns the last 2 fields of the working directory
+pwdtail () {
+    pwd|awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
+}
+
+# Gets the current 1m avg CPU load
+chkload () {
+    local CURRLOAD=`uptime|awk '{print $8}'`
+    if [ "$CURRLOAD" &gt; "1" ]; then
+        local OUTP="HIGH"
+    elif [ "$CURRLOAD" &lt; "1" ]; then
+        local OUTP="NORMAL"
+    else
+        local OUTP="UNKNOWN"
+    fi
+    echo $CURRLOAD
+}
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -92,10 +122,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
 fi
 
 # Alias definitions.
