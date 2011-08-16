@@ -1,0 +1,9 @@
+Use : ie.sh [OPTIONS]
+launch an internet explorer (5, 55 or 6) navigator with wine.
+
+Mandatory:
+--ie-version(-i) VERSION	version of the navigator
+
+Other:
+--help (-h)		this help message
+

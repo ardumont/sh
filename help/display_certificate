@@ -1,0 +1,7 @@
+Use : display_certificate.sh [OPTIONS]
+
+Mandatory options:
+--cn(-c) CN	name of the certificate without extension nor pathname to display
+
+Other options:
+--help		display this help message

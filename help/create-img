@@ -1,0 +1,10 @@
+Use : create-img.sh [OPTIONS]
+create a qcow image specified by the argument 'image'.
+this is a wrapper of the qemu-img utilitie.
+
+Mandatory:
+--image(-i) IMG		name of the image to create
+
+Other:
+--size(-s) SIZE		size of the qcow image
+--help (-h)		this help message
