@@ -12,8 +12,9 @@
 # deborphan -> delete some orphan packages
 # language-pack-en, language-pack-fr -> packages for the locales management -> you need to call this command after 'sudo dpkg-reconfigure locales'
 # gparted gui to manage disks
+# kdiff3 -> package to use for diff on git
 sudo apt-get install maven2 git gitk chromium-browser localepurge tree deborphan \
-    language-pack-en language-pack-fr gparted
+    language-pack-en language-pack-fr gparted kdiff3
 
 # depending on the machine
 # linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
