@@ -46,10 +46,6 @@ ln -s ~/Dropbox/.bash_history ~/
 destroy-link ~/.git-completion.bash
 ln -s $SRC/slash-my-home-slash-bin/.git-completion.bash ~/
 
-# For emacs
-destroy-link-or-backup-file ~/.emacs.d
-ln -s ~/Dropbox/Documents/emacs.d ~/.emacs.d
-
 # For conkeror
 destroy-link ~/.conkerorrc
 ln -s $SRC/conkeror-saner-defaults/.conkerorrc ~/
