@@ -14,9 +14,11 @@
 # gparted gui to manage disks
 # stalonetray -> a panel to attach applet (useful to call on stumpwm to add new wifi network)
 # postgresql -> db
+# pgadmin3 -> administration tool for postgresql
 # mysql-server -> db
 sudo apt-get install maven2 git gitk chromium-browser localepurge tree deborphan \
-    language-pack-en language-pack-fr gparted stalonetray postgresql mysql-server
+    language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
+    mysql-server
 
 # depending on the machine
 # linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
