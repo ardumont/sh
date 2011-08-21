@@ -6,8 +6,8 @@
 USERNAME=$1
 DBNAME=$2
 
-echo "createuser -D -A -P $USERNAME"
-createuser -D -A -P $USERNAME
+echo "createuser -D -P $USERNAME"
+createuser -D -P $USERNAME
 
 echo "createdb -O $USERNAME $DBNAME"
 createdb -O $USERNAME $DBNAME
