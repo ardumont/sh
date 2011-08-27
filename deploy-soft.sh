@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# those we can install directly
+# Depending on the machine
+# linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
+# sudo apt-get install linux-generic-pae
+
+# software that cannot be install directly
+# conkeror -> very cool browser keyboard driven
+# chrome -> google browser based on chromium
+
+# software that can be directly installed
 
 # maven2 -> standard tool to manage java project
 # git -> DCVS
@@ -16,14 +24,8 @@
 # postgresql -> db
 # pgadmin3 -> administration tool for postgresql
 # mysql-server -> db
+# sun-java6-jdk -> sun jdk
+# sun-java6-source -> sun jdk sources
 sudo apt-get install maven2 git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
-    phppgadmin mysql-server
-
-# depending on the machine
-# linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
-# sudo apt-get install linux-generic-pae
-
-# the other one we can't
-# conkeror -> very cool browser keyboard driven
-# chrome -> google browser based on chromium
+    phppgadmin mysql-server sun-java6-jdk sun-java6-source
