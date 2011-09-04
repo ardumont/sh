@@ -11,6 +11,14 @@ alias egrep='egrep --color=auto'
 # emacs for the win
 alias em='emacs -nw'
 
+#### Alias for changing directory
+
+# cd ..
+alias cd..='cd ..'
+
+# cd ~/.m2
+alias cdm2='cd $HOME/.m2'
+
 # cd wikeo-project
 alias wik.cd='cd $HOME/repositories/pro/wikeo-core/wikeo-parent'
 
