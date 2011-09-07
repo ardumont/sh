@@ -49,3 +49,7 @@ ln -s $SRC/slash-my-home-slash-bin/.git-completion.bash ~/
 # For conkeror
 destroy-link ~/.conkerorrc
 ln -s $SRC/conkeror-saner-defaults/.conkerorrc ~/
+
+# link to some reading
+destroy-link ~/lecture
+ln -s ~/Dropbox/Documents/lecture ~
