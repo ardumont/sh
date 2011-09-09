@@ -29,4 +29,4 @@
 # sweethome3d
 aptitude install maven2 git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
-    phppgadmin mysql-server sun-java6-jdk sun-java6-source sweethome3d
+    phppgadmin mysql-server sun-java6-jdk sun-java6-source sweethome3d stalonetray
