@@ -9,7 +9,7 @@ do-action "sudo aptitude install clojure inotify-tools"
 [ ! -d ~/repositories ] && do-action "mkdir -p ~/repositories/clones"
 cd ~/repositories/clones
 
-[ ! -d ~/repositories/clones/leiningen ] && do-action "git clone https://github.com/technomancy/leiningen.git" || git reset --hard HEAD && git pull
+[ ! -d ~/repositories/clones/leiningen ] && do-action "git clone https://github.com/technomancy/leiningen.git ~/repositories/clones/leiningen" || git reset --hard HEAD && git pull
 
 # will launch the download of all needed
 cd leiningen
@@ -25,10 +25,13 @@ do-action "lein plugin install swank-clojure 1.3.1"
 # x to install
 
 # install cake
-[ ! -d ~/repositories/clones/cake ] && do-action "git clone git://github.com/ninjudd/cake.git" || git reset --hard HEAD && git pull
-
-# create a link
-destroy-link ~/repositories/clones/cake/bin/cake
+[ ! -d ~/repositories/clones/cake ] && do-action "git clone git://github.com/ninjudd/cake.git ~/repositories/clones/cake" || git reset --hard HEAD && git pull
+destroy-link ~/bin/cake
 ln -s ~/repositories/clones/cake/bin/cake ~/bin/cake
+
+[ ! -d ~/repositories/clones/faster-cake-autotest ] && do-action "git clone git://github.com/denlab/faster-cake-autotest.git ~/repositories/clones/faster-cake-autotest" || git reset --hard HEAD && git pull
+destroy-link ~/bin/cake-autotest
+ln -s ~/repositories/clones/faster-cake-autotest/cake-autotest ~/bin/cake-autotest
+
 # add this files to the root of your project 
 # wget https://github.com/marick/Midje/raw/master/examples/cake-midje/tasks.clj
