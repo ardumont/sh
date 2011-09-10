@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
 # Install clojure
-aptitude install clojure
+sudo aptitude install clojure
 
 # deploy tools to help
 [ ! -d ~/repositories ] && mkdir -p ~/repositories/clones
