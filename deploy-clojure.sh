@@ -3,7 +3,7 @@
 . standard-functions.sh
 
 # Install clojure
-do-action "sudo aptitude install clojure"
+do-action "sudo aptitude install clojure inotify-tools"
 
 # deploy tools to help
 [ ! -d ~/repositories ] && do-action "mkdir -p ~/repositories/clones"
