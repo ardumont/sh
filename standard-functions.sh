@@ -19,3 +19,10 @@ function destroy-link-or-backup-file() {
 	mv $1. "$1.clean-install"
     fi
 }
+
+# deploy git repository or just update it if it already exists
+function deploy-git-clone-or-update() {
+    REPO=$1
+    DEST=$2
+    [ ! -d $DEST ] && do-action "git clone $REPO $DEST" || do-action "git reset --hard HEAD && git pull"
+}

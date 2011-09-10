@@ -3,7 +3,7 @@
 . standard-functions.sh
 
 # Install clojure
-do-action "sudo aptitude install clojure inotify-tools"
+do-action "sudo aptitude install clojure inotify-tools ruby"
 
 # deploy tools to help
 [ ! -d ~/repositories ] && do-action "mkdir -p ~/repositories/clones"
@@ -25,13 +25,18 @@ do-action "lein plugin install swank-clojure 1.3.1"
 # x to install
 
 # install cake
-[ ! -d ~/repositories/clones/cake ] && do-action "git clone git://github.com/ninjudd/cake.git ~/repositories/clones/cake" || git reset --hard HEAD && git pull
+deploy-git-clone-or-update git://github.com/ninjudd/cake.git ~/repositories/clones/cake
 destroy-link ~/bin/cake
 ln -s ~/repositories/clones/cake/bin/cake ~/bin/cake
 
-[ ! -d ~/repositories/clones/faster-cake-autotest ] && do-action "git clone git://github.com/denlab/faster-cake-autotest.git ~/repositories/clones/faster-cake-autotest" || git reset --hard HEAD && git pull
+# install midje-cake
+deploy-git-clone-or-update https://github.com/marick/Midje/wiki/Cake-midje ~/repositories/clones/Cake-midje
+
+# install faster-cake-autotest
+deploy-git-clone-or-update git://github.com/denlab/faster-cake-autotest.git ~/repositories/clones/faster-cake-autotest
 destroy-link ~/bin/cake-autotest
 ln -s ~/repositories/clones/faster-cake-autotest/cake-autotest ~/bin/cake-autotest
 
 # add this files to the root of your project 
+
 # wget https://github.com/marick/Midje/raw/master/examples/cake-midje/tasks.clj
