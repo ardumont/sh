@@ -30,4 +30,5 @@ do-action "lein plugin install swank-clojure 1.3.1"
 # create a link
 destroy-link ~/repositories/clones/cake/bin/cake
 ln -s ~/repositories/clones/cake/bin/cake ~/bin/cake
-
+# add this files to the root of your project 
+# wget https://github.com/marick/Midje/raw/master/examples/cake-midje/tasks.clj
