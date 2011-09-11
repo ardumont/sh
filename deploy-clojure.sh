@@ -25,18 +25,17 @@ do-action "lein plugin install swank-clojure 1.3.1"
 # x to install
 
 # install cake
-deploy-git-clone-or-update git://github.com/ninjudd/cake.git ~/repositories/clones/cake
+deploy-git-clone-or-update git://github.com/flatland/cake.git ~/repositories/clones/cake
 destroy-link ~/bin/cake
 ln -s ~/repositories/clones/cake/bin/cake ~/bin/cake
 
 # install midje-cake
-deploy-git-clone-or-update https://github.com/marick/Midje/wiki/Cake-midje ~/repositories/clones/Cake-midje
+deploy-git-clone-or-update git://github.com/marick/Midje.git ~/repositories/clones/Cake-midje
+# retrieve the tasks.clj files from this project and copy it inside your project root
+# add this files to the root of your project 
+# wget https://github.com/marick/Midje/raw/master/examples/cake-midje/tasks.clj
 
 # install faster-cake-autotest
 deploy-git-clone-or-update git://github.com/denlab/faster-cake-autotest.git ~/repositories/clones/faster-cake-autotest
 destroy-link ~/bin/cake-autotest
 ln -s ~/repositories/clones/faster-cake-autotest/cake-autotest ~/bin/cake-autotest
-
-# add this files to the root of your project 
-
-# wget https://github.com/marick/Midje/raw/master/examples/cake-midje/tasks.clj
