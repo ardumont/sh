@@ -19,14 +19,8 @@ alias cd..='cd ..'
 # cd ~/.m2
 alias cdm2='cd $HOME/.m2'
 
-# cd wikeo-project
-alias wik.cd='cd $HOME/repositories/pro/wikeo-core/wikeo-parent'
-
-# cd catalog-module
-alias wikcat.cd='cd $HOME/repositories/pro/catalog-module'
-
-# cd catalog-search
-alias wiksea.cd='cd $HOME/repositories/pro/catalog-search'
+# cd ~/.ssh
+alias cdssh='cd $HOME/.ssh'
 
 # projectsion
 alias pr.cd='cd $HOME/repositories/perso/ProjectionReloaded/pr-parent'

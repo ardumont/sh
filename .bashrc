@@ -72,18 +72,16 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# standard
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+
+# for work
+[ -f ~/work/bin/.bash_aliases-work ] && . ~/work/bin/.bash_aliases-work
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+[ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 
 # To remap my keyboard
-if [ -f ~/bin/remap-alt-gr-and-capslock.sh ] && ! shopt -oq posix; then
-    . ~/bin/remap-alt-gr-and-capslock.sh
-fi
+[ -f ~/bin/remap-alt-gr-and-capslock.sh ] && ! shopt -oq posix && . ~/bin/remap-alt-gr-and-capslock.sh
