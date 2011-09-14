@@ -41,3 +41,7 @@ ln -s $SRC/conkeror-saner-defaults/.conkerorrc ~/
 # link to some reading
 destroy-link ~/lecture
 ln -s ~/Dropbox/Documents/lecture ~
+
+# link to my perso repositories
+destroy-link ~/repositories/perso
+ln -s ~/Dropbox/repositories/git/ ~/repositories/perso
