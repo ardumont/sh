@@ -16,6 +16,15 @@ alias em='emacs -nw'
 # cd ..
 alias cd..='cd ..'
 
+# cd ~/org
+alias cdorg='cd $HOME/org'
+
+# cd ~/bin
+alias cdbin='cd $HOME/bin'
+
+# cd ~/work/bin
+alias cdwbin='cd $HOME/work/bin'
+
 # cd ~/.m2
 alias cdm2='cd $HOME/.m2'
 
