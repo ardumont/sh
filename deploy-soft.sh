@@ -30,6 +30,7 @@
 # inotify-tools -> tools to manage file systems notifications
 # tree -> to list directory in a pretty way
 # curl -> cli request
+# yajl-tools -> tools to help on different occasions (json_reformat for example)
 aptitude install maven2 git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
-    phppgadmin mysql-server sweethome3d inotify-tools ruby tree curl
+    phppgadmin mysql-server sweethome3d inotify-tools ruby tree curl yajl-tools
