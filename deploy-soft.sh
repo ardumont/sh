@@ -31,6 +31,8 @@
 # tree -> to list directory in a pretty way
 # curl -> cli request
 # yajl-tools -> tools to help on different occasions (json_reformat for example)
+# openssh-server -> server ssh that is not installed by default
 aptitude install maven2 git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
-    phppgadmin mysql-server sweethome3d inotify-tools ruby tree curl yajl-tools
+    phppgadmin mysql-server sweethome3d inotify-tools ruby tree curl yajl-tools \
+    openssh-server
