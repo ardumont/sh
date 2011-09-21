@@ -75,9 +75,6 @@ fi
 # standard
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
-# for work
-[ -f ~/work/bin/.bash_aliases-work ] && . ~/work/bin/.bash_aliases-work
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
