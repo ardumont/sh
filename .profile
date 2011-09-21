@@ -14,6 +14,9 @@ if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
 	. "$HOME/.bashrc"
     fi
+    if [ -f "$HOME/.bashrc-work" ]; then
+	. "$HOME/.bashrc-work"
+    fi
 fi
 
 # set PATH so it includes user's private bin if it exists
