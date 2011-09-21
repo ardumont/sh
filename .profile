@@ -11,9 +11,9 @@
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
-    if [ -f $HOME/.bashrc ] && . $HOME/.bashrc
+    [ -f $HOME/.bashrc ] && . $HOME/.bashrc
     # one for the work
-    if [ -f $HOME/.bashrc-work ] && . $HOME/.bashrc-work
+    [ -f $HOME/.bashrc-work ] && . $HOME/.bashrc-work
 fi
 
 # set PATH so it includes user's private bin if it exists
