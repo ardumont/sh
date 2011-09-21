@@ -11,54 +11,31 @@
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-    if [ -f "$HOME/.bashrc-work" ]; then
-	. "$HOME/.bashrc-work"
-    fi
+    if [ -f $HOME/.bashrc ] && . $HOME/.bashrc
+    # one for the work
+    if [ -f $HOME/.bashrc-work ] && . $HOME/.bashrc-work
 fi
 
 # set PATH so it includes user's private bin if it exists
 # environment variables
 
 # Personal shell scripts
-if [ -d "$HOME/bin" ] ; then
-    export PATH="$HOME/bin:$PATH"
-fi
+[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
 # Work shell scripts
-if [ -d "$HOME/work/bin" ] ; then
-    export PATH="$HOME/work/bin:$PATH"
-fi
+[ -d $HOME/work/bin ] && export PATH=$HOME/work/bin:$PATH
 
 # Specific to wine (some times, it's useful... It has been a long time since i use this...)
-if [ -d "$HOME/applications/wine" ] ; then
-    export PATH="$HOME/applications/wine:$PATH"
-fi
+[ -d $HOME/applications/wine ] && export PATH=$HOME/applications/wine:$PATH
 
 # Specific folder for links on application launcher
-if [ -d "$HOME/applications/bin" ] ; then
-    export PATH="$HOME/applications/bin:$PATH"
-fi
+[ -d $HOME/applications/bin ] && export PATH=$HOME/applications/bin:$PATH
 
 # java config
-if [ -d "/usr/lib/jvm/java-6-sun" ] ; then
-    export JAVA_HOME=/usr/lib/jvm/java-6-sun
-fi
+[ -d /usr/lib/jvm/java-6-sun ] && export JAVA_HOME=/usr/lib/jvm/java-6-sun
 
-if [ -d "~/applications/apache-maven-3.0.3" ]; then
-    # Specific to use maven 3 which is not on the repository
-    export M2_HOME=~/bin/apache-maven-3.0.3
-    export PATH=$M2_HOME/bin:$PATH
-fi
-
-if [ -d "~/repositories/pro/wikeo-core" ]; then
-    export WIKEO_HOME=~/repositories/pro/wikeo-core
-fi
-
-# Editor
-export EDITOR='emacs -nw'
+# maven 3
+[ -d $HOME/applications/apache-maven-3.0.3 ] && export PATH=$HOME/applications/apache-maven-3.0.3/bin:$PATH
 
 # Languages setup
 export LANG="fr_FR.UTF-8"
