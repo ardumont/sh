@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC=~/Dropbox/repositories/git
+SRC=$HOME/Dropbox/repositories/git
 
 . standard-functions.sh
 
