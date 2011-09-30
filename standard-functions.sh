@@ -5,7 +5,7 @@ do-action() {
     echo -e "\n$1"
     $1
 }
-                                                                                      
+
 # To destroy a link
 function destroy-link() {
     [ -h $1 -o -f $1 ] && rm $1
