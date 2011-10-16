@@ -28,6 +28,9 @@
 # curl -> cli request
 # yajl-tools -> tools to help on different occasions (json_reformat for example)
 # openssh-server -> server ssh that is not installed by default
-yes | aptitude install git gitk chromium-browser localepurge tree deborphan \
+# nautilus-dropbox -> dropbox
+# sysvbanner -> script to help delimit information in cli
+yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
-    inotify-tools ruby tree curl yajl-tools openssh-server nautilus-dropbox 
+    inotify-tools ruby tree curl yajl-tools openssh-server nautilus-dropbox \
+    sysvbanner
