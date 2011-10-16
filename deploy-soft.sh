@@ -28,6 +28,6 @@
 # curl -> cli request
 # yajl-tools -> tools to help on different occasions (json_reformat for example)
 # openssh-server -> server ssh that is not installed by default
-aptitude install git gitk chromium-browser localepurge tree deborphan \
+yes | aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
     inotify-tools ruby tree curl yajl-tools openssh-server
