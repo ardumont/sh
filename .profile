@@ -35,7 +35,7 @@ fi
 [ -d /usr/lib/jvm/java-6-sun ] && export JAVA_HOME=/usr/lib/jvm/java-6-sun
 
 # maven 3
-[ -d $HOME/applications/apache-maven-3.0.3 ] && export PATH=$HOME/applications/apache-maven-3.0.3/bin:$PATH
+#[ -d $HOME/applications/apache-maven-3.0.3 ] && export PATH=$HOME/applications/apache-maven-3.0.3/bin:$PATH
 
 # Languages setup
 export LANG="fr_FR.UTF-8"
