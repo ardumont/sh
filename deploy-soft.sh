@@ -4,10 +4,6 @@
 # linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
 # sudo apt-get install linux-generic-pae
 
-# software that cannot be install directly
-# conkeror -> very cool browser keyboard driven
-# chrome -> google browser based on chromium
-
 # software that can be directly installed
 
 # maven2 -> standard tool to manage java project
@@ -32,7 +28,6 @@
 # curl -> cli request
 # yajl-tools -> tools to help on different occasions (json_reformat for example)
 # openssh-server -> server ssh that is not installed by default
-aptitude install maven2 git gitk chromium-browser localepurge tree deborphan \
-    language-pack-en language-pack-fr gparted stalonetray postgresql pgadmin3 \
-    phppgadmin mysql-server sweethome3d inotify-tools ruby tree curl yajl-tools \
-    openssh-server
+aptitude install git gitk chromium-browser localepurge tree deborphan \
+    language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
+    inotify-tools ruby tree curl yajl-tools openssh-server
