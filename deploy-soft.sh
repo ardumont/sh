@@ -30,4 +30,4 @@
 # openssh-server -> server ssh that is not installed by default
 yes | aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
-    inotify-tools ruby tree curl yajl-tools openssh-server
+    inotify-tools ruby tree curl yajl-tools openssh-server nautilus-dropbox
