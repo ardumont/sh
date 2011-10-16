@@ -23,13 +23,20 @@ then
     wget $URL
 fi
 
+if [ ! -f xulrunner-1.9.2_1.9.2.17%2Bbuild3%2Bnobinonly-0ubuntu1_i386.deb ];
+then
+    echo "Download xulrunner."
+    wget http://launchpadlibrarian.net/70321863/xulrunner-1.9.2_1.9.2.17%2Bbuild3%2Bnobinonly-0ubuntu1_i386.deb
+fi
+
 # Is the soft already installed?
 dpkg -l | grep conkeror
 if [ $? != 0 ];
 then
     echo "Conkeror is not installed! Install conkeror.".
     # dependency on xulrunner 192
-    sudo apt-get install xulrunner-1.9.2
+#    sudo apt-get install xulrunner-1.9.2
+    sudo dpkg -i xulrunner-1.9.2_1.9.2.17%2Bbuild3%2Bnobinonly-0ubuntu1_i386.deb
     # Install
     sudo dpkg -i conkeror_0.9.2+git100804-1ubuntu1_all.deb
     echo "Installation done!"
