@@ -32,5 +32,5 @@
 # sysvbanner -> script to help delimit information in cli
 yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
-    inotify-tools ruby tree curl yajl-tools openssh-server nautilus-dropbox \
+    inotify-tools ruby curl yajl-tools openssh-server nautilus-dropbox \
     sysvbanner
