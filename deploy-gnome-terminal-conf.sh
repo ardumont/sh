@@ -3,7 +3,10 @@
 # Working directory of the script
 WDIR=$(dirname $0)
 
-# backup the original file
-mv $HOME/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml $HOME/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml.original
+FILE=$HOME/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml
+
+[ -h $FILE ] && rm $FILE # delete the link
+[ -f $FILE ] && mv $FILE $FILE.original # backup the original file
+
 # make a link to the gconf configuration file from the terminal
-ln -s $WDIR/%gconf.xml $HOME/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml
+ln -s $WDIR/%gconf.xml $FILE
