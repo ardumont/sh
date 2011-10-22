@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install stumpwm
-sudo apt-get install stumpwm
+sudo aptitude install stumpwm
 
 # Create the file
 sudo touch /usr/share/xsessions/stumpwm.desktop
