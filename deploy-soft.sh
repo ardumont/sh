@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# First install aptitude
+sudo apt-get install aptitude
+
 # Depending on the machine
 # linux-generic-pae -> kernel with the flag PAE activated so that the machine see all the 4gb of ram or over
 # sudo apt-get install linux-generic-pae
