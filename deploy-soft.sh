@@ -1,5 +1,9 @@
 #!/bin/bash
 
+VERSION=$1
+
+[ -z $VERSION ] && VERSION=11.10
+
 # First install aptitude
 sudo apt-get install aptitude
 
@@ -35,5 +39,6 @@ sudo apt-get install aptitude
 # sysvbanner -> script to help delimit information in cli
 yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
-    inotify-tools ruby curl yajl-tools openssh-server nautilus-dropbox \
-    sysvbanner
+    inotify-tools ruby curl yajl-tools openssh-server sysvbanner
+
+[ $VERSION = "11.10" ] && yes | sudo aptitude install nautilus-dropbox 
