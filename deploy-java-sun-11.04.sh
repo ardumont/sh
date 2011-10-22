@@ -7,7 +7,7 @@ sudo add-apt-repository "deb http://archive.canonical.com/ubuntu natty partner"
 sudo aptitude update
 
 # Install sun
-yes | aptitude install sun-java6-jdk sun-java6-source
+yes | sudo aptitude install sun-java6-jdk sun-java6-source
 
 # Once install choose the sun-jre ad the default one
-update-alternatives --config java
+sudo update-alternatives --config java
