@@ -4,11 +4,13 @@ WDIR=$(dirname $0)
 VERSION=$1
 WITH_JAVA=$2
 
+# Version by default is 11.10
 [ -z $VERSION ] && VERSION=11.10
+# By default, no java
 [ -z $WITH_JAVA ] && $WITH_JAVA=n
 
 # Deploy the basename soft
-$WDIR/deploy-soft.sh
+$WDIR/deploy-soft.sh $VERSION
 
 # Deploy home
 $WDIR/deploy-home-folder.sh
