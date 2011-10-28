@@ -20,12 +20,18 @@
     (package-install p)))
 
 ;; =============================================================================
-;; General config
+;; Display line number in the left margin
 ;; =============================================================================
 
-(global-linum-mode 1); display line number in the left margin
+(global-linum-mode 1)
 
-(require 'auto-complete)
+;; =============================================================================
+;; Autocomplete setup
+;; =============================================================================
+
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4.20110207/dict")
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;; =============================================================================
 ;; Clojure config
