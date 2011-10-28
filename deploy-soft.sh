@@ -37,8 +37,9 @@ sudo apt-get install aptitude
 # openssh-server -> server ssh that is not installed by default
 # nautilus-dropbox -> dropbox
 # sysvbanner -> script to help delimit information in cli
+# most -> better pager than less (deals with color in man page for example)
 yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
-    inotify-tools ruby curl yajl-tools openssh-server sysvbanner
+    inotify-tools ruby curl yajl-tools openssh-server sysvbanner most
 
 [ $VERSION = "11.10" ] && yes | sudo aptitude install nautilus-dropbox gtalk

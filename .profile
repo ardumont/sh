@@ -41,3 +41,6 @@ fi
 export LANG="fr_FR.UTF-8"
 export LANGUAGE="en_US:en"
 export LC_MESSAGES="en_US.UTF-8"
+
+# pager setup
+export MANPAGER="/usr/bin/most -s"
