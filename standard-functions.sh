@@ -8,15 +8,16 @@ do-action() {
 
 # To destroy a link
 function destroy-link() {
-    [ -h $1 -o -f $1 ] && rm $1
+    [ -h $1 ] && echo "Delete link $1" && do-action "rm $1"
+    [ -f $1 ] && echo "Delete file $1" && do-action "rm $1"
 }
 
 # To destroy a link or backup a directory (use: emacs)
 function destroy-link-or-backup-file() {
     if [ -h $1 ]; then
-	rm $1
+	echo "Delete link $1" && do-action "rm $1"
     else
-	mv $1. "$1.clean-install"
+	echo "Backup file $1" && do-action "mv $1 '$1.clean-install'"
     fi
 }
 
