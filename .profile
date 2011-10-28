@@ -11,36 +11,5 @@
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
-    [ -f $HOME/.bashrc ] && . $HOME/.bashrc
-    # one for the work
-    [ -f $HOME/.bashrc-work ] && . $HOME/.bashrc-work
+    [ -f ~/.bashrc ] && . ~/.bashrc
 fi
-
-# set PATH so it includes user's private bin if it exists
-# environment variables
-
-# Personal shell scripts
-[ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
-
-# Work shell scripts
-[ -d $HOME/work/bin ] && export PATH=$HOME/work/bin:$PATH
-
-# Specific to wine (some times, it's useful... It has been a long time since i use this...)
-[ -d $HOME/applications/wine ] && export PATH=$HOME/applications/wine:$PATH
-
-# Specific folder for links on application launcher
-[ -d $HOME/applications/bin ] && export PATH=$HOME/applications/bin:$PATH
-
-# java config
-[ -d /usr/lib/jvm/java-6-sun ] && export JAVA_HOME=/usr/lib/jvm/java-6-sun
-
-# maven 3
-#[ -d $HOME/applications/apache-maven-3.0.3 ] && export PATH=$HOME/applications/apache-maven-3.0.3/bin:$PATH
-
-# Languages setup
-export LANG="fr_FR.UTF-8"
-export LANGUAGE="en_US:en"
-export LC_MESSAGES="en_US.UTF-8"
-
-# pager setup
-export MANPAGER="/usr/bin/most -s"

@@ -57,7 +57,7 @@ fi
 unset color_prompt force_color_prompt
 
 # play the file to have a nice ps1 prompt
-[ -f ~/.bash-prompt ] && . ~/.bash-prompt
+[ -f ~/.bashrc-prompt ] && . ~/.bashrc-prompt
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -75,10 +75,19 @@ fi
 # standard
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+# the path to reference have been set in a file
+[ -f ~/.bashrc-path ] && . ~/.bashrc-path
+
+# the env variable have been set in a file
+[ -f ~/.bashrc-env ] && . ~/.bashrc-env
+
+# a bashrc specific to work
+[ -f ~/.bashrc-work ] && . ~/.bashrc-work
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 [ -f /etc/bash_completion ] && ! shopt -oq posix && . /etc/bash_completion
 
-# To remap my keyboard
+# To remap my keyboard (CAPSLOCK is CTRL, ALT-GR is ALT)
 [ -f ~/bin/remap-alt-gr-and-capslock.sh ] && ! shopt -oq posix && . ~/bin/remap-alt-gr-and-capslock.sh

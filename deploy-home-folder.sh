@@ -20,18 +20,22 @@ destroy-link $HOME/.stumpwmrc
 do-action "ln -s $SRC/stumpw-config/.stumpwmrc $HOME/"
 
 # $HOME/.bash*
-destroy-link $HOME/.bashrc
-destroy-link $HOME/.bashrc-work
-destroy-link $HOME/.bash_aliases
 destroy-link $HOME/.profile
+destroy-link $HOME/.bashrc
+destroy-link $HOME/.bashrc-path
+destroy-link $HOME/.bashrc-env
+destroy-link $HOME/.bash_aliases
 destroy-link $HOME/.bash_history
 destroy-link $HOME/.bash-prompt
+destroy-link $HOME/.bashrc-work
 
-do-action "ln -s $REPOSITORY/.bashrc $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc-work $HOME/"
 do-action "ln -s $REPOSITORY/.profile $HOME/"
+do-action "ln -s $REPOSITORY/.bashrc $HOME/"
+do-action "ln -s $REPOSITORY/.bashrc-env $HOME/"
+do-action "ln -s $REPOSITORY/.bashrc-path $HOME/"
 do-action "ln -s $REPOSITORY/.bash_aliases $HOME/"
-do-action "ln -s $REPOSITORY/.bash-prompt $HOME/"
+do-action "ln -s $REPOSITORY/.bashrc-prompt $HOME/"
+do-action "ln -s $REPOSITORY/.bashrc-work $HOME/"
 # not synchronized on github
 do-action "ln -s $HOME/Dropbox/.bash_history $HOME/"
 
