@@ -24,5 +24,5 @@ function destroy-link-or-backup-file() {
 function deploy-git-clone-or-update() {
     REPO=$1
     DEST=$2
-    [ ! -d $DEST ] && do-action "git clone $REPO $DEST" || do-action "git reset --hard HEAD && git pull"
+    [ ! -d $DEST ] && do-action "git clone $REPO $DEST" || do-action "cd $DEST && git reset --hard HEAD && git pull"
 }
