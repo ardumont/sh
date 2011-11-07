@@ -19,7 +19,7 @@ $WDIR/deploy-home-folder.sh
 $WDIR/deploy-git-config.sh
 
 # Deploy emacs
-#$WDIR/deploy-emacs.sh -> need to be finished
+$WDIR/deploy-emacs.sh
 
 # Deploy stumpwm
 $WDIR/deploy-stumpwm.sh
