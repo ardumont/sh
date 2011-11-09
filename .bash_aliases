@@ -10,6 +10,7 @@ alias egrep='egrep --color=auto'
 
 # emacs for the win
 alias em='emacs -nw'
+alias emc='emacs-clojure.sh'
 
 #### Alias for changing directory
 
