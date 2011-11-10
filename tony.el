@@ -12,7 +12,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(clojure-mode midje-mode slime org auto-complete flymake-shell)
+(defvar my-packages '(clojure-mode midje-mode org auto-complete flymake-shell)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
