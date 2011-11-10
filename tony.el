@@ -42,6 +42,9 @@
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
 
+; add color into the repl via clojure-jack-in
+(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
+
 ;; =============================================================================
 ;; Org config
 ;; =============================================================================
