@@ -18,7 +18,7 @@ cd $WDIR/leiningen
 do-action "lein"
 
 # install the plugin to make a server swank
-do-action "lein plugin install swank-clojure 1.3.1"
+do-action "lein plugin install swank-clojure 1.3.3"
 
 # install cake
 deploy-git-clone-or-update git://github.com/flatland/cake.git $WDIR/cake
