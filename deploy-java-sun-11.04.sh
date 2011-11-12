@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Add the repository
-sudo add-apt-repository "deb http://archive.canonical.com/ubuntu natty partner"
+
+grep "deb http://archive.canonical.com/ubuntu natty partner" /etc/apt/sources.list || sudo add-apt-repository "deb http://archive.canonical.com/ubuntu natty partner"
 
 # Update the repository
 sudo aptitude update

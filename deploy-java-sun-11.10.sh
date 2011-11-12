@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add the repository
-sudo add-apt-repository ppa:ferramroberto/java
+grep "ferramroberto" /etc/apt/sources.list || sudo add-apt-repository ppa:ferramroberto/java
 
 # Update the repository
 sudo aptitude update
