@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -e
 
 . $(dirname $0)/standard-functions.sh
 
@@ -18,12 +18,12 @@ cd $WDIR/leiningen
 do-action "lein"
 
 # install the plugin to make a server swank
-do-action "lein plugin install swank-clojure 1.3.3"
+do-action "lein plugin install swank-clojure 1.3.1"
 
 # install cake
 deploy-git-clone-or-update git://github.com/flatland/cake.git $WDIR/cake
 destroy-link $HOME/bin/cake
-do-action "ln -s $WDIR/cake/bin/cake $HOME/bin/"
+do-action "ln -s $WDIR/cake/bin/cake $HOME/bin/cake"
 
 # install midje-cake
 deploy-git-clone-or-update git://github.com/marick/Midje.git $WDIR/Cake-midje
@@ -34,4 +34,4 @@ deploy-git-clone-or-update git://github.com/marick/Midje.git $WDIR/Cake-midje
 # install faster-cake-autotest
 deploy-git-clone-or-update git://github.com/denlab/faster-cake-autotest.git $WDIR/faster-cake-autotest
 destroy-link $HOME/bin/cake-autotest
-do-action "ln -s $WDIR/faster-cake-autotest/cake-autotest $HOME/bin/"
+do-action "ln -s $WDIR/faster-cake-autotest/cake-autotest $HOME/bin/cake-autotest"

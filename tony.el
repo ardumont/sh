@@ -12,7 +12,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(clojure-mode midje-mode org auto-complete flymake-shell)
+(defvar my-packages '(clojure-mode midje-mode slime org auto-complete flymake-shell)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -41,9 +41,6 @@
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
-
-; add color into the repl via clojure-jack-in
-(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
 ;; =============================================================================
 ;; Org config

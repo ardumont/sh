@@ -17,7 +17,7 @@ do-action "ln -s $SRC/my-org-files $HOME/org"
 
 # $HOME/.stumpwmrc
 destroy-link $HOME/.stumpwmrc
-do-action "ln -s $SRC/stumpwm-config/.stumpwmrc $HOME/"
+do-action "ln -s $SRC/stumpw-config/.stumpwmrc $HOME/"
 
 # $HOME/.bash*
 destroy-link $HOME/.profile
