@@ -16,23 +16,16 @@ grep "emacs.naquadah.org" /etc/apt/sources.list || (sudo add-apt-repository "deb
 do-action "sudo aptitude update"
 
 # Install git and emacs
-do-action "sudo aptitude remove emacs"
+do-action "sudo aptitude remove emacs emacs23"
 do-action "sudo aptitude install git emacs-snapshot-gtk"
 
-# Delete the old link 
-[ -h $HOME/.emacs.d ] && do-action "rm $HOME/.emacs.d"
-# or default directory for emacs
-[ -d $HOME/.emacs.d ] && do-action "mv $HOME/.emacs.d $HOME/.emacs.d.clean-install"
+# Delete the old link
+[ -d $HOME/.emacs.d ] && do-action "rm -rf $HOME/.emacs.d/*" || do-action "mkdir $HOME/.emacs.d"
 
 do-action "cd $HOME/.emacs.d"
 
 # create a link to my specific setup (init.el that loads the starterkit)
-[ -h $HOME/.emacs.d/init.el ] && do-action "rm $HOME/.emacs.d/init.el"
 do-action "ln -s $REPOSITORY/init24.el $HOME/.emacs.d/init.el"
-
-# create a link to my specific setup (tony.el)
-[ -h $HOME/.emacs.d/tony.el ] && do-action "rm $HOME/.emacs.d/tony.el"
-do-action "ln -s $REPOSITORY/tony.el $HOME/.emacs.d/tony.el"
 
 # add some mode not yet available with marmalade
 [ -h $HOME/.emacs.d/linum.el ] && do-action "rm $HOME/.emacs.d/linum.el"
