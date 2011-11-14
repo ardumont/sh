@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SRC=$HOME/Dropbox/repositories/git
+SRC=$HOME/repositories/perso
 REPOSITORY=$SRC/slash-my-home-slash-bin
 
 echo ". $(dirname $0)/standard-functions.sh"
@@ -51,6 +51,3 @@ do-action "ln -s $SRC/conkeror-saner-defaults/.conkerorrc $HOME/"
 destroy-link $HOME/lecture
 do-action "ln -s $HOME/Dropbox/Documents/lecture $HOME/"
 
-# link to my perso repositories
-destroy-link $HOME/repositories/perso
-do-action "ln -s $SRC $HOME/repositories/perso"
