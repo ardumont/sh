@@ -21,9 +21,8 @@ do-action "lein"
 do-action "lein plugin install swank-clojure 1.3.3"
 
 # install cake
-deploy-git-clone-or-update git://github.com/flatland/cake.git $WDIR/cake
-destroy-link $HOME/bin/cake
-do-action "ln -s $WDIR/cake/bin/cake $HOME/bin/"
+# From https://github.com/flatland/cake
+curl http://releases.clojure-cake.org/cake -o ~/bin/cake && chmod +x ~/bin/cake
 
 # install midje-cake
 deploy-git-clone-or-update git://github.com/marick/Midje.git $WDIR/Cake-midje
