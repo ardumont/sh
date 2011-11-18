@@ -19,3 +19,4 @@ cd $WDIR
 [ ! -d $WDIR/clojure-plays-checkers ] && git clone git@github.com:denlab/clojure-plays-checkers.git
 [ ! -d $WDIR/clojure-dojo-at-lunch ] && git clone git@github.com:denlab/clojure-dojo-at-lunch.git
 [ ! -d $WDIR/my-pallet-stevedore-lab ] && git clone git@github.com:ardumont/my-pallet-stevedore-lab.git
+[ ! -d $WDIR/luhnybin ] && git clone git@github.com:ardumont/luhnybin.git
