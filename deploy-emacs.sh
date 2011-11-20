@@ -29,3 +29,6 @@ do-action "ln -s $REPOSITORY/tony.el $HOME/.emacs.d/tony.el"
 do-action "wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $HOME/bin/linum.el"
 do-action "ln -s $HOME/bin/linum.el $HOME/.emacs.d/linum.el"
 
+[ -h $HOME/.emacs ] && do-action "rm $HOME/.emacs"
+do-action "ln -s $HOME/bin/.emacs $HOME/.emacs"
+

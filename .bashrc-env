@@ -5,3 +5,6 @@ export LC_MESSAGES="en_US.UTF-8"
 
 # pager setup
 export MANPAGER="/usr/bin/most -s"
+
+# emacs as the core editor for all
+export EDITOR="emacsclient -t"

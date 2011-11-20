@@ -2,5 +2,5 @@
 
 NW=$1
 
-emacs -fs $NW -e clojure-jack-in
+emacsclient -t -fs $NW -e clojure-jack-in
 

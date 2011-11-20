@@ -9,7 +9,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # emacs for the win
-alias em='emacs -nw'
+alias em='emacsclient -t -nw'
 alias emc='emacs-clojure.sh'
 
 #### Alias for changing directory
