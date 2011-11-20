@@ -12,7 +12,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(ediff starter-kit starter-kit-lisp starter-kit-bindings starter-kit-lisp slime slime-repl clojure-mode midje-mode org auto-complete flymake-shell)
+(defvar my-packages '(ediff multi-term starter-kit starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org auto-complete flymake-shell)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -23,6 +23,10 @@
 ;; Display line number in the left margin
 ;; =============================================================================
 
+;; put binding for line-mode in t
+(global-set-key (kbd "C-c C-j") 'term-line-mode)
+
+;; linum mode activated by default
 (global-linum-mode 1)
 
 ;; =============================================================================
