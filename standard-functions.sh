@@ -27,3 +27,10 @@ function deploy-git-clone-or-update() {
     DEST=$2
     [ ! -d $DEST ] && do-action "git clone $REPO $DEST" || do-action "cd $DEST && git reset --hard HEAD && git pull"
 }
+
+# deploy git repository or just update it if it already exists
+function deploy-git-clone-or-update-soft() {
+    REPO=$1
+    DEST=$2
+    [ ! -d $DEST ] && do-action "git clone $REPO $DEST" || do-action "cd $DEST && git pull"
+}
