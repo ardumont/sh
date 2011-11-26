@@ -1,6 +1,8 @@
-#!/bin/bash -xe
+#!/bin/bash
 
 NW=$1
 
-emacsclient -t -fs $NW -e clojure-jack-in
+# start emacs
+emacs -t -fs $NW -e clojure-jack-in
+
 
