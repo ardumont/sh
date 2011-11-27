@@ -21,3 +21,4 @@ deploy-git-clone-or-update-soft git@github.com:ardumont/my-pallet-stevedore-lab.
 deploy-git-clone-or-update-soft git@github.com:ardumont/luhnybin.git $WDIR/luhnybin
 deploy-git-clone-or-update-soft git@github.com:denlab/clojure-plays-checkers.git $WDIR/clojure-plays-checkers
 deploy-git-clone-or-update-soft git@github.com:denlab/clojure-dojo-at-lunch.git $WDIR/clojure-dojo-at-lunch
+deploy-git-clone-or-update-soft git@github.com:ardumont/luhn-challenge.git $WDIR/luhn-challenge
