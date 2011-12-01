@@ -44,4 +44,4 @@ yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan
     inotify-tools ruby curl yajl-tools openssh-server sysvbanner most \
     graphviz audacious audacious-plugins
 
-[ $VERSION = "11.10" ] && yes | sudo aptitude install nautilus-dropbox gtalk
+[ $VERSION = "11.10" ] && yes | sudo aptitude install nautilus-dropbox gtalk meld
