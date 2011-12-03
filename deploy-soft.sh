@@ -39,9 +39,9 @@ sudo apt-get install aptitude
 # sysvbanner -> script to help delimit information in cli
 # most -> better pager than less (deals with color in man page for example)
 # graphviz -> graph visualization software
-yes | sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
+sudo aptitude install git gitk chromium-browser localepurge tree deborphan \
     language-pack-en language-pack-fr gparted stalonetray  sweethome3d \
     inotify-tools ruby curl yajl-tools openssh-server sysvbanner most \
     graphviz audacious audacious-plugins
 
-[ $VERSION = "11.10" ] && yes | sudo aptitude install nautilus-dropbox gtalk meld
+[ $VERSION = "11.10" ] && sudo aptitude install nautilus-dropbox gtalk meld
