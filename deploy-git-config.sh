@@ -9,7 +9,7 @@ git config --global core.editor "emacsclient -t -nw"
 git config --global color.ui true
 
 # tool to help the merging
-git config --global merge.tool ediff
+git config --global merge.tool meld
 
 # aliases
 git config --global alias.co checkout
