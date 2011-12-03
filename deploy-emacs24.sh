@@ -17,7 +17,7 @@ do-action "sudo aptitude update"
 
 # Install git and emacs
 do-action "sudo aptitude remove emacs emacs23"
-do-action "sudo aptitude install git emacs-snapshot-gtk"
+do-action "sudo aptitude install git emacs-snapshot-gtk emacs-snapshot"
 
 # Delete the old link
 [ -d $HOME/.emacs.d ] && do-action "rm -rf $HOME/.emacs.d/*" || do-action "mkdir $HOME/.emacs.d"

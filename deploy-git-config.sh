@@ -4,9 +4,15 @@ git config --global user.name "Antoine R. Dumont"
 git config --global user.email "antoine.romain.dumont@gmail.com"
 
 # emacs
-git config --global core.editor "emacsclient -t -nw"
-# color everywhere
+git config --global core.editor "emacs -nw"
+
+# color everywhere (one flag)
 git config --global color.ui true
+# or in separate
+#git config --global color.branch auto
+#git config --global color.diff auto
+#git config --global color.interactive auto
+#git config --global color.status auto
 
 # tool to help the merging
 git config --global merge.tool meld
