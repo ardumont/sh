@@ -12,7 +12,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(ediff multi-term starter-kit starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org auto-complete flymake-shell)
+(defvar my-packages '(ediff multi-term starter-kit starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org auto-complete flymake-shell graphviz-dot-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
