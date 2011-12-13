@@ -19,7 +19,7 @@ do-action "lein"
 
 # install the plugin to make a server swank
 do-action "lein plugin install swank-clojure 1.3.3"
-do-action "lein plugin install lein-midje 1.0.3"
+do-action "lein plugin install lein-midje 1.0.7"
 
 # install cake
 # From https://github.com/flatland/cake
