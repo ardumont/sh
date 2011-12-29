@@ -7,6 +7,7 @@ alias l='ls -CF'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias rgrep='rgrep --color=auto'
 
 # emacs for the win
 alias em='emacs -nw'
