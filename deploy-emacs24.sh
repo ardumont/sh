@@ -3,25 +3,22 @@
 WDIR=$(dirname $(readlink -f $0))
 source $WDIR/check-ubuntu-version.sh
 
-# the directory where to store or find things
-REPOSITORY=$HOME/bin
-
-#yes | sudo aptitude install python-software-properties
-#sudo add-apt-repository ppa:cassou/emacs
-#sudo tee -a /etc/apt/sources.list <<EOF
+yes | sudo aptitude install python-software-properties
+sudo add-apt-repository ppa:cassou/emacs
+sudo tee -a /etc/apt/sources.list <<EOF
 
 # For Emacs 24
-#deb http://ppa.launchpad.net/cassou/emacs/ubuntu $UBUNTU_VERSION main
-#deb-src http://ppa.launchpad.net/cassou/emacs/ubuntu $UBUNTU_VERSION main
-#EOF
+deb http://ppa.launchpad.net/cassou/emacs/ubuntu $UBUNTU_VERSION main
+deb-src http://ppa.launchpad.net/cassou/emacs/ubuntu $UBUNTU_VERSION main
+EOF
 
 # Update since the sources have been modified
-#sudo aptitude update
+sudo aptitude update
 
 ##################### Install emacs
 
 # Install git and emacs
-#yes | sudo aptitude install emacs-snapshot
+yes | sudo aptitude install emacs-snapshot
 
 emacs --version
 
@@ -32,8 +29,6 @@ EM_DIR=$HOME/.emacs.d
 # Delete the old link
 [ -d $EM_DIR ] && rm -rf $EM_DIR/*
 mkdir -p $EM_DIR
-
-cd $EM_DIR
 
 tee "$EM_DIR"/init.el <<EOF
 ;; =============================================================================
@@ -131,6 +126,5 @@ tee "$EM_DIR"/init.el <<EOF
 
 EOF
 
-#Create the linum.el file
-
+#Install linum.el file
 wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $EM_DIR/linum.el
