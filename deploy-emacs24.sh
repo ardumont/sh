@@ -131,8 +131,6 @@ tee "$EM_DIR"/init.el <<EOF
 
 EOF
 
-# add some mode not yet available with marmalade
-[ -h $HOME/.emacs.d/linum.el ] && rm $HOME/.emacs.d/linum.el
+#Create the linum.el file
 
-wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $HOME/bin/linum.el
-ln -s $HOME/bin/linum.el $HOME/.emacs.d/linum.el
+wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $EM_DIR/linum.el
