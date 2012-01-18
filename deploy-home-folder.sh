@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SRC=$HOME/repositories/perso
-REPOSITORY=$SRC/slash-my-home-slash-bin/
+REPOSITORY=$SRC/sh/
 
 echo ". $(dirname $0)/standard-functions.sh"
 . $(dirname $0)/standard-functions.sh

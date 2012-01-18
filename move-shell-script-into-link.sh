@@ -6,7 +6,7 @@ FILTER=.*
 
 # Directory structure
 DEST_DIR=~
-SRC_DIR=/home/tony/Dropbox/repositories/git/slash-my-home-slash-bin
+SRC_DIR=/home/tony/Dropbox/repositories/git/sh
 
 for i in $(ls $SRC_DIR $FILTER); 
 do
