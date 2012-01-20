@@ -45,12 +45,19 @@ tee "$EM_DIR"/init.el <<EOF
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(ediff multi-term starter-kit starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org flymake-shell graphviz-dot-mode)
+(defvar my-packages '(starter-kit ediff multi-term starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org flymake-shell graphviz-dot-mode starter-kit-eshell starter-kit-js starter-kit-ruby)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; =============================================================================
+;; Paredit mode in the sline-repl
+;; =============================================================================
+
+; add color into the repl via clojure-jack-in
+(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
 ;; =============================================================================
 ;; Display line number in the left margin
@@ -81,12 +88,6 @@ tee "$EM_DIR"/init.el <<EOF
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
-
-; add color into the repl via clojure-jack-in
-(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
-
-;; add paredit-mode into slime repl
-(add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
 
 ;; =============================================================================
 ;; Org config
