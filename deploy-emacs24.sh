@@ -85,6 +85,9 @@ tee "$EM_DIR"/init.el <<EOF
 ; add color into the repl via clojure-jack-in
 (add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
+;; add paredit-mode into slime repl
+(add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
+
 ;; =============================================================================
 ;; Org config
 ;; =============================================================================
