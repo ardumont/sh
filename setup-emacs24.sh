@@ -9,6 +9,13 @@ EM_DIR=$HOME/.emacs.d
 #mkdir -p $EM_DIR
 
 tee "$EM_DIR"/init.el <<EOF
+EM_DIR=$HOME/.emacs.d
+
+# Delete the old link
+[ -d $EM_DIR ] && rm -rf $EM_DIR/*
+mkdir -p $EM_DIR
+
+tee "$EM_DIR"/init.el <<EOF
 ;; =============================================================================
 ;; Install needed packages if not present
 ;; =============================================================================
@@ -23,12 +30,19 @@ tee "$EM_DIR"/init.el <<EOF
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(ediff multi-term starter-kit starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org flymake-shell graphviz-dot-mode)
+(defvar my-packages '(starter-kit ediff multi-term starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org flymake-shell graphviz-dot-mode starter-kit-eshell starter-kit-js starter-kit-ruby)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; =============================================================================
+;; Paredit mode in the sline-repl
+;; =============================================================================
+
+; add color into the repl via clojure-jack-in
+(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
 ;; =============================================================================
 ;; Display line number in the left margin
@@ -59,9 +73,6 @@ tee "$EM_DIR"/init.el <<EOF
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
-
-; add color into the repl via clojure-jack-in
-(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
 ;; =============================================================================
 ;; Org config
