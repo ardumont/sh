@@ -9,7 +9,7 @@ WDIR=$(dirname $(readlink -f $0))
 LIST_USER_FILE=$1
 
 # Fallback list
-[ -z $LIST_USER_FILE ] && LIST_USER_FILE=4clojure-people-i-follow.list
+[ -z $LIST_USER_FILE ] && LIST_USER_FILE=~/bin/4clojure-people-i-follow.list
 
 # Check that the user list file exist
 [ ! -f $LIST_USER_FILE ] && echo "#### $LIST_USER_FILE does not exist. Please, input a correct file with one user per line." && exit 1
