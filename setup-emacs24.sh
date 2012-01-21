@@ -38,13 +38,6 @@ tee "$EM_DIR"/init.el <<EOF
     (package-install p)))
 
 ;; =============================================================================
-;; Paredit mode in the sline-repl
-;; =============================================================================
-
-; add color into the repl via clojure-jack-in
-(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
-
-;; =============================================================================
 ;; Display line number in the left margin
 ;; =============================================================================
 
@@ -73,6 +66,15 @@ tee "$EM_DIR"/init.el <<EOF
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
+
+; add color into the repl via clojure-jack-in
+(add-hook 'slime-repl-mode-hook
+         (defun clojure-mode-slime-font-lock ()
+           (let (font-lock-mode)
+             (clojure-mode-font-lock-setup))))
+
+;; paredit mode in the repl
+(add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
 
 ;; =============================================================================
 ;; Org config
