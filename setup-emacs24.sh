@@ -6,10 +6,7 @@ EM_DIR=$HOME/.emacs.d
 
 # Delete the old link
 #[ -d $EM_DIR ] && rm -rf $EM_DIR/*
-#mkdir -p $EM_DIR
-
-tee "$EM_DIR"/init.el <<EOF
-EM_DIR=$HOME/.emacs.d
+mkdir -p $EM_DIR
 
 # Delete the old link
 [ -d $EM_DIR ] && rm -rf $EM_DIR/*

@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
-NW=$1
+OPTS=$@
 
 # start emacs
-emacs -fs $NW -e 'clojure-jack-in' -e 'split-window-vertically' -e 'other-window' -e 'shell'
+emacs $OPTS -e 'clojure-jack-in' -e 'split-window-vertically' -e 'other-window' -e 'shell'
 
