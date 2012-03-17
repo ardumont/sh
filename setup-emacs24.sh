@@ -5,10 +5,6 @@
 EM_DIR=$HOME/.emacs.d
 
 # Delete the old link
-#[ -d $EM_DIR ] && rm -rf $EM_DIR/*
-mkdir -p $EM_DIR
-
-# Delete the old link
 [ -d $EM_DIR ] && rm -rf $EM_DIR/*
 mkdir -p $EM_DIR
 
