@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-# ubuntu
-if [ -f /etc/lsb-release ]; then
+if [ -f /etc/lsb-release ]; then #ubuntu
     # First install aptitude
     sudo apt-get install aptitude
 
@@ -12,10 +10,8 @@ if [ -f /etc/lsb-release ]; then
     graphviz audacious audacious-plugins gnuplot vim
 
     [ $DISTRIB_RELEASE = "11.10" ] && sudo aptitude install nautilus-dropbox gtalk meld dstat htop
-fi
 
-# debian
-if [ -f /etc/debian_version ]; then
+elif [ -f /etc/debian_version ]; then #debian
     su -c "apt-get install aptitude"
     su -c "aptitude install localpurge tree deborphan curl inotify-tools ruby curl yajl-tools sysvbanner most gtalk meld dstat htop"
 fi
