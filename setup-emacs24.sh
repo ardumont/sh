@@ -22,8 +22,9 @@ tee "$EM_DIR"/init.el <<EOF
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; starter-kit-eshell starter-kit-js starter-kit-ruby)
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit ediff multi-term starter-kit-lisp starter-kit-bindings slime slime-repl clojure-mode midje-mode org flymake-shell graphviz-dot-mode starter-kit-eshell starter-kit-js starter-kit-ruby)
+(defvar my-packages '(starter-kit starter-kit-bindings clojure-mode midje-mode multi-term switch-window slime ediff org flymake-shell graphviz-dot-mode)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
