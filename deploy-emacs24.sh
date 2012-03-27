@@ -4,7 +4,7 @@ WDIR=$(dirname $(readlink -f $0))
 #source /etc/lsb-release
 DISTRIB_VERSION=11.10
 
-yes | sudo aptitude install python-software-properties
+sudo  aptitude install -y python-software-properties
 sudo add-apt-repository ppa:cassou/emacs
 sudo tee -a /etc/apt/sources.list <<EOF
 
@@ -19,7 +19,7 @@ sudo aptitude update
 ##################### Install emacs
 
 # Install git and emacs
-yes | sudo aptitude install emacs-snapshot
+sudo aptitude install -y emacs-snapshot
 
 emacs --version
 
