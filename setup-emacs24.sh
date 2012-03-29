@@ -60,6 +60,7 @@ tee "$EM_DIR"/init.el <<EOF
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode +1)))
 
 ; add color into the repl via clojure-jack-in
 (add-hook 'slime-repl-mode-hook
