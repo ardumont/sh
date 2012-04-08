@@ -1,16 +1,15 @@
 #!/bin/bash -xe
 
 WDIR=$(dirname $(readlink -f $0))
-#source /etc/lsb-release
-DISTRIB_VERSION=11.10
+source /etc/lsb-release
 
 sudo  aptitude install -y python-software-properties
-sudo add-apt-repository ppa:cassou/emacs
+
 sudo tee -a /etc/apt/sources.list <<EOF
 
 # For Emacs 24
-deb http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_VERSION main
-deb-src http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_VERSION main
+deb http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_RELEASE main
+deb-src http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_RELEASE main
 EOF
 
 # Update since the sources have been modified
