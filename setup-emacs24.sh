@@ -4,7 +4,7 @@
 
 EM_DIR=$HOME/.emacs.d
 
-# Delete the old link
+# Delete the old directory
 [ -d $EM_DIR ] && rm -rf $EM_DIR/*
 mkdir -p $EM_DIR
 
@@ -118,5 +118,5 @@ tee "$EM_DIR"/init.el <<EOF
 
 EOF
 
-#Install linum.el file
+# Install linum.el file (have the lines numbered on the side)
 wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $EM_DIR/linum.el

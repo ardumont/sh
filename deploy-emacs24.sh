@@ -3,8 +3,9 @@
 WDIR=$(dirname $(readlink -f $0))
 source /etc/lsb-release
 
-sudo  aptitude install -y python-software-properties
+##################### Prepare
 
+# Update the repositories with the one for emacs 24
 sudo tee -a /etc/apt/sources.list <<EOF
 
 # For Emacs 24
@@ -17,7 +18,7 @@ sudo aptitude update
 
 ##################### Install emacs
 
-# Install git and emacs
+# Install emacs
 sudo aptitude install -y emacs-snapshot
 
 emacs --version
