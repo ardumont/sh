@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash -x
 
 WDIR=$(dirname $(readlink -f $0))
 source /etc/lsb-release
