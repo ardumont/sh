@@ -17,7 +17,7 @@ tee "$EM_DIR"/init.el <<EOF
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit starter-kit-bindings clojure-mode midje-mode multi-term switch-window slime slime-repl ediff org flymake-shell graphviz-dot-mode auto-complete clj-doc)
+(defvar my-packages '(starter-kit starter-kit-bindings clojure-mode midje-mode multi-term switch-window slime slime-repl ediff org flymake-shell graphviz-dot-mode auto-complete cljdoc)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
