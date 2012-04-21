@@ -27,6 +27,8 @@ tee "$EM_DIR"/init.el <<EOF
 (global-set-key (kbd "C-c C-j") 'term-line-mode)
 
 (global-linum-mode 1)
+(add-hook 'org-mode-hook
+          (lambda () (setq linum-mode nil)))
 
 (setq-default fill-column 120)
 
