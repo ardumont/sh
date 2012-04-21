@@ -74,7 +74,7 @@ tee "$EM_DIR"/init.el <<EOF
                       ("linux")))
 
 (setq org-todo-keywords
-   '((sequence "TODO" "FAIL" "PENDING" "|" "DONE" "DELEGATED" "CANCELLED")))
+   '((sequence "TODO" "PENDING" "|"  "FAIL" "DONE" "DELEGATED" "CANCELLED")))
 
 EOF
 
