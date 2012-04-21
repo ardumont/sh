@@ -71,6 +71,9 @@ tee "$EM_DIR"/init.el <<EOF
                       ("conkeror")
                       ("linux")))
 
+(setq org-todo-keywords
+   '((sequence "TODO" "FAIL" "PENDING" "|" "DONE" "DELEGATED" "CANCELLED")))
+
 EOF
 
 # Install linum.el file (have the lines numbered on the side)
