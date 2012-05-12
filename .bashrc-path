@@ -4,6 +4,9 @@
 # Personal shell scripts
 [ -d $HOME/bin ] && export PATH=$HOME/bin:$PATH
 
+# Team shell scripts
+[ -d $HOME/team/bin ] && export PATH=$HOME/team/bin:$PATH
+
 # Work shell scripts
 [ -d $HOME/work/bin ] && export PATH=$HOME/work/bin:$PATH
 
