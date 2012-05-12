@@ -49,5 +49,5 @@ destroy-link $HOME/lecture
 do-action "ln -s $HOME/Dropbox/Documents/lecture $HOME/"
 
 # create the usefull arborescence
-mkdir -p ~/team/bin
-mkdir -p ~/work/{bin,org}
+mkdir -p ~/team/
+mkdir -p ~/work/
