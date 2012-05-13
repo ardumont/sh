@@ -84,6 +84,8 @@ tee "$EM_DIR"/init.el <<EOF
 (global-set-key (kbd "C-c l") 'fold-dwim-hide-all)
 (global-set-key (kbd "C-c ;") 'fold-dwim-show-all)
 
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 EOF
 
 # Install linum.el file (have the lines numbered on the side)
