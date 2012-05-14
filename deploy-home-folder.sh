@@ -1,14 +1,15 @@
 #!/bin/bash
 
 SRC=$HOME/repositories/perso
-REPOSITORY=$SRC/sh/
+REPO_BIN=$SRC/sh/
+REPO_TEAM=$SRC/common-sh/
 
 echo ". $(dirname $0)/standard-functions.sh"
 . $(dirname $0)/standard-functions.sh
 
 # $HOME/bin
 destroy-link $HOME/bin
-do-action "ln -s $REPOSITORY $HOME/bin"
+do-action "ln -s $REPO_BIN $HOME/bin"
 
 # $HOME/org
 destroy-link $HOME/org
@@ -28,13 +29,14 @@ destroy-link $HOME/.bash_history
 destroy-link $HOME/.bashrc-prompt
 destroy-link $HOME/.bashrc-work
 
-do-action "ln -s $REPOSITORY/.profile $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc-env $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc-path $HOME/"
-do-action "ln -s $REPOSITORY/.bash_aliases $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc-prompt $HOME/"
-do-action "ln -s $REPOSITORY/.bashrc-work $HOME/"
+do-action "ln -s $REPO_BIN/.profile $HOME/"
+do-action "ln -s $REPO_BIN/.bashrc $HOME/"
+do-action "ln -s $REPO_BIN/.bashrc-env $HOME/"
+do-action "ln -s $REPO_BIN/.bashrc-path $HOME/"
+do-action "ln -s $REPO_BIN/.bash_aliases $HOME/"
+do-action "ln -s $REPO_BIN/.bashrc-prompt $HOME/"
+do-action "ln -s $REPO_BIN/.bashrc-work $HOME/"
+do-action "ln -s $REPO_TEAM ~/team/bin"
 
 # git-bash-completion
 destroy-link $HOME/.git-completion.bash
@@ -48,3 +50,6 @@ do-action "ln -s $SRC/conkeror-saner-defaults/.conkerorrc $HOME/"
 destroy-link $HOME/lecture
 do-action "ln -s $HOME/Dropbox/Documents/lecture $HOME/"
 
+# create the usefull arborescence
+mkdir -p ~/team/
+mkdir -p ~/work/
