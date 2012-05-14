@@ -86,6 +86,19 @@ tee "$EM_DIR"/init.el <<EOF
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+(eval-after-load 'find-file-in-project
+  '(progn
+     ;; add 'entreprise' files patterns (cough!)
+     (setq ffip-patterns
+           (append ffip-patterns
+                   '("*.css" "*.csv" "*.htm" "*.java" "*.js" "*.json"
+                     "*.jsp" "*.php" "*.properties" "*.sql" "*.xml")))
+     ;; increase the max number of files, otherwise some files will be
+     ;; 'unfindable' on big projects
+     (setq ffip-limit 4096)))
+
+
 EOF
 
 # Install linum.el file (have the lines numbered on the side)
