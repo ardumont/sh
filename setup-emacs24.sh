@@ -17,7 +17,7 @@ tee "$EM_DIR"/init.el <<EOF
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-(defvar my-packages '(starter-kit starter-kit-bindings clojure-mode midje-mode multi-term switch-window slime slime-repl ediff org flymake-shell graphviz-dot-mode auto-complete clj-doc)
+(defvar my-packages '(starter-kit starter-kit-bindings starter-kit-lisp starter-kit-js starter-kit-ruby starter-kit-eshell clojure-mode midje-mode multi-term switch-window slime slime-repl ediff org flymake-shell graphviz-dot-mode auto-complete cljdoc)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
@@ -27,6 +27,8 @@ tee "$EM_DIR"/init.el <<EOF
 (global-set-key (kbd "C-c C-j") 'term-line-mode)
 
 (global-linum-mode 1)
+(add-hook 'org-mode-hook
+          (lambda () (setq linum-mode nil)))
 
 (setq-default fill-column 120)
 
@@ -47,6 +49,9 @@ tee "$EM_DIR"/init.el <<EOF
              (clojure-mode-font-lock-setup))))
 
 (add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
+
++(set-language-environment "UTF-8") 
++(setq slime-net-coding-system 'utf-8-unix) 
 
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 
@@ -70,6 +75,9 @@ tee "$EM_DIR"/init.el <<EOF
                       ("firefox")
                       ("conkeror")
                       ("linux")))
+
+(setq org-todo-keywords
+   '((sequence "TODO" "IN-PROGRESS" "PENDING" "|"  "DONE" "FAIL" "DELEGATED" "CANCELLED")))
 
 EOF
 
