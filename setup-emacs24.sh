@@ -26,18 +26,22 @@ tee "$EM_DIR"/init.el <<EOF
 
 (global-set-key (kbd "C-c C-j") 'term-line-mode)
 
-(global-linum-mode 1)
-(add-hook 'org-mode-hook
-          (lambda () (setq linum-mode nil)))
-
 (setq-default fill-column 120)
 
-'(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4.20110207/dict")
-'(require 'auto-complete-config)
-'(ac-config-default)
+;; ===================================================================
+;; auto complete
+;; ===================================================================
+
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict")
+(require 'auto-complete-config)
+(ac-config-default)
+
+;; ===================================================================
+;; Some clojure/slime setup
+;; ===================================================================
 
 (require 'clojure-mode)
-(add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\.clj$" . clojure-mode))
 (require 'midje-mode)
 (add-hook 'clojure-mode-hook 'midje-mode)
 (add-hook 'clojure-mode-hook (lambda () (paredit-mode +1)))
@@ -52,6 +56,10 @@ tee "$EM_DIR"/init.el <<EOF
 
 (set-language-environment "UTF-8") 
 (setq slime-net-coding-system 'utf-8-unix) 
+
+;; ===================================================================
+;; Some org-mode setup
+;; ===================================================================
 
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 
@@ -79,13 +87,25 @@ tee "$EM_DIR"/init.el <<EOF
 (setq org-todo-keywords
    '((sequence "TODO" "IN-PROGRESS" "PENDING" "|"  "DONE" "FAIL" "DELEGATED" "CANCELLED")))
 
+;; ===================================================================
+;; To show/hide block of code
+;; ===================================================================
+
 (require 'fold-dwim)
 (global-set-key (kbd "C-c j") 'fold-dwim-toggle)
 (global-set-key (kbd "C-c l") 'fold-dwim-hide-all)
 (global-set-key (kbd "C-c ;") 'fold-dwim-show-all)
 
+;; ===================================================================
+;; C-x C-l to lower case ; C-x C-u to upper case
+;; ===================================================================
+
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+
+;; ===================================================================
+;; Find file in project
+;; ===================================================================
 
 (eval-after-load 'find-file-in-project
   '(progn
@@ -98,8 +118,21 @@ tee "$EM_DIR"/init.el <<EOF
      ;; 'unfindable' on big projects
      (setq ffip-limit 4096)))
 
+;; ===================================================================
+;; To dynamically extend emacs via macros
+;; ===================================================================
+
+(defun save-macro (name)                  
+  "save a macro. Take a name as argument and save the last
+     defined macro under this name at the end of your .emacs"
+     (interactive "SName of the macro :")  ; ask for the name of the macro    
+     (kmacro-name-last-macro name)         ; use this name for the macro    
+     (find-file user-init-file)          ; open ~/.emacs or other user init file 
+     (goto-char (point-max))               ; go to the end of the .emacs
+     (newline)                             ; insert a newline
+     (insert-kbd-macro name)               ; copy the macro 
+     (newline)                             ; insert a newline
+     (switch-to-buffer nil))               ; return to the initial buffer
 
 EOF
 
-# Install linum.el file (have the lines numbered on the side)
-wget http://web.student.tuwien.ac.at/~e0225855/linum/linum.el --output-document $EM_DIR/linum.el
