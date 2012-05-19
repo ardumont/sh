@@ -83,25 +83,19 @@ tee "$EM_DIR"/init.el <<EOF
 (setq org-todo-keywords
    '((sequence "TODO" "IN-PROGRESS" "PENDING" "|"  "DONE" "FAIL" "DELEGATED" "CANCELLED")))
 
-;; ===================================================================
 ;; To show/hide block of code
-;; ===================================================================
 
 (require 'fold-dwim)
 (global-set-key (kbd "C-c j") 'fold-dwim-toggle)
 (global-set-key (kbd "C-c l") 'fold-dwim-hide-all)
 (global-set-key (kbd "C-c ;") 'fold-dwim-show-all)
 
-;; ===================================================================
 ;; C-x C-l to lower case ; C-x C-u to upper case
-;; ===================================================================
 
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; ===================================================================
 ;; Find file in project
-;; ===================================================================
 
 (eval-after-load 'find-file-in-project
   '(progn
