@@ -126,9 +126,10 @@ tee $HOME/.emacs <<EOF
 
 (defun switch-to-buffer-or-nothing (process-name buffer-name)
   "Given a process name, switch to the corresponding buffer-name if the process is running or does nothing."
-  (let ((proc (get-buffer-process process-name)))
-    (if (and proc (eq (process-status proc) 'run) (not (eq (current-buffer) buffer-name)))
-      (switch-to-buffer-other-window buffer-name))))
+  (unless (string= (buffer-name) buffer-name)
+    (let ((proc (get-buffer-process process-name)))
+      (if (and proc (eq (process-status proc) 'run))       
+          (switch-to-buffer-other-window buffer-name)))))
 
 ;; examples
 ;; (switch-to-buffer-or-nothing "*swank*" "*slime-repl nil*")    ;; clojure-jack-in
