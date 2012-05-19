@@ -53,11 +53,9 @@ tee "$EM_DIR"/init.el <<EOF
 (add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
 
 (set-language-environment "UTF-8") 
-(setq slime-net-coding-system 'utf-8-unix) 
+(setq slime-net-coding-system 'utf-8-unix)
 
-;; ===================================================================
 ;; Some org-mode setup
-;; ===================================================================
 
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 
