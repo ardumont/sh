@@ -4,10 +4,6 @@
 
 EM_DIR=$HOME/.emacs.d
 
-# Delete the old directory
-#[ -d $EM_DIR ] && rm -rf $EM_DIR/*
-mkdir -p $EM_DIR
-
 tee "$EM_DIR"/init.el <<EOF
 (require 'package)
 (add-to-list 'package-archives
