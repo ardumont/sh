@@ -20,25 +20,27 @@ tee "$EM_DIR"/init.el <<EOF
   (when (not (package-installed-p p))
     (package-install p)))
 
+;; some multi term tweaks
+(require 'multi-term)
 (global-set-key (kbd "C-c C-j") 'term-line-mode)
+
+;; some text tweaks
 
 (setq-default fill-column 120)
 
-;; ===================================================================
 ;; auto complete
-;; ===================================================================
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict")
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; ===================================================================
 ;; Some clojure/slime setup
-;; ===================================================================
 
 (require 'clojure-mode)
-(add-to-list 'auto-mode-alist '("\.clj$" . clojure-mode))
 (require 'midje-mode)
+
+(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
+
 (add-hook 'clojure-mode-hook 'midje-mode)
 (add-hook 'clojure-mode-hook (lambda () (paredit-mode +1)))
 
