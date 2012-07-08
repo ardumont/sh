@@ -1,7 +1,7 @@
 #/bin/bash
 
-# gnome-shell -> gnome 3
-# gnome-session-fallback -> session gnome fallback from ubuntu 11.04
-# gnome-tweak-tool -> menu to tweak gnome
+WDIR=$(dirname $0)
 
-sudo aptitude install gnome-shell gnome-session-fallback gnome-tweak-tool
+# install
+
+$WDIR/install.sh gnome-shell gnome-session-fallback gnome-tweak-tool
