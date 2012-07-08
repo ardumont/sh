@@ -8,4 +8,4 @@ $WDIR/install.sh tmux
 
 # setup
 
-#echo 'set-option -g prefix C-q' > ~/.tmux.conf
+echo 'set-option -g prefix C-q' > ~/.tmux.conf
