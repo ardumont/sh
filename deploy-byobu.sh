@@ -1,12 +1,12 @@
 #!/bin/bash
 
-CMD="aptitude install byobu landscape-common update-motd"
+WDIR=$(dirname $0)
 
-# ubuntu
-if [ -f /etc/lsb-release ]; then #ubuntu
-    sudo $CMD
-elif [ -f /etc/debian_version ]; then # debian
-    su -c "$CMD"
-fi
+# install
+
+$WDIR/install.sh byobu landscape-common update-motd
+
+# setup
 
 echo 'escape ``' > ~/.screenrc
+
