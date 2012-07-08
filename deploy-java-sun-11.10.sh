@@ -3,7 +3,7 @@
 WDIR=$(dirname $0)
 
 # Add the repository
-grep "ferramroberto" /etc/apt/sources.list || sudo add-apt-repository ppa:ferramroberto/java
+grep "ferramroberto" /etc/apt/sources.list || $WDIR/add-apt-repository.sh ppa:ferramroberto/java
 
 # Update the repository
 sudo aptitude update

@@ -1,7 +1,9 @@
 #!/bin/bash
 
+WDIR=$(dirname $0)
+
 # Add the repository
-grep "webupd8team" /etc/apt/sources.list || sudo add-apt-repository ppa:webupd8team/java
+grep "webupd8team" /etc/apt/sources.list || $WDIR/add-apt-repository.sh ppa:webupd8team/java
 
 # Update the repository
 sudo aptitude update
