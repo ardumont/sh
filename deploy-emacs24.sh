@@ -19,7 +19,10 @@ sudo aptitude update
 ##################### Install emacs
 
 # Install emacs
-sudo aptitude install -y emacs-snapshot
+
+$WDIR/install.sh emacs-snapshot
+
+# check
 
 emacs --version
 
