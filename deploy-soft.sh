@@ -1,6 +1,8 @@
 #!/bin/bash
 
 if [ -f "/etc/lsb-release" ]; then #ubuntu
+    source "/etc/lsb-release"
+
     # First install aptitude
     sudo apt-get install -y aptitude
 
@@ -10,13 +12,13 @@ if [ -f "/etc/lsb-release" ]; then #ubuntu
         graphviz audacious audacious-plugins gnuplot vim latex latex-beamer \
         texlive-latex-extra texlive-fonts-recommended ttf-marvosym gnome-tweak-tool fonts-cantarell
 
-    [ $DISTRIB_RELEASE -eq "11.10" ] && \
+    [ "$DISTRIB_RELEASE" = "11.10" ] && \
         sudo aptitude install -y nautilus-dropbox gtalk meld dstat htop
 
-    [ $DISTRIB_RELEASE -eq "12.04" ] && \
+    [ "$DISTRIB_RELEASE" = "12.04" ] && \
         sudo aptitude install -y nautilus-dropbox gtalk meld dstat htop
 
-    [ $DISTRIB_RELEASE -eq "13" ] && \
+    [ "$DISTRIB_RELEASE" = "13" ] && \
         sudo aptitude install -y nautilus-dropbox gtalk meld dstat htop
 
 elif [ -f "/etc/debian_version" ]; then #debian
