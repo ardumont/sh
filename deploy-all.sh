@@ -37,4 +37,4 @@ $WDIR/deploy-clojure.sh
 [ $WITH_JAVA = "y" ] && [ -f $WDIR/deploy-java-sun-$VERSION.sh ] && $WDIR/deploy-java-sun-$VERSION.sh
 
 # Deploy gnome on 11.10
-[ $VERSION = "11.10" ] && [ -f $WDIR/deploy-gnome-$VERSION.sh ] && $WDIR/deploy-gnome-$VERSION.sh
+[ $VERSION \> "11.10" ] && [ -f $WDIR/deploy-gnome-alternative.sh ] && $WDIR/deploy-gnome-alternative.sh
