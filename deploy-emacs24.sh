@@ -1,17 +1,10 @@
 #!/bin/bash -x
 
 WDIR=$(dirname $(readlink -f $0))
-source /etc/lsb-release
 
 ##################### Prepare
 
-# Update the repositories with the one for emacs 24
-sudo tee -a /etc/apt/sources.list <<EOF
-
-# For Emacs 24
-deb http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_RELEASE main
-deb-src http://ppa.launchpad.net/cassou/emacs/ubuntu $DISTRIB_RELEASE main
-EOF
+sudo add-apt-repository ppa:cassou/emacs
 
 # Update since the sources have been modified
 sudo aptitude update
@@ -20,7 +13,7 @@ sudo aptitude update
 
 # Install emacs
 
-$WDIR/install.sh emacs-snapshot
+$WDIR/install.sh "emacs24 emacs24-el"
 
 # check
 
