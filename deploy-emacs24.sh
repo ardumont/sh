@@ -13,7 +13,7 @@ sudo aptitude update
 
 # Install emacs
 
-$WDIR/install.sh "emacs24 emacs24-el"
+$WDIR/install.sh "emacs-snapshot-el emacs-snapshot-gtk emacs-snapshot"
 
 # check
 

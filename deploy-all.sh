@@ -19,7 +19,7 @@ $WDIR/deploy-home-folder.sh
 $WDIR/deploy-git-config.sh
 
 # Deploy emacs
-$WDIR/deploy-emacs.sh
+$WDIR/deploy-emacs24.sh
 
 # Deploy stumpwm
 $WDIR/deploy-stumpwm.sh
@@ -28,7 +28,7 @@ $WDIR/deploy-stumpwm.sh
 $WDIR/deploy-conkeror.sh
 
 # Deploy byobu
-$WDIR/deploy-byobu.sh
+#$WDIR/deploy-byobu.sh
 
 # Deploy clojure
 $WDIR/deploy-clojure.sh
