@@ -27,22 +27,33 @@ do-action "ln -s $REPO_DOTFILES/.stumpwmrc $HOME/"
 
 # $HOME/.bash*
 destroy-link $HOME/.profile
-destroy-link $HOME/.bashrc
-destroy-link $HOME/.bashrc-path
-destroy-link $HOME/.bashrc-env
-destroy-link $HOME/.bash_aliases
-destroy-link $HOME/.bash_history
-destroy-link $HOME/.bashrc-prompt
-destroy-link $HOME/.bashrc-work
-
 do-action "ln -s $REPO_DOTFILES/.profile $HOME/"
+
+destroy-link $HOME/.bashrc
 do-action "ln -s $REPO_DOTFILES/.bashrc $HOME/"
+
+destroy-link $HOME/.bashrc-env
 do-action "ln -s $REPO_DOTFILES/.bashrc-env $HOME/"
+
+destroy-link $HOME/.bashrc-path
 do-action "ln -s $REPO_DOTFILES/.bashrc-path $HOME/"
+
+destroy-link $HOME/.bash_aliases
 do-action "ln -s $REPO_DOTFILES/.bash_aliases $HOME/"
+
+destroy-link $HOME/.bashrc-prompt
 do-action "ln -s $REPO_DOTFILES/.bashrc-prompt $HOME/"
 
-[ -f $REPO_WORK/.bashrc-work ] && do-action "ln -s $REPO_WORK/.bashrc-work $HOME/"
+destroy-link $HOME/.tmux.conf
+do-action "ln -s $REPO_DOTFILES/.tmux.conf $HOME/"
+
+destroy-link $HOME/.ratpoisonrc
+do-action "ln -s $REPO_DOTFILES/.ratpoisonrc $HOME/"
+
+if [ -f $REPO_WORK/.bashrc-work ]; then
+    destroy-link $HOME/.bashrc-work
+    do-action "ln -s $REPO_WORK/.bashrc-work $HOME/"
+fi
 
 do-action "ln -s $REPO_TEAM ~/team/bin"
 
