@@ -1,7 +1,9 @@
 #!/bin/bash
 
+WDIR=$(dirname $0)
+
 # Install stumpwm
-sudo aptitude install stumpwm
+$WDIR/install.sh ratpoison
 
 # Create the file
 sudo touch /usr/share/xsessions/stumpwm.desktop
