@@ -2,22 +2,24 @@
 
 WDIR=$(dirname $0)
 
-# Install stumpwm
-$WDIR/install.sh ratpoison
+PACKAGE=stumpwm
+
+# Install $PACKAGE
+$WDIR/install.sh $PACKAGE
 
 # Create the file
-sudo touch /usr/share/xsessions/stumpwm.desktop
+sudo touch /usr/share/xsessions/$PACKAGE.desktop
 
 # Add the entry for gdm
 (cat <<EOF
 [Desktop Entry]
-        Exec=stumpwm
-        TryExec=stumpwm
-        Name=stumpwm
+        Exec=$PACKAGE
+        TryExec=$PACKAGE
+        Name=$PACKAGE
         Comment=The Mouseless Window Manager!
 EOF
-)> stumpwm.buffer
+)> $PACKAGE.buffer
 
-sudo cp stumpwm.buffer /usr/share/xsessions/stumpwm.desktop
+sudo cp $PACKAGE.buffer /usr/share/xsessions/$PACKAGE.desktop
 
-rm stumpwm.buffer
+rm $PACKAGE.buffer
