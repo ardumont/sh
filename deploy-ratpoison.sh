@@ -2,23 +2,24 @@
 
 WDIR=$(dirname $0)
 
-# Install stumpwm
-$WDIR/install.sh ratpoison
+PACKAGE=ratpoison
+
+$WDIR/install.sh $PACKAGE
 
 # Create the file
-sudo touch /usr/share/xsessions/ratpoison.desktop
+sudo touch /usr/share/xsessions/$PACKAGE.desktop
 
 # Add the entry for gdm
 (cat <<EOF
 [Desktop Entry]
         Type=Application
         Encoding=UTF-8
-        Name=Ratpoison
+        Name=$PACKAGE
         Comment=Minimalistic Window Manager
-        Exec=ratpoison
+        Exec=$PACKAGE
 EOF
-)> stumpwm.buffer
+)> $PACKAGE.buffer
 
-sudo cp stumpwm.buffer /usr/share/xsessions/stumpwm.desktop
+sudo cp $PACKAGE.buffer /usr/share/xsessions/$PACKAGE.desktop
 
-rm stumpwm.buffer
+rm $PACKAGE.buffer
