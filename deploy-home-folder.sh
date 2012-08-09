@@ -50,6 +50,9 @@ do-action "ln -s $REPO_DOTFILES/.tmux.conf $HOME/"
 destroy-link $HOME/.ratpoisonrc
 do-action "ln -s $REPO_DOTFILES/.ratpoisonrc $HOME/"
 
+destroy-link $HOME/.xmodmaprc
+do-action "ln -s $REPO_DOTFILES/.xmodmaprc $HOME/"
+
 if [ -f $REPO_WORK/.bashrc-work ]; then
     destroy-link $HOME/.bashrc-work
     do-action "ln -s $REPO_WORK/.bashrc-work $HOME/"
