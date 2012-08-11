@@ -10,4 +10,4 @@ COMMIT_MSG=$1
 
 git add .
 git ls-files -d | xargs git rm
-git commit -m $COMMIT_MSG
+git commit -m "$COMMIT_MSG"
