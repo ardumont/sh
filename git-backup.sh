@@ -7,4 +7,4 @@ COMMIT_MSG=$1
 
 git add .
 git ls-files -d | xargs git rm
-git commit -am "stable"
+git commit -am $COMMIT_MSG
