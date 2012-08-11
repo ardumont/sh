@@ -7,3 +7,5 @@ if [ $? -ne 0 ]; then
     ssh-add
 fi
 
+[ -f ~/work/bin/work-ssh-add.sh ] && ~/work/bin/work-ssh-add.sh
+
