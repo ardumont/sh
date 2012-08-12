@@ -11,11 +11,11 @@ SESSION_NAME=$1
 tmux new-session -d -s $SESSION_NAME
 
 # Then setup some window in it
-tmux new-window -t $SESSION_NAME:0 -n 'Fitnesse'
-tmux new-window -t $SESSION_NAME:1 -n 'Lily'
-tmux new-window -t $SESSION_NAME:2 -n 'hdt'
-tmux new-window -t $SESSION_NAME:3 -n 'wikeo'
-tmux new-window -t $SESSION_NAME:4 -n 'git'
+tmux new-window -t $SESSION_NAME:1 -n 'Fitnesse'
+tmux new-window -t $SESSION_NAME:2 -n 'Lily'
+tmux new-window -t $SESSION_NAME:3 -n 'hdt'
+tmux new-window -t $SESSION_NAME:4 -n 'wikeo'
+tmux new-window -t $SESSION_NAME:5 -n 'git'
 
 # Select the git window
 tmux select-window -t $SESSION_NAME:5
