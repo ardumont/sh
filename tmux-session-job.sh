@@ -18,6 +18,6 @@ tmux new-window -t $SESSION_NAME:4 -n 'wikeo'
 tmux new-window -t $SESSION_NAME:5 -n 'git'
 
 # Select the git window
-tmux select-window -t $SESSION_NAME:5
+tmux select-window -t $SESSION_NAME:0
 # at last, attach to it
 tmux -2 attach-session -t $SESSION_NAME
