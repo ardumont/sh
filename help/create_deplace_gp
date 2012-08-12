@@ -1,8 +1,0 @@
-Use : create_deplace.sh [OPTIONS]
-create the directory from a pattern (in lower case with a "_" to separate the different word of the directory)
-
-Mandatory:
---pattern(-p) PATTERN	the pattern to discriminate the files to move
-
-Other:
---help			this help message

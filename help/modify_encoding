@@ -1,8 +1,0 @@
-Use : modify_encoding.sh [OPTIONS]
-
-Mandatory:
---target(-t)	file or directory target
-
-Other:
---recursive (-r)    tells the script to reach all levels of the directory target if the target is a directory
-NONE
