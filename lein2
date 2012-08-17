@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-export LEIN_VERSION="2.0.0-preview7"
+# Ensure this file is executable via chmod a+x lein, then place it
+# somewhere on your $PATH, like ~/bin. The rest of Leiningen will be
+# installed upon first run into the ~/.lein/self-installs directory.
+
+export LEIN_VERSION="2.0.0-preview8"
 
 case $LEIN_VERSION in
     *SNAPSHOT) SNAPSHOT="YES" ;;
@@ -87,11 +91,14 @@ if [ -r "$BIN_DIR/../src/leiningen/version.clj" ]; then
     fi
 
     mkdir -p "$LEIN_DIR/target/classes"
-    export LEIN_JVM_OPTS=${LEIN_JVM_OPTS:-"-Dclojure.compile.path=$LEIN_DIR/target/classes"}
+    export LEIN_JVM_OPTS=${LEIN_JVM_OPTS:-"-Xms64m -Xmx256m -Dclojure.compile.path=$LEIN_DIR/target/classes"}
     CLASSPATH="$LEIN_DIR/leiningen-core/src/"
     CLASSPATH="$CLASSPATH:$LEIN_DIR/leiningen-core/resources/"
-    CLASSPATH="$CLASSPATH:$(cat $LEIN_DIR/.lein-classpath 2> /dev/null)"
-    CLASSPATH="$CLASSPATH:$LEIN_DIR/leiningen-core/lib/*"
+    if [ -r "$LEIN_DIR/.lein-classpath" ]; then
+        CLASSPATH="$CLASSPATH:$(cat $LEIN_DIR/.lein-classpath 2> /dev/null)"
+    else
+        CLASSPATH="$CLASSPATH:$LEIN_DIR/leiningen-core/lib/*"
+    fi
     CLASSPATH="$CLASSPATH:$LEIN_DIR/test:$LEIN_DIR/target/classes"
     CLASSPATH="$CLASSPATH:$LEIN_DIR/src:$LEIN_DIR/resources:$LEIN_JAR"
     if [ -f .lein-classpath ]; then
@@ -123,6 +130,7 @@ if [ "$HTTP_CLIENT" = "" ]; then
     fi
 fi
 
+# TODO: explain what to do when Java is missing
 export JAVA_CMD=${JAVA_CMD:-"java"}
 export LEIN_JAVA_CMD=${LEIN_JAVA_CMD:-$JAVA_CMD}
 
