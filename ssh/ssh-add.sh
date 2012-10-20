@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/bin/bash -x
 
-# Is the key already loaded into the ssh-agent
-ssh-add -l | grep "~/.ssh/id_rsa"
-if [ $? -ne 0 ]; then
-    # add id_rsa
-    ssh-add
-fi
-
-[ -f ~/work/bin/work-ssh-add.sh ] && ~/work/bin/work-ssh-add.sh
-
+for key in $(cat ~/bin/ssh/identity);
+do
+    # Is the key already loaded into the ssh-agent?
+    ssh-add -L | grep "$key"
+    if [ $? -ne 0 ]; then
+        ssh-add $key
+    fi
+done
