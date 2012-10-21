@@ -7,5 +7,6 @@ $WDIR/install.sh "git gitk chromium-browser localepurge tree deborphan
         inotify-tools ruby curl yajl-tools openssh-server sysvbanner most
         graphviz audacious audacious-plugins gnuplot vim latex latex-beamer
         texlive-latex-extra texlive-fonts-recommended ttf-marvosym
-        nautilus-dropbox gtalk meld dstat htop zip unzip rar unrar p7zip p7zip-rar"
+        nautilus-dropbox gtalk meld dstat htop zip unzip rar unrar p7zip p7zip-rar
+        xclip gpointing-device-settings"
 
