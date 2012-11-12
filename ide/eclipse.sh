@@ -1,5 +1,5 @@
 #!/bin/bash
 
-[ -f ~/repositories/pro/wikeo/.metadata/.lock ] && rm ~/repositories/pro/wikeo/.metadata/.lock
+[ -f ~/workspace/projet-wikeo/.metadata/.lock ] && rm ~/workspace/projet-wikeo/.metadata/.lock
 
 ~/applications/eclipse/eclipse
