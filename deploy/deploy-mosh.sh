@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
-sudo add-apt-repository ppa:keithw/mosh
+WDIR=$(dirname $(readlink -f $0))
 
-sudo aptitude update
+$WDIR/add-apt-repository.sh ppa:keithw/mosh
 
-sudo aptitude install mosh
+$WDIR/install.sh mosh
