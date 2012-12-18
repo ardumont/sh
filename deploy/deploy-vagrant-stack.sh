@@ -6,4 +6,4 @@ $WDIR/install.sh libxslt-dev libxml2-dev libghc-zlib-dev
 
 sudo gem install vagrant vagrant-snap virtualbox
 
-sudo gem instal veewee
+sudo gem install veewee
