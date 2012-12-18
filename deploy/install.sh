@@ -2,9 +2,9 @@
 
 # This script is destined to simplify the installation between debian and ubuntu
 # Use: install.sh list-of-packages
-# Ex:  install.sh "byobu tmux emacs23..."
+# Ex:  install.sh byobu tmux emacs23...
 
-CMD=$1
+CMD=$*
 [ -z "$CMD" ] && echo "Nothing to install - STOP." && exit 1;
 
 # ubuntu

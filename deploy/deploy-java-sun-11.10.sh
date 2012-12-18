@@ -9,7 +9,7 @@ grep "ferramroberto" /etc/apt/sources.list || $WDIR/add-apt-repository.sh ppa:fe
 sudo aptitude update
 
 # Install sun
-$WDIR/install.sh "sun-java6-jdk sun-java6-source sun-java6-plugin"
+$WDIR/install.sh sun-java6-jdk sun-java6-source sun-java6-plugin
 
 # Once install choose the sun-jre ad the default one
 sudo update-alternatives --config java
