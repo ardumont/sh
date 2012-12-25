@@ -24,7 +24,7 @@ git config --global alias.ci commit
 git config --global alias.st status
 
 # unstage a file
-git config --global alias.unstage 'reset HEAD --'
+git config --global alias.unstage 'reset HEAD~ --'
 
 # see the last log
 git config --global alias.last 'log -1 HEAD'
