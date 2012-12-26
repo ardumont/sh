@@ -6,10 +6,18 @@
 
 ACTION=${1:-"on"}
 
-# /etc/environment
+# /etc/environment:
 # PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+#
+# http_proxy=
+# https_proxy=
+# ftp_proxy=
+# no_proxy=
+# HTTP_PROXY=
+# HTTPS_PROXY=
+# FTP_PROXY=
 
-# /etc/environment-proxy
+# /etc/environment-proxy:
 # PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 #
 # http_proxy="http://192.168.33.2:8123"
