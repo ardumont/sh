@@ -20,7 +20,7 @@ ACTION=${1:-"on"}
 # HTTPS_PROXY="http://192.168.33.2:8123"
 # FTP_PROXY="http://192.168.33.2:8123"
 
-if [ $ACTION -eq "on" ]; then
+if [ "$ACTION" = "on" ]; then
     sudo cp /etc/environment /etc/environment-backup
     sudo cp /etc/environment-proxy /etc/environment
 else
