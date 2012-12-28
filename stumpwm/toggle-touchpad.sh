@@ -11,4 +11,4 @@ TOUCHPAD_STATUS=$(xinput --list-props 12 | grep "Device Enabled " | cut -d':' -f
 
 [ $TOUCHPAD_STATUS = "0" ] && NEW_STATUS="1" || NEW_STATUS="0"
 
-$WDIR/toggle-touchpad-manual.sh $TOUCHPAD_ID $NEW_STATUS
+$WDIR/toggle-touchpad-manual.sh $NEW_STATUS
