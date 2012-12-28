@@ -12,8 +12,8 @@ TOUCHPAD_ID=$(xinput list | grep -i touchpad | grep -o "id=[0-9]*" | cut -f 2 -d
 
 if [ $ACTION = "on" ]; then
     # Activate
-    xinput set-prop $TOUCHPAD_ID "Device Enabled" 1
+    xinput --enable $TOUCHPAD_ID
 else
     # Deactivate
-    xinput set-prop $TOUCHPAD_ID "Device Enabled" 0
+    xinput --disable $TOUCHPAD_ID
 fi
