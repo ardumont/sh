@@ -7,7 +7,10 @@
 
 TOUCHPAD_STATUS=${1-:"1"}
 
-TOUCHPAD_ID=$(xinput list | grep -i touchpad | grep -o "id=[0-9]*" | cut -f 2 -d'=')
+TOUCHPAD_ID=$(xinput list\
+                    | grep -i touchpad \
+                    | grep -o "id=[0-9]*" \
+                    | cut -f 2 -d'=')
 
 if [ $TOUCHPAD_STATUS = "1" ]; then
     # Activate
