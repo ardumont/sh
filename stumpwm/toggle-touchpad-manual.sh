@@ -12,10 +12,8 @@ TOUCHPAD_ID=$(xinput list\
                     | grep -o "id=[0-9]*" \
                     | cut -f 2 -d'=')
 
-if [ $TOUCHPAD_STATUS = "1" ]; then
-    # Activate
-    xinput --enable $TOUCHPAD_ID
-else
-    # Deactivate
-    xinput --disable $TOUCHPAD_ID
-fi
+# activate or deactivate?
+[ $TOUCHPAD_STATUS = "1" ] && ACTION="--enable" || ACTION="--disable"
+
+# commit the actions
+xinput $ACTION $TOUCHPAD_ID
