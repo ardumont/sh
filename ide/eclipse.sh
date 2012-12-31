@@ -2,4 +2,8 @@
 
 [ -f ~/workspace/projet-wikeo/.metadata/.lock ] && rm ~/workspace/projet-wikeo/.metadata/.lock
 
-~/applications/eclipse/eclipse
+HOST=$(hostname)
+
+[ "$HOST" = "job" ] && ECLIPSE=eclipse || ECLIPSE=~/applications/eclipse/eclipse
+
+$ECLIPSE
