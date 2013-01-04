@@ -1,3 +1,3 @@
 #!/bin/bash -x
 
-nm-applet &
+killall nm-applet
