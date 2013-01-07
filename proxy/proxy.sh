@@ -9,13 +9,13 @@ ACTION=${1:-"on"}
 # /etc/environment:
 # PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 #
-# export http_proxy=
-# export https_proxy=
-# export ftp_proxy=
-# export no_proxy=
-# export HTTP_PROXY=
-# export HTTPS_PROXY=
-# export FTP_PROXY=
+# unset http_proxy
+# unset https_proxy
+# unset ftp_proxy
+# unset no_proxy
+# unset HTTP_PROXY
+# unset HTTPS_PROXY
+# unset FTP_PROXY
 
 # /etc/environment-proxy:
 # PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
