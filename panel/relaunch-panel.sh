@@ -1,3 +1,4 @@
 #!/bin/bash
 
-gnome-panel --replace &
+killall xfce4-panel
+xfce4-panel&
