@@ -15,7 +15,7 @@ delay=${4:-5} # defaults to 5 seconds
 
 while [ $count -gt 0 ]
 do
-    sudo -u $user jstack -l $pid >jstack.$pid.$(date +%H%M%S.%N)
+    jstack -l $pid >jstack.$pid.$(date +%H%M%S.%N)
     sleep $delay
     let count--
     echo -n "."
