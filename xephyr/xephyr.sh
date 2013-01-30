@@ -3,8 +3,11 @@
 XDP=:1
 DP=$XDP.0
 
+# resolution depending on my hostname
+[ $(hostname) = "job" ] && RES="1680x1050" || RES="1366x768"
+
 # Launch a xephyr xserver
-Xephyr -ac -br -noreset -screen 1366x768 $XDP &
+Xephyr -ac -br -noreset -screen $RES $XDP &
 
 # wait a little
 sleep 1
