@@ -4,7 +4,7 @@ git config --global user.name "Antoine R. Dumont"
 git config --global user.email "antoine.romain.dumont@gmail.com"
 
 # emacs
-git config --global core.editor "emacs --no-init-file -nw"
+git config --global core.editor "emacsclient -nw"
 
 # color everywhere (one flag)
 git config --global color.ui true
