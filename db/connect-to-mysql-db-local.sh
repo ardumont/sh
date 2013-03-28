@@ -22,5 +22,8 @@ EOF
     exit 1
 fi
 
-echo "mysql -u $USER -p$PASSWD -h $SERVER $DATABASE"
-mysql -u $USER -p$PASSWD -h $SERVER $DATABASE
+
+CMD="mysql -u $USER -p$PASSWD -h $SERVER $DATABASE"
+
+echo $CMD
+$CMD
