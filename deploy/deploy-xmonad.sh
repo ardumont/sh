@@ -1,1 +1,3 @@
-tony@dagobah.18198:1365699079
+#!/bin/bash
+
+$(dirname $0)/deploy-wm.sh xmonad
