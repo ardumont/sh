@@ -3,16 +3,8 @@
 # Use
 # deploy the ocaml package manager
 
-FILE=/etc/apt/sources.list
-CONTENT="deb [arch=amd64] http://www.recoil.org/~avsm/ wheezy main"
+WDIR=$(dirname $0)
 
-grep "$CONTENT" $FILE
-if [ $? -ne 0 ]; then
-    echo "$CONTENT" | sudo tee -a $FILE
-fi
-
-set -e
-
-sudo aptitude update
+$WDIR/deploy-apt-repo.sh "deb [arch=amd64] http://www.recoil.org/~avsm/ wheezy main"
 
 sudo aptitude install -y opam
