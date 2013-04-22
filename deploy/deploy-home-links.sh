@@ -4,7 +4,7 @@ SRC=$HOME/repo/perso
 REPO_TEAM=$SRC/common-sh
 
 # create the usefull arborescence
-mkdir -p ~/{team, work, $SRC}
+mkdir -p $HOME/{team,work,$SRC}
 
 # personal scripts
 ln -nsf $SRC/sh $HOME/bin
