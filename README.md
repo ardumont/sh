@@ -7,7 +7,7 @@ Personal scripts for multiple uses:
 - syncing git repositories
 - fetching multiple dependencies (lein, mvn, etc...)
 - connecting to db...
-- and so forth and so on
+etc...
 
 # licence
 
