@@ -1,13 +1,14 @@
 #!/bin/bash -xe
 
-WDIR=$(dirname $(readlink -f $0))
+sudo aptitude purge -y ruby1.8 rubygems
 
-$WDIR/install.sh libxslt-dev libxml2-dev libghc-zlib-dev
+sudo aptitude install -y ruby1.9.1-full
 
-$WDIR/deploy-ruby.sh
+# set ruby 1.9 the default
+sudo update-alternatives --set ruby /usr/bin/ruby1.9.1
 
-$WDIR/install.sh virtualbox
+# will install vagrant, virtualbox, rubygems, ruby1.8, etc...
+sudo aptitude install -y vagrant
 
-sudo gem install vagrant vagrant-snap virtualbox
-
-sudo gem install veewee
+# extends vagrant
+sudo gem install vagrant-snap virtualbox veewee
