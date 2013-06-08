@@ -1,4 +1,7 @@
 #!/bin/bash
 
-killall xfce4-panel
-xfce4-panel&
+#PROG=xfce4-panel
+PROG="stalonetray -t --window-type=normal"
+
+killall $PROG
+$PROG &
