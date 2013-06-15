@@ -13,12 +13,14 @@ function log() {
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
+XMODMAP="xmodmap -display $DISPLAY -e"
+
 log "Replacing capsLocks by control...";
-xmodmap -display $DISPLAY -e 'remove lock = Caps_Lock'
-xmodmap -display $DISPLAY -e 'keysym Caps_Lock = Control_L'
-xmodmap -display $DISPLAY -e 'add control = Control_L'
+$XMODMAP 'remove lock = Caps_Lock'
+$XMODMAP 'keysym Caps_Lock = Control_L'
+$XMODMAP 'add control = Control_L'
 
 log "Replacing altgr by leftAlt...";
-xmodmap -display $DISPLAY -e 'clear mod5'
-xmodmap -display $DISPLAY -e 'add mod1 = Mode_switch'
-xmodmap -display $DISPLAY -e "keysym ISO_Level3_Shift = Alt_L"
+$XMODMAP 'clear mod5'
+$XMODMAP 'add mod1 = Mode_switch'
+$XMODMAP "keysym ISO_Level3_Shift = Alt_L"
