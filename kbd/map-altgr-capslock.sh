@@ -10,11 +10,11 @@
 # ------------------------------------------------------------------------------
 
 echo "Replacing capsLocks by control ....";
-xmodmap -e 'remove Lock = Caps_Lock'
-xmodmap -e 'keysym Caps_Lock = Control_L'
-xmodmap -e 'add Control = Control_L'
+xmodmap -display $DISPLAY -e 'remove Lock = Caps_Lock'
+xmodmap -display $DISPLAY -e 'keysym Caps_Lock = Control_L'
+xmodmap -display $DISPLAY -e 'add Control = Control_L'
 
 echo "Replacing altgr by leftAlt ....";
-xmodmap -e 'clear mod5'
-xmodmap -e 'add mod1 = Mode_switch'
-xmodmap -e "keysym ISO_Level3_Shift = Alt_L"
+xmodmap -display $DISPLAY -e 'clear mod5'
+xmodmap -display $DISPLAY -e 'add mod1 = Mode_switch'
+xmodmap -display $DISPLAY -e "keysym ISO_Level3_Shift = Alt_L"
