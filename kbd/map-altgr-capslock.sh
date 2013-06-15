@@ -14,9 +14,9 @@ function log() {
 # ------------------------------------------------------------------------------
 
 log "Replacing capsLocks by control...";
-xmodmap -display $DISPLAY -e 'remove Lock = Caps_Lock'
+xmodmap -display $DISPLAY -e 'remove lock = Caps_Lock'
 xmodmap -display $DISPLAY -e 'keysym Caps_Lock = Control_L'
-xmodmap -display $DISPLAY -e 'add Control = Control_L'
+xmodmap -display $DISPLAY -e 'add control = Control_L'
 
 log "Replacing altgr by leftAlt...";
 xmodmap -display $DISPLAY -e 'clear mod5'
