@@ -13,7 +13,7 @@ function log() {
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-XMODMAP="xmodmap -display $DISPLAY -v -e"
+XMODMAP="xmodmap -display $DISPLAY -e"
 
 # work around pb in xephyr
 # $XMODMAP 'clear mod2'
