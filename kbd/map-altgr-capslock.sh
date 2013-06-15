@@ -13,7 +13,11 @@ function log() {
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-XMODMAP="xmodmap -display $DISPLAY -e"
+XMODMAP="xmodmap -display $DISPLAY -v -e"
+
+# work around pb in xephyr
+# $XMODMAP 'clear mod2'
+# $XMODMAP 'keycode 77 = Num_Lock'
 
 log "Replacing capsLocks by control...";
 $XMODMAP 'remove lock      = Caps_Lock'
@@ -24,3 +28,5 @@ log "Replacing altgr by leftAlt...";
 $XMODMAP 'clear mod5'
 $XMODMAP 'add mod1                = Mode_switch'
 $XMODMAP "keysym ISO_Level3_Shift = Alt_L"
+
+#$XMODMAP 'add mod2 = Num_Lock'
