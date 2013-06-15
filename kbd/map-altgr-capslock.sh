@@ -16,11 +16,11 @@ function log() {
 XMODMAP="xmodmap -display $DISPLAY -e"
 
 log "Replacing capsLocks by control...";
-$XMODMAP 'remove lock = Caps_Lock'
+$XMODMAP 'remove lock      = Caps_Lock'
 $XMODMAP 'keysym Caps_Lock = Control_L'
-$XMODMAP 'add control = Control_L'
+$XMODMAP 'add control      = Control_L'
 
 log "Replacing altgr by leftAlt...";
 $XMODMAP 'clear mod5'
-$XMODMAP 'add mod1 = Mode_switch'
+$XMODMAP 'add mod1                = Mode_switch'
 $XMODMAP "keysym ISO_Level3_Shift = Alt_L"
