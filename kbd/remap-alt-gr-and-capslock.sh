@@ -1,7 +1,11 @@
 #!/bin/bash
 
+function log() {
+    echo "display '$DISPLAY' - $1"
+}
+
 # ------------------------------------------------------------------------------
-# Replace :
+# Replace:
 #     - capslock by ctrl
 #     - altgr    by alt
 #
@@ -10,10 +14,10 @@
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-if [[ $(xmodmap) == *ISO_Level3_Shift* ]]
+if [[ $(xmodmap -display $DISPLAY) == *ISO_Level3_Shift* ]]
 then
-    echo "xmodmap not customized !";
+    log "xmodmap customisation..."
     map-altgr-capslock.sh
 else
-    echo "xmodmap already customized !";
+    log "xmodmap already customized !";
 fi
