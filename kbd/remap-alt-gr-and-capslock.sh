@@ -14,7 +14,10 @@ function log() {
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-if [[ $(xmodmap -display $DISPLAY) == *ISO_Level3_Shift* ]]
+# will be *Caps_Lock* if no customisation or empty otherwise
+CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
+
+if [[ $CAPS == *Caps_Lock* ]]
 then
     log "xmodmap customisation..."
     map-altgr-capslock.sh
