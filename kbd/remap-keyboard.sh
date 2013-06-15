@@ -22,5 +22,5 @@ then
     log "xmodmap customisation..."
     map-altgr-capslock.sh
 else
-    log "xmodmap already customized !";
+    log "xmodmap already customized!";
 fi
