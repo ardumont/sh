@@ -16,7 +16,7 @@ function log() {
 XMODMAP="xmodmap -display $DISPLAY -e"
 
 # work around pb in xephyr
-# $XMODMAP 'clear mod2'
+$XMODMAP 'keysym Super_L = Num_Lock'
 
 log "Replacing capsLocks by control...";
 $XMODMAP 'remove lock      = Caps_Lock'
