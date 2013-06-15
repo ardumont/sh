@@ -1,5 +1,9 @@
 #!/bin/bash
 
+function log() {
+    echo "display '$DISPLAY' - $1"
+}
+
 # ------------------------------------------------------------------------------
 # Replace :
 #     - capslock by ctrl
@@ -9,12 +13,12 @@
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-echo "Replacing capsLocks by control ....";
+log "Replacing capsLocks by control...";
 xmodmap -display $DISPLAY -e 'remove Lock = Caps_Lock'
 xmodmap -display $DISPLAY -e 'keysym Caps_Lock = Control_L'
 xmodmap -display $DISPLAY -e 'add Control = Control_L'
 
-echo "Replacing altgr by leftAlt ....";
+log "Replacing altgr by leftAlt...";
 xmodmap -display $DISPLAY -e 'clear mod5'
 xmodmap -display $DISPLAY -e 'add mod1 = Mode_switch'
 xmodmap -display $DISPLAY -e "keysym ISO_Level3_Shift = Alt_L"
