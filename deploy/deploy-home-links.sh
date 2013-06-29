@@ -10,7 +10,7 @@ mkdir -p $HOME/{team,work,$SRC}
 ln -nsf $SRC/sh $HOME/bin
 
 # personal org files
-ln -nsf $SRC/my-org-files $HOME/org
+ln -nsf $SRC/org $HOME/org
 
 # personal books
 ln -nsf $HOME/Dropbox/Documents/books $HOME/books
