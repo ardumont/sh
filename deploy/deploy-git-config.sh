@@ -1,7 +1,9 @@
 #!/bin/bash
 
+USER=${1-"antoine.romain.dumont@gmail.com"}
+
 git config --global user.name "Antoine R. Dumont"
-git config --global user.email "antoine.romain.dumont@gmail.com"
+git config --global user.email $USER
 
 # emacs
 git config --global core.editor "emacsclient -nw"
