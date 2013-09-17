@@ -4,7 +4,7 @@ XDP=:1
 DP=$XDP.0
 
 # resolution depending on my hostname
-RES="1366x768"
+[ $(hostname) = "FR-WS-307" ] && RES="1920x1080" || RES="1366x768"
 
 # Launch a xephyr xserver
 Xephyr -ac -br -noreset -screen $RES $XDP &
