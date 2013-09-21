@@ -2,9 +2,9 @@ sh
 ==
 
 Personal scripts for multiple uses:
-- deploy machine soft
-- centralizing lein script
-- syncing git repositories
+- centralizing scripts
+- deploy machine software
+- synchronizing git repositories deployment scripts
 - fetching multiple dependencies (lein, mvn, etc...)
 - connecting to db...
 etc...
