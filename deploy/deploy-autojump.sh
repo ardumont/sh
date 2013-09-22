@@ -1,7 +1,5 @@
 #!/bin/bash -e
 
-git clone git://github.com/joelthelion/autojump.git ~/repo/perso/autojump
+WDIR=$(dirname $0)
 
-cd ~/repo/perso/autojump
-
-./install.sh
+$WDIR/install.sh autojump
