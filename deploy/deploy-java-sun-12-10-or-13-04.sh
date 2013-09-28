@@ -9,7 +9,7 @@ grep "webupd8team" /etc/apt/sources.list || $WDIR/add-apt-repository.sh ppa:webu
 sudo aptitude update
 
 # Install sun
-$WDIR/install.sh oracle-java6-installer
+$WDIR/install.sh oracle-java6-installer oracle-java7-installer
 
 # Once install choose the sun-jre ad the default one
 sudo update-alternatives --config java
