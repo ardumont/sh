@@ -1,15 +1,13 @@
 #!/bin/bash -xe
 
+DDIR=$HOME/Downloads
 URL=http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
-DIR=$HOME/applications/scala/
-FILE=$HOME/Downloads/scala.tgz
-
-mkdir -p $DIR
+FILENAME=scala-2.10.2
+FILE=$DDIR/$FILENAME.tgz
+IDIR=$HOME/applications/
+IFINAL_DIR=$IDIR/$FILENAME
+LINKNAME=scala
 
 [ ! -f $FILE ] && wget -O $FILE $URL
 
-tar xvf $FILE -C $DIR
-
-cd $DIR
-
-ln -s $DIR scala
+[ ! -d $IFINAL_DIR ] && tar xvf $FILE -C $IDIR && cd $IDIR && ln -nsf $IFINAL_DIR $LINKNAME
