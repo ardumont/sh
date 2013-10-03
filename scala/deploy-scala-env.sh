@@ -15,7 +15,7 @@ fi
 # static setup
 
 URL=http://scalasbt.artifactoryonline.com/scalasbt/sbt-native-packages/org/scala-sbt/sbt//0.12.3/sbt.deb
-DDIR=~/Downloads/scala
+DDIR=$HOME/Downloads/scala
 DEB=sbt.deb
 DEB_FILE=$DDIR/$DEB
 
