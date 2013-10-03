@@ -5,18 +5,22 @@
 
 ################ Dynamic setup
 
-URL=${1-"http://download.jetbrains.com/idea/ideaIC-12.1.4.tar.gz"}
+URL=${1-"http://download.jetbrains.com/idea/ideaIC-12.1.5.tar.gz"}
 
 ################ Static setup
 
 FILENAME=$(basename "$URL")
 #FILENAME_WEXT=$(basename "$URL" ".tar.gz")
 
-DL_FILE=~/Downloads/idea/$FILENAME
-EXTRACTED_FOLDER_DEST=~/applications/ide/idea
+DL_DIR=$HOME/Downloads/idea
+DL_FILE=$DL_DIR/$FILENAME
+EXTRACTED_FOLDER_DEST=$HOME/applications/ide/idea
+
+mkdir -p $EXTRACTED_FOLDER_DEST
+mkdir -p $DL_DIR
 
 # Download the file if need be
-[ ! -f $DL_FILE ] && wget $URL -O $DL_FILE
+[ ! -f $DL_FILE ] && wget -O $DL_FILE $URL
 
 # Extract the archive
 tar axvf $DL_FILE -C $EXTRACTED_FOLDER_DEST
