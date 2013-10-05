@@ -6,4 +6,4 @@
 
 [ -f $1 ] && cd $(dirname $1) || exit 0
 
-sbt deps
+sbt test
