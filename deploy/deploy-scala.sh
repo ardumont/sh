@@ -1,8 +1,8 @@
 #!/bin/bash -xe
 
 DDIR=$HOME/Downloads
-URL=http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
-FILENAME=scala-2.10.2
+URL=http://www.scala-lang.org/files/archive/scala-2.10.3.tgz
+FILENAME=scala-2.10.3
 FILE=$DDIR/$FILENAME.tgz
 IDIR=$HOME/applications/
 IFINAL_DIR=$IDIR/$FILENAME
