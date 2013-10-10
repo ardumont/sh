@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
 #$WDIR/install.sh haskell-platform
-install.sh haskell-compiler cabal-install
+install.sh haskell-compiler cabal-install zlibc libghc-bzlib-dev libghc-zlib-bindings-dev
 
 # init cabal
 cabal update
