@@ -1,7 +1,5 @@
 #!/bin/bash
 
-WDIR=$(dirname $0)
+install.sh suckless-tools
 
-$WDIR/install.sh suckless-tools
-
-$WDIR/deploy-wm.sh xmonad
+deploy-wm.sh xmonad
