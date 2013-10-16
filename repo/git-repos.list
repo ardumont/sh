@@ -105,3 +105,4 @@ ssh://git@bitbucket.org/ardumont/coursera-scala-recfun.git
 ssh://git@bitbucket.org/ardumont/coursera-scala-funsets.git
 ssh://git@bitbucket.org/ardumont/coursera-scala-objsets.git
 ssh://git@bitbucket.org/ardumont/coursera-scala-patmat.git
+git@github.com:ardumont/glowing-octo-archer.git
