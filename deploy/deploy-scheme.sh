@@ -1,3 +1,3 @@
 #!/bin/bash
 
-install.sh mit-scheme
+install.sh mit-scheme mit-scheme:i386
