@@ -2,7 +2,7 @@
 
 # Use
 # $0 /path/to/repo/git
-# Will sync (git fetch --all)
+# Will sync
 
 cd $1/..
-git fetch --all
+git fetch --all --recurse-submodules --prune
