@@ -6,7 +6,7 @@ DP=$XDP.0
 HOSTNAME=$(hostname)
 
 # resolution depending on my hostname
-[ $HOSTNAME = "FR-WS-307" -o $HOSTNAME = "dagobah" ] && RES="1920x1080" || RES="1366x768"
+[ $HOSTNAME = "FR-WS-307" -o $HOSTNAME = "dagobah" -o $HOSTNAME = "myrkr" ] && RES="1920x1080" || RES="1366x768"
 
 # Launch a xephyr xserver
 Xephyr -ac -br -noreset -screen $RES $XDP &
