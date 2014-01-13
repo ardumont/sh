@@ -27,3 +27,5 @@ log "Replacing altgr by leftAlt...";
 $XMODMAP 'clear mod5'
 $XMODMAP 'add mod1                = Mode_switch'
 $XMODMAP "keysym ISO_Level3_Shift = Alt_L"
+
+# state 0x10, keycode 36 (keysym 0xff0d, Return), same_screen YES,
