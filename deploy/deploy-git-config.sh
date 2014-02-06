@@ -33,3 +33,6 @@ git config --global alias.last 'log -1 HEAD'
 
 # global gitignore
 git config --global core.excludesfile ~/.gitignore_global
+
+# help when typo
+git config --global help.autocorrect 1
