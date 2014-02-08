@@ -1,7 +1,4 @@
 #!/bin/bash -x
+# start wifi
 
-WDIR=$(dirname $0)
-
-$WDIR/wifi-off.sh
-
-nm-applet &
+wifi.sh on

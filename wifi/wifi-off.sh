@@ -1,3 +1,4 @@
 #!/bin/bash -x
+# shutdown wifi
 
-killall nm-applet
+wifi.sh off
