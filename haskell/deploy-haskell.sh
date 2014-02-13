@@ -3,6 +3,8 @@
 #$WDIR/install.sh haskell-platform
 install.sh haskell-platform
 
+install.sh libghc-zlib-dev
+
 # init cabal
 cabal update
 
