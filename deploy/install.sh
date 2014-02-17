@@ -4,8 +4,8 @@
 # Use: install.sh list-of-packages
 # Ex:  install.sh byobu tmux emacs23...
 
-CMD=$*
-[ -z "$CMD" ] && echo "Nothing to install - STOP." && exit 1;
+PACKAGES=$*
+[ -z "$PACKAGES" ] && echo "Nothing to install - STOP." && exit 1;
 
 function package-install() {
     sudo aptitude install -y $*
@@ -15,10 +15,10 @@ function package-install() {
 if [ -f "/etc/lsb-release" ]; then #ubuntu or linux mint
     if [ $# -eq 1 ]; then
         # one software, we can check if it is already installed or not
-        ( [ ! $(dpkg -l | grep -c "$CMD") -eq 1 ] && echo "Installing package '$CMD'..." && package-install $CMD ) || echo "Package '$CMD' already installed!"
+        ( [ ! $(dpkg -l | grep -c "$PACKAGES") -eq 1 ] && echo "Installing package '$PACKAGES'..." && package-install $PACKAGES ) || echo "Package '$PACKAGES' already installed!"
     else
-        package-install $CMD
+        package-install $PACKAGES
     fi
 elif [ -f "/etc/debian_version" ]; then # debian
-    su -c "aptitude install -y $CMD"
+    su -c "aptitude install -y $PACKAGES"
 fi
