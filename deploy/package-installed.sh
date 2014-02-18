@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 # Script to determine if a package is installed or not
 
@@ -18,7 +18,7 @@ fi
 
 PACKAGE=$1
 
-STATE=$(aptitude show $PACKAGE | grep 'State:' | cut -d':' -f2)
+STATE=$(aptitude show $PACKAGE 2>/dev/null | grep 'State:' | cut -d':' -f2)
 
 if [ "$STATE" = "" ]; then
     echo "DOES-NOT-EXIST"
