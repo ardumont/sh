@@ -18,7 +18,7 @@ fi
 
 PACKAGE=$1
 
-STATE=$(aptitude show $PACKAGE 2>/dev/null | grep 'State:' | cut -d':' -f2)
+STATE=$($apt_pref show $PACKAGE 2>/dev/null | grep 'State:' | cut -d':' -f2)
 
 if [ "$STATE" = "" ]; then
     echo "DOES-NOT-EXIST"
