@@ -4,4 +4,4 @@
 
 icon=$HOME/bin/keyboard/kabooom.jpeg
 
-notify-send -i $icon "CapsLock ON - BOOOOM" -t 1000
+notify-send -i $icon "Caps/NumLock ON - BOOOOM" -t 1000
