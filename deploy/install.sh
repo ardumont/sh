@@ -8,7 +8,7 @@ PACKAGES=$*
 [ -z "$PACKAGES" ] && echo "Nothing to install - STOP." && exit 1;
 
 function package-install() {
-    sudo $apt_pref install -y $*
+    sudo aptitude install -y $*
 }
 
 # ubuntu
@@ -20,5 +20,5 @@ if [ -f "/etc/lsb-release" ]; then #ubuntu or linux mint
         package-install $PACKAGES
     fi
 elif [ -f "/etc/debian_version" ]; then # debian
-    su -c "$apt_pref install -y $PACKAGES"
+    su -c "aptitude install -y $PACKAGES"
 fi
