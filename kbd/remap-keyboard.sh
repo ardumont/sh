@@ -1,9 +1,4 @@
 #!/bin/bash
-
-log() {
-    echo "display '$DISPLAY' - $1"
-}
-
 # ------------------------------------------------------------------------------
 # Replace:
 #     - capslock by ctrl
@@ -13,6 +8,10 @@ log() {
 # To have an alt on the right and an easier ctrl on the left.
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
+
+log() {
+    echo "display '$DISPLAY' - $1"
+}
 
 # will be *Caps_Lock* if no customisation or empty otherwise
 CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
