@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function log() {
+log() {
     echo "display '$DISPLAY' - $1"
 }
 
@@ -17,8 +17,7 @@ function log() {
 # will be *Caps_Lock* if no customisation or empty otherwise
 CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
 
-if [[ $CAPS == *Caps_Lock* ]]
-then
+if [ "$CAPS" == *Caps_Lock* ]; then
     log "xmodmap customisation..."
     ~/bin/kbd/map-altgr-capslock.sh
 else
