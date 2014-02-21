@@ -1,8 +1,10 @@
 #!/bin/bash -xe
 
-[ "$(package-installed.sh haskell-platform)" = "NOT" ] && install.sh haskell-platform
+PACKAGES="haskell-platform libghc-zlib-dev"
 
-[ "$(package-installed.sh libghc-zlib-dev)" = "NOT" ] && install.sh libghc-zlib-dev
+for package in $PACKAGES; do
+  [ "$(package-installed.sh $package)" = "NOT" ] && install.sh $package
+done
 
 # init cabal
 cabal update
