@@ -20,7 +20,7 @@ CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
 if [[ $CAPS == *Caps_Lock* ]]
 then
     log "xmodmap customisation..."
-    map-altgr-capslock.sh
+    ~/bin/kbd/map-altgr-capslock.sh
 else
     log "xmodmap already customized!";
 fi
