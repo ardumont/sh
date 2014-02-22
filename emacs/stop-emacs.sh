@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-emacsclient -e '(kill-emacs)'
+[ ! -z "$(pidof emacs)" ] && emacsclient -e '(kill-emacs)'

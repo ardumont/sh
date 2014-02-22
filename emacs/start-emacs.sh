@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-emacs --daemon
+[ -z "$(pidof emacs)" ] && emacs --daemon
