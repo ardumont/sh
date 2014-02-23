@@ -58,7 +58,7 @@ case "$1" in
         ;;
 
     *)
-	echo "Usage: service.sh <APP> {start|stop|restart|status}" >&2
+	echo "Usage: $0 <APP> {start|stop|restart|status}" >&2
 	exit 1
 	;;
 esac
