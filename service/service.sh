@@ -2,13 +2,11 @@
 # Use: $0 {start|stop|restart|status}
 # Generic Service Wrapper
 # Example:
-# ~/bin/service/service.sh htop start
-# ~/bin/service/service.sh htop stop
-# ~/bin/service/service.sh htop status
-# ~/bin/service/service.sh htop restart
+# ~/bin/service/service.sh htop {start|stop|status|restart}
 
 ### functions
 
+# Application that this service wraps
 APP=$1
 shift
 
@@ -21,12 +19,12 @@ app-send() {
     exit 1 # otherwise problem
 }
 
-# Stop nm-applet
+# Stop application
 app-stop() {
     $(app-send KILL)
 }
 
-# Start nm-applet
+# Start application
 app-start() {
     $APP
 }
