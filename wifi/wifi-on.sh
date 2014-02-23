@@ -1,4 +1,6 @@
 #!/bin/bash -x
 # start wifi
 
-wifi.sh on
+WDIR=$(dirname $0)
+
+$WDIR/wifi.sh on

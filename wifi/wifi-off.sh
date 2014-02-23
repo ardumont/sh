@@ -1,4 +1,6 @@
 #!/bin/bash -x
 # shutdown wifi
 
-wifi.sh off
+WDIR=$(dirname $0)
+
+$WDIR/wifi.sh off
