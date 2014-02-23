@@ -2,7 +2,7 @@
 # Use: $0 {start|stop|restart|status}
 # Generic Service Wrapper
 # Example:
-# ~/bin/service/service.sh htop {start|stop|status|restart}
+# $0 <htop|nm-applet|some-personal-script> {start|stop|status|restart}
 
 ### functions
 
