@@ -9,6 +9,8 @@
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
+WDIR=$(dirname $0)
+
 log() {
     echo "display '$DISPLAY' - $1"
 }
@@ -18,7 +20,7 @@ CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
 
 if [ "$CAPS" = "Caps_Lock" ]; then
     log "xmodmap customisation..."
-    ~/bin/kbd/map-altgr-capslock.sh
+    $WDIR/map-altgr-capslock.sh
 else
     log "xmodmap already customized!";
 fi
