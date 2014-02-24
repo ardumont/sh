@@ -9,6 +9,6 @@
 USER=tony
 case "${1}" in
         resume)
-	        su -l $USER -c "export DISPLAY=:0.0 ; xmodmap /home/$USER/.Xmodmap"
+	        su -l $USER -c "export DISPLAY=:0.0 ; /home/$USER/bin/kbd/remap-keyboard.sh"
                 ;;
 esac
