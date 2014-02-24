@@ -2,7 +2,7 @@
 
 WDIR=$(dirname $0)
 
-if [ $# -ne 1]; then
+if [ $# -ne 1 ]; then
     echo <<EOF
 Use: $0 <WINDOW_MANAGER_NAME>
 - <WINDOW_MANAGER_NAME> name of the window manager to install (stumpwm or xmonad)
