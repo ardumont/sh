@@ -9,6 +9,7 @@ Use: $0 <WINDOW_MANAGER_NAME>
 
 This will install the window manager using the linux package manager and installing the file.desktop
 EOF
+    exit 1
 fi
 
 PACKAGE=$1
