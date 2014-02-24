@@ -28,7 +28,7 @@ CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
 
 if [ "$CAPS" = "Caps_Lock" ]; then
     log "xmodmap customisation..."
-    $WDIR/map-altgr-capslock.sh
+    $WDIR/map-keyboard.sh
 else
     log "xmodmap already customized!";
 fi
