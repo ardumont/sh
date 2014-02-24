@@ -21,12 +21,13 @@ function unarchive() {
 FILE=0.9.8
 FILE_AR=$FILE.tar.gz
 DDIR_AR_FILE=$HOME/Downloads/$FILE_AR
+IDIR=$HOME/applications
 
 [ ! -f $DDIR_AR_FILE ] && wget https://github.com/sabetts/stumpwm/archive/$FILE_AR -O $DDIR_AR_FILE
 
-unarchive $DDIR_AR_FILE /tmp/
+unarchive $DDIR_AR_FILE $IDIR
 
-cd /tmp/$PACKAGE-$FILE
+cd $IDIR/$PACKAGE-$FILE
 
 autoconf
 
@@ -35,3 +36,5 @@ autoconf
 make
 
 sudo checkinstall
+
+ln -s $IDIR/$PACKAGE-$FILE $IDIR/$PACKAGE
