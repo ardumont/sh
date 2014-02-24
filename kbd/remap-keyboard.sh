@@ -1,12 +1,10 @@
 #!/bin/bash
-# ------------------------------------------------------------------------------
-# Replace:
-#     - capslock by ctrl
-#     - altgr    by alt
+# Use: $0
+# If no display variable set, log a simple message and exit
+# Otherwise, launch the keyboard mapping.
 #
 # Test before changing the mapping
-# To have an alt on the right and an easier ctrl on the left.
-# For a much better Emacs experience.
+# For a much better Emacs/Stumpwm/Firefox with keysnail experience.
 # ------------------------------------------------------------------------------
 
 ## function
