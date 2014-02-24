@@ -17,7 +17,7 @@ log() {
 
 ## Checks
 
-[ -z "$DISPLAY" ] && log "No display so no keyboard mapping." && exit 1
+[ -z "$DISPLAY" ] && log "No display so no keyboard mapping." && return 1
 
 ## Run
 
