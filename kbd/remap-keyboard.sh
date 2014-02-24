@@ -9,11 +9,19 @@
 # For a much better Emacs experience.
 # ------------------------------------------------------------------------------
 
-WDIR=$(dirname $0)
+## function
 
 log() {
     echo "display '$DISPLAY' - $1"
 }
+
+## Checks
+
+[ -z "$DISPLAY" ] && log "No display so no keyboard mapping." && exit 1
+
+## Run
+
+WDIR=$(dirname $0)
 
 # will be *Caps_Lock* if no customisation or empty otherwise
 CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
