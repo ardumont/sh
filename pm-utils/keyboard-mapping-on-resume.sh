@@ -8,7 +8,10 @@
 
 USER=tony
 case "${1}" in
-        resume)
+        suspend|hibernate)   # `suspend to ram` or `suspend to disk`
+                # do nothing
+                ;;
+        resume|thaw)         # resume from `suspend to ram` or `suspend to disk`
 	        su -l $USER -c "export DISPLAY=:0.0 ; /home/$USER/bin/kbd/remap-keyboard.sh"
                 ;;
 esac
