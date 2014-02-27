@@ -32,7 +32,7 @@ app-start() {
 # status
 app-status() {
     $(app-send 0)
-    ( [ $? = 0 ] && echo "Running!" ) || echo "Not running"
+    ( [ $? = 0 ] && echo "$APP is running!" ) || echo "$APP is not running!"
 }
 
 ### run
