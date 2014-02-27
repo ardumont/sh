@@ -40,10 +40,12 @@ app-status() {
 case "$1" in
     start)
         app-start
+        app-status
         ;;
 
     stop)
         app-stop
+        app-status
         ;;
 
     restart)
