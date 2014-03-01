@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-[ ! -z "$(pidof emacs)" ] && emacsclient -e '(kill-emacs)'
+service.sh emacs stop
