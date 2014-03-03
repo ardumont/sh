@@ -7,6 +7,6 @@ BRANCH=master
 ROOT_DIR=$(pwd)
 
 for d in *; do
-    [ -d $d ] && cd $d && echo "module: $d" && git checkout $BRANCH && git merge origin/$BRANCH
+    [ -d $d ] && cd $d && echo "module: $d" && git checkout $BRANCH && git reset --hard origin/$BRANCH
     cd $ROOT_DIR
 done
