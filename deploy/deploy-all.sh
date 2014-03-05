@@ -25,7 +25,7 @@ $WDIR/deploy-stumpwm.sh
 
 $WDIR/deploy-clojure.sh
 
-$WDIR/deploy-haskell.sh
+$WDIR/../haskell/deploy-haskell.sh
 
 $WDIR/deploy-scala.sh
 
