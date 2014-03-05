@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-service.sh emacs stop
+service.sh stop emacs

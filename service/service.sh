@@ -1,14 +1,17 @@
-#!/bin/bash
+#!/bin/bash -x
 # Use: $0 {start|stop|restart|status}
 # Generic Service Wrapper
 # Example:
-# $0 <htop|nm-applet|some-personal-script> {start|stop|status|restart}
+# $0 {start|stop|status|restart} <htop|nm-applet|some-personal-script>
 
 ### functions
 
 # Application that this service wraps
-APP=$1
+ACTION=$1
+APP=$2
 shift
+shift
+CMD="$APP $*"
 
 # Send a signal to the nm-applet pid (KILL to kill, 0 to know if it's alive)
 app-send() {
@@ -26,7 +29,7 @@ app-stop() {
 
 # Start application
 app-start() {
-    $APP
+    $CMD
 }
 
 # status
@@ -37,7 +40,7 @@ app-status() {
 
 ### run
 
-case "$1" in
+case "$ACTION" in
     start)
         app-start
         app-status
@@ -58,7 +61,7 @@ case "$1" in
         ;;
 
     *)
-	echo "Usage: $0 <APP> {start|stop|restart|status}" >&2
-	exit 1
-	;;
+        echo "Usage: $0 {start|stop|restart|status} <APP>" >&2
+        exit 1
+        ;;
 esac
