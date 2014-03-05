@@ -12,6 +12,6 @@ case "${1}" in
                 # do nothing
                 ;;
         resume|thaw)         # resume from `suspend to ram` or `suspend to disk`
-                su -l $USER -c "export DISPLAY=:0.0 ; /home/$USER/bin/kbd/remap-keyboard.sh" &
+                su -l $USER -c "/home/$USER/bin/kbd/remap-keyboard.sh" &
                 ;;
 esac
