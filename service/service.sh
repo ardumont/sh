@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 # Use: $0 {start|stop|restart|status} <APP>
 # Generic Service Wrapper
 # Example:
