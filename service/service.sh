@@ -1,5 +1,5 @@
 #!/bin/bash -x
-# Use: $0 {start|stop|restart|status}
+# Use: $0 {start|stop|restart|status} <APP>
 # Generic Service Wrapper
 # Example:
 # $0 {start|stop|status|restart} <htop|nm-applet|some-personal-script>
