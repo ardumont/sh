@@ -12,6 +12,8 @@ if [ ! -f $FILE ] ; then
     exit 1;
 fi
 
+eval $(ssh-agent)
+
 for key in $(cat $FILE);
 do
     # Is the key already loaded into the ssh-agent?
