@@ -4,4 +4,4 @@ WDIR=$(dirname $0)
 
 # remove
 
-sudo aptitude remove $*
+sudo aptitude remove -y $*
