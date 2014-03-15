@@ -1,4 +1,6 @@
 #!/bin/bash -xe
+# Use: $0
+# Install nodejs from source
 
 DDIR=$HOME/applications
 VERSION=v0.10.26
