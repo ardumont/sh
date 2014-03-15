@@ -1,18 +1,21 @@
 #!/bin/bash -xe
 
-FILE=$HOME/Downloads/node.tgz
 DDIR=$HOME/applications
+VERSION=v0.10.26
+APP=node-$VERSION
+URL=http://nodejs.org/dist/$VERSION/$APP.tar.gz
+FILE=$HOME/Downloads/node-$VERSION.tgz
 
 install.sh g++
 
 mkdir -p $DDIR
 
-[ ! -f $FILE ] && wget http://nodejs.org/dist/v0.10.20/node-v0.10.20.tar.gz -O $FILE
+[ ! -f $FILE ] && wget $URL -O $FILE
 
-if [ ! -d $DDIR/node-v0.10.20 ]; then
+if [ ! -d $DDIR/$VERSION ]; then
     tar xvf $FILE -C $DDIR
 
-    cd $DDIR/node-v0.10.20
+    cd $DDIR/$VERSION
 
     ./configure
     make
