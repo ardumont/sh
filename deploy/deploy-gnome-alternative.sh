@@ -1,7 +1,9 @@
-#/bin/bash
+#/bin/bash -x
+
+REMOVE_FLAG=$1
 
 WDIR=$(dirname $0)
 
-# install
+PACKAGES="gnome-control-center gnome-shell gnome-session-fallback gnome-tweak-tool"
 
-$WDIR/install.sh gnome-control-center gnome-shell gnome-session-fallback gnome-tweak-tool
+[ -z "$REMOVE_FLAG" ] && $WDIR/install.sh $PACKAGES || $WDIR/remove.sh $PACKAGES
