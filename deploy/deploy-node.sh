@@ -25,3 +25,5 @@ if [ ! -d $DDIR/$VERSION ]; then
 
     ~/bin/deploy/install-from-source.sh
 fi
+
+install.sh npm
