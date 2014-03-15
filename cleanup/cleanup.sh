@@ -19,6 +19,9 @@ sudo aptitude purge -y $OLDCONF
 echo -e $YELLOW"Removing old kernels..."$ENDCOLOR
 sudo aptitude purge -y $OLDKERNELS
 
+echo -e $YELLOW"Purge orphan packages..."$ENDCOLOR
+deborphan | xargs sudo aptitude purge -y
+
 echo -e $YELLOW"Emptying every trashes..."$ENDCOLOR
 rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
 sudo rm -rf /root/.local/share/Trash/*/** &> /dev/null
