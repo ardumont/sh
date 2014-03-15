@@ -17,7 +17,5 @@ if [ ! -d $DDIR/$VERSION ]; then
 
     cd $DDIR/$VERSION
 
-    ./configure
-    make
-    sudo make install
+    ./install-from-source.sh
 fi
