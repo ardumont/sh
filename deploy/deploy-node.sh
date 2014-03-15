@@ -6,18 +6,22 @@ DDIR=$HOME/applications
 VERSION=v0.10.26
 APP=node-$VERSION
 URL=http://nodejs.org/dist/$VERSION/$APP.tar.gz
-FILE=$HOME/Downloads/node-$VERSION.tgz
+FILE=node-$VERSION
+ARCHIVE=$FILE.tgz
+ARCHIVE_PATH=$HOME/Downloads/$ARCHIVE
 
 install.sh g++
 
 mkdir -p $DDIR
 
-[ ! -f $FILE ] && wget $URL -O $FILE
+# Download the archive once
+[ ! -f $ARCHIVE_PATH ] && wget $URL -O $ARCHIVE_PATH
 
+# Install
 if [ ! -d $DDIR/$VERSION ]; then
-    tar xvf $FILE -C $DDIR
+    tar xvf $ARCHIVE_PATH -C $DDIR
 
-    cd $DDIR/$VERSION
+    cd $DDIR/$FILE
 
-    ./install-from-source.sh
+    ~/bin/deploy/install-from-source.sh
 fi
