@@ -11,4 +11,4 @@ sudo gem install bundler
 echo -e "source 'https://rubygems.org'\ngem 'github-pages'" > Gemfile
 
 # execute the bundle installation of the deps needed
-bundle install
+sudo bundle install
