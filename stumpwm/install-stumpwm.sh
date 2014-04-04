@@ -23,7 +23,7 @@ FILE_AR=$FILE.tar.gz
 DDIR_AR_FILE=$HOME/Downloads/$FILE_AR
 IDIR=$HOME/applications
 
-[ ! -f $DDIR_AR_FILE ] && wget https://github.com/sabetts/stumpwm/archive/$FILE_AR -O $DDIR_AR_FILE
+[ ! -f $DDIR_AR_FILE ] && wget https://github.com/stumpwm/stumpwm/archive/$FILE_AR -O $DDIR_AR_FILE
 
 unarchive $DDIR_AR_FILE $IDIR
 
