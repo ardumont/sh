@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-install.sh textinfo build-essential automake autoconf libdbus-1-dev libgconf2-dev libgif-dev libgpm-dev libgtk2.0-dev libjpeg62-dev libm17n-dev libncurses5-dev libotf-dev librsvg2-dev libtiff4-dev libXpm-dev
+install.sh texinfo build-essential automake autoconf libdbus-1-dev libgconf2-dev libgif-dev libgpm-dev libgtk2.0-dev libjpeg-dev libm17n-dev libncurses5-dev libotf-dev librsvg2-dev libtiff4-dev libXpm-dev
 
 EMACS_SOURCE_FOLDER=$HOME/repo/perso/emacs
 
@@ -12,4 +12,4 @@ cd $EMACS_SOURCE_FOLDER
 make
 src/emacs --version
 src/emacs --batch -q
-checkinstall
+sudo checkinstall
