@@ -13,6 +13,9 @@ ENDCOLOR="\033[0m"
 echo -e $YELLOW"Cleaning apt cache..."$ENDCOLOR
 sudo aptitude clean
 
+echo -e $YELLOW"Auto remove obsolete deps..."$ENDCOLOR
+sudo apt-get autoremove
+
 echo -e $YELLOW"Removing old config files..."$ENDCOLOR
 sudo aptitude purge -y $OLDCONF
 
