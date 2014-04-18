@@ -9,7 +9,7 @@ curl https://get.docker.io/ubuntu/ | sudo sh
 # Add the current user to docker group
 sudo gpasswd -a ${USER} docker
 
-# Restart the Docker daemon.
+# logout the user and relog in
 sudo service docker restart
 
 # Now you can run docker
