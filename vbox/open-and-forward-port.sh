@@ -8,7 +8,15 @@ GUEST_NAME=$1
 RULE_NAME=$2
 GUEST_PORT=$3
 HOST_PORT=$4
+PROTOCOL=tcp
 
-VBoxManage setextradata $GUEST_NAME "VBoxInternal/Devices/pcnet/0/LUN#0/Config/$RULE_NAME/HostPort" $HOST_PORT
-VBoxManage setextradata $GUEST_NAME "VBoxInternal/Devices/pcnet/0/LUN#0/Config/$RULE_NAME/GuestPort" $GUEST_PORT
-VBoxManage setextradata $GUEST_NAME "VBoxInternal/Devices/pcnet/0/LUN#0/Config/$RULE_NAME/Protocol" TCP
+# Pause the vm to be able to modify it
+VBoxManage controlvm $GUEST_NAME pause
+
+# Remove if the rules exist
+VBoxManage modifyvm $GUEST_NAME --natpf1 delete "$RULE_NAME"
+# Than add the current rule
+VBoxManage modifyvm $GUEST_NAME --natpf1 "$RULE_NAME,$PROTOCOL,,$HOST_PORT,,$GUEST_NAME"
+
+# Pause the vm to be able to modify it
+VBoxManage controlvm $GUEST_NAME resume
