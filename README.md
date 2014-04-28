@@ -1,13 +1,13 @@
 sh
 ==
 
-Personal scripts for multiple uses:
-- centralizing scripts
+Scripts to:
+- centralize
 - deploy machine software
-- synchronizing git repositories deployment scripts
-- fetching multiple dependencies (lein, mvn, etc...)
-- connecting to db...
-etc...
+- synchronize git repositories deployment scripts
+- fetch multiple dependencies (lein, mvn, etc...)
+- connect to db...
+- etc...
 
 # licence
 
