@@ -1,3 +1,3 @@
 #!/bin/bash
 
-install.sh gnupg2
+install.sh gnupg2 keychain
