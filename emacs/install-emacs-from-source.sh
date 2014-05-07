@@ -8,7 +8,8 @@ EMACS_SOURCE_FOLDER=$HOME/repo/perso/emacs
 
 cd $EMACS_SOURCE_FOLDER
 
-./configure --with-x-toolkit=lucid --with-dir=$HOME/applications/emacs-snapshot
+# to avoid "Emacs might crash when run in daemon mode and the X11 connection is unexpectedly lost. Using an Emacs configured with --with-x-toolkit=lucid does not have this problem."
+./configure --with-dir=$HOME/applications/emacs-snapshot --with-x-toolkit=lucid
 make
 src/emacs --version
 src/emacs --batch -q
