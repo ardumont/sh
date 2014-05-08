@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-PACKAGES="haskell-platform libghc-zlib-dev"
+PACKAGES="haskell-platform libghc-zlib-dev hlint"
 
 for package in $PACKAGES; do
   [ "$(package-installed.sh $package)" = "NOT" ] && install.sh $package
@@ -13,4 +13,4 @@ cabal update
 cabal install cabal cabal-install
 
 # reload the path
-source ~/.bashrc
+source ~/.shrc-path
