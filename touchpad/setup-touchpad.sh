@@ -1,13 +1,13 @@
 #!/bin/sh -x
 
-# disable palm detection
-synclient PalmDetect=1
+# Use: $0
+# This script will:
+# - Activate palm detection
+# - Activate tap to click
+# - Activate 2 fingers tapping as right click
+# - Activate 3 fingers tapping as middle click
 
-# Activate tap to click
-synclient TapButton1=1
-
-# Activate secondary tap to click (to display contextual menu)
-synclient TapButton3=1
-
-# disable the touchpad (for information)
-#synclient TouchpadOff=1
+synclient PalmDetect=0 \
+          TapButton1=1 \
+          TapButton2=3 \
+          TapButton3=2
