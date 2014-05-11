@@ -8,7 +8,7 @@ EMACS_SOURCE_FOLDER=$HOME/repo/perso/emacs
 
 cd $EMACS_SOURCE_FOLDER
 
-./configure --with-dir=$HOME/applications/emacs-snapshot
+./configure --with-x-toolkit=lucid --with-dir=$HOME/applications/emacs-snapshot
 make
 src/emacs --version
 src/emacs --batch -q
