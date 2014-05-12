@@ -1,4 +1,4 @@
 #!/bin/bash
 # Use: $0
 
-slock
+xscreensaver-command --lock
