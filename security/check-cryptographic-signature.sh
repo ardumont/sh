@@ -3,4 +3,4 @@
 SIG=$1
 FILE=$2
 
-gpg --keyid-format long --verify $SIG $FILE
+gpg2 --keyid-format long --verify $SIG $FILE
