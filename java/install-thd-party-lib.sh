@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[ $# -ne 4 ] && echo "Use: $0 <FILEPATH> <GROUPID> <ARTEFACTID> <VERSION>" && return 1
+
 FILEPATH=$1
 GROUPID=$2
 ARTEFACTID=$3
