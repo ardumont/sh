@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Source:
+# - http://eclim.org/install.html
+# - https://github.com/senny/emacs-eclim
+
 [ $# -ne 1 ] && echo "Use: $0 <ECLIPSE_HOME>
 ECLIPSE_HOME Folder where eclipse is installed." && exit 1
 
