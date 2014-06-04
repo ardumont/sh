@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ ! -d .git ] && echo "Error: must run this script from the root of a git repository" && exit 1
+
 [ $# -ne 1 ] && echo "Use: $0 <CMD>
 CMD Command to execute for each commit since your repository's dawn of time" && exit 1
 

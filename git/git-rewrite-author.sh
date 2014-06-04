@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ ! -d .git ] && echo "Error: must run this script from the root of a git repository" && exit 1
+
 [ $# -ne 1 -a $# -ne 2 ] && echo "Use: $0 <AUTHOR> (<AUTHOR_NAME>)
 AUTHOR_EMAIL Author's email
 AUTHOR_NAME  (Optional) Author's name" && exit 1
