@@ -4,4 +4,4 @@ install.sh suckless-tools
 
 deploy-wm.sh xmonad
 
-cabal install xmonad-contrib
+cabal update && cabal install xmonad-contrib
