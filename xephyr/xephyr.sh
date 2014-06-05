@@ -3,6 +3,7 @@
 XDP=:1
 DP=$XDP.0
 
+MANAGER=$1
 HOSTNAME=$(hostname)
 
 # resolution depending on my hostname
@@ -15,13 +16,20 @@ HOSTNAME=$(hostname)
 # -screen XxY specify screen characteristics
 Xephyr -ac -br -noreset -screen $RES $XDP &
 
-# wait a little
+# wait a little for xephyr to start (FIXME: improve on this)
 sleep 1
 
-metacity --display $DP &
-
 # Then launch a connection
-DISPLAY=$DP gnome-panel --replace &
+DISPLAY=$DP
+
+if [ "$MANAGER" = "gnome" ];
+then
+    metacity --display $DP &
+    gnome-panel --replace &
+elif [ "$MANAGER" = "xmonad" ]
+then
+    xmonad &
+fi
 
 xterm -display $DP
 
