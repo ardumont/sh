@@ -1,3 +1,3 @@
 #!/bin/bash -xe
 
-~/bin/service/service.sh $1 emacs --daemon
+[ -z "$(pidof emacs)" ] && emacs --daemon || emacsclient --create-frame
