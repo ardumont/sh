@@ -31,6 +31,6 @@ then
     xmonad &
 fi
 
-xterm -display $DP
+gnome-terminal &
 
 # ssh -XfC -c blowfish tony@localhost some-apps
