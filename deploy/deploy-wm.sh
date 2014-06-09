@@ -27,6 +27,7 @@ sudo touch /usr/share/xsessions/$PACKAGE.desktop
         TryExec=$PACKAGE
         Name=$PACKAGE
         Comment=The Mouseless Window Manager!
+        Type=XSession
 EOF
 )> $PACKAGE.buffer
 
