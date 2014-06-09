@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install.sh suckless-tools
+install.sh suckless-tools xmobar
 
 deploy-wm.sh xmonad
 
