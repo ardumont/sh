@@ -22,14 +22,20 @@ sleep 1
 # Then launch a connection
 DISPLAY=$DP
 
-if [ "$MANAGER" = "gnome" ];
-then
-    metacity --display $DP &
-    gnome-panel --replace &
-elif [ "$MANAGER" = "xmonad" ]
-then
-    xmonad &
-fi
+case "$MANAGER" in
+    "gnome")
+        metacity --display $DP &
+        gnome-panel --replace &
+        ;;
+    "xmonad")
+        xmonad &
+        ;;
+    "stumpwm")
+        stumpwm &
+        ;;
+    *)
+        ;;
+esac
 
 gnome-terminal &
 
