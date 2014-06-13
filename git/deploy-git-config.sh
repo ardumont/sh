@@ -43,3 +43,6 @@ git config --global core.excludesfile ~/.gitignore_global
 
 # help when typo
 git config --global help.autocorrect 1
+
+# Adopt the new default git behavior where you need to explicitely define the branch you are working with
+git config --global push.default.simple
