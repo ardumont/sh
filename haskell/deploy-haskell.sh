@@ -10,7 +10,7 @@ done
 cabal update
 
 # upgrade to latest version
-cabal install cabal cabal-install
+cabal install cabal cabal-install haddock
 
 # reload the path
 source ~/.shrc-path
