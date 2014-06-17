@@ -10,7 +10,7 @@ done
 cabal update
 
 # upgrade to latest version
-cabal install cabal cabal-install haddock hs-colour
+cabal install cabal cabal-install haddock hs-colour hasktags
 
 # reload the path
 source ~/.shrc-path
