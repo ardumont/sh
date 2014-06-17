@@ -23,8 +23,8 @@ sudo touch /usr/share/xsessions/$PACKAGE.desktop
 # Add the entry for login manager (gdm, mdm, lightdm, etc...)
 (cat <<EOF
 [Desktop Entry]
-        Exec=$PACKAGE
-        TryExec=$PACKAGE
+        Exec=$HOME/.$PACKAGE.start
+        TryExec=$HOME/.$PACKAGE.start
         Name=$PACKAGE
         Comment=The Mouseless Window Manager!
         Type=XSession
