@@ -2,6 +2,6 @@
 
 HOST=$(hostname)
 
-[ "$HOST" = "job" ] && ECLIPSE=eclipse || ECLIPSE=~/applications/eclipse/eclipse
+[ "$HOST" = "job" ] && ECLIPSE=eclipse || ECLIPSE=~/applications/ide/eclipse/eclipse/eclipse
 
 $ECLIPSE
