@@ -33,4 +33,4 @@ xrandr \
     --pos 0x0 \
     --output DP2 \
     --rotate normal \
-    --pos 0x0
+    --pos 1920x0
