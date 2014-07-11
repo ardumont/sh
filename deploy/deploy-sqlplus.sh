@@ -1,5 +1,9 @@
 #!/bin/bash -x
 
+install.sh alien
+
+DEST_DIR=$HOME/Downloads
+
 # Not working yet so dl manually at the moment
 retrieve-oracle-soft () {
   URL=$1
@@ -14,16 +18,23 @@ retrieve-oracle-soft () {
         --output-document $DEST_FILE
 }
 
-DEST_DIR=$HOME/Downloads
+# convert if need be and then install the converted rpm
+convert-oracle-soft () {
+    FILE_INPUT=$1
+    FILE_OUTPUT=$2
+
+    # convert if need be
+    [ ! -f $FILE_OUTPUT ] && \
+        sudo alien --to-deb $FILE_INPUT
+
+    # install the converted file
+    sudo dpkg -i $FILE_OUTPUT
+}
 
 retrieve-oracle-soft http://download.oracle.com/otn/linux/instantclient/121010/oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.rpm   $DEST_DIR/oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.rpm
 retrieve-oracle-soft http://download.oracle.com/otn/linux/instantclient/121010/oracle-instantclient12.1-sqlplus-12.1.0.1.0-1.x86_64.rpm $DEST_DIR/oracle-instantclient12.1-sqlplus-12.1.0.1.0-1.x86_64.rpm
 retrieve-oracle-soft http://download.oracle.com/otn/linux/instantclient/121010/oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.rpm   $DEST_DIR/oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.rpm
 
-sudo aptitude install -y alien
-
-for package in *.rpm; do sudo alien --to-deb $package; done
-
-cd $DEST_DIR
-
-sudo dpkg -i oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.deb oracle-instantclient12.1-sqlplus-12.1.0.1.0-1.x86_64.deb oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.deb
+convert-oracle-soft $DEST_DIR/oracle-instantclient12.1-basic-12.1.0.1.0-1.x86_64.rpm   $DEST_DIR/oracle-instantclient12.1-basic_12.1.0.1.0-2_amd64.deb
+convert-oracle-soft $DEST_DIR/oracle-instantclient12.1-sqlplus-12.1.0.1.0-1.x86_64.rpm $DEST_DIR/oracle-instantclient12.1-sqlplus_12.1.0.1.0-2_amd64.deb
+convert-oracle-soft $DEST_DIR/oracle-instantclient12.1-devel-12.1.0.1.0-1.x86_64.rpm   $DEST_DIR/oracle-instantclient12.1-devel_12.1.0.1.0-2_amd64.deb
