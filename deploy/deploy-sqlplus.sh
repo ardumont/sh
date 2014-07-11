@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-install.sh alien
+install.sh alien libaio-dev
 
 DEST_DIR=$HOME/Downloads
 
