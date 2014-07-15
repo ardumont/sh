@@ -1,5 +1,18 @@
-#!/bin/bash -xe
+#!/bin/bash
+
+[ $# -lt 2 ] && \
+    echo "Use: $0 <FOLDER-FROM> <REGEXP>...
+FOLDER-FROM  The folder from where to start.
+REGEXP       The expression to look for
+
+Example - Search for a folder or file named \"hello you\" in ~admin/bin:
+f ~admin/bin hello you" && \
+    exit 1
+
+FOLDER=$1
+
+shift
 
 REGEXP="*"$(echo "$*" | sed 's/[ ]/*/g')"*"
 
-find . -iname "$REGEXP"
+find $FOLDER -iname "$REGEXP"
