@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Clean idea files from the current location
 

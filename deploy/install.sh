@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # This script is destined to simplify the installation between debian and ubuntu
 # Use: $0 list-of-packages
 # Ex:  $0 byobu tmux emacs23...

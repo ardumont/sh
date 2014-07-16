@@ -1,3 +1,3 @@
-#!/bin/bash -e
+#!bash -e
 
 sudo dmidecode -s system-product-name

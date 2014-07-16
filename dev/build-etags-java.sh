@@ -1,4 +1,3 @@
-#!/bin/bash
+#!bash
 
 find . -name "*.java" | etags --language=java -
-

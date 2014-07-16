@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 [ $# -ne 1 ] && echo "$0 <EMAIL>" && exit 1
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # Use: $0 <GUEST-NAME> <RULE-NAME> <PORT-GUEST> <PORT-HOST>
 
 # tips: vboxmanage list vms

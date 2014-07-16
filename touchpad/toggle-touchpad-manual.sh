@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 # Use: $0 <STATUS>
 # By default the touchpad is activated!

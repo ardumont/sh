@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 ########################################################################################################################
 # Set variables - interrupt, extension1, extension2, and the audio file name
@@ -41,4 +41,4 @@ for filename in *.$ext1; do
     fi
 done
 
-exit 0 
+exit 0

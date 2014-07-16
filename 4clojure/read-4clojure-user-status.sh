@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 # Input the user we want to see
 USER=$1

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 # Use:
 # deploy new repository inside /etc/apt/sources.list

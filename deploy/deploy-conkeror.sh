@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 DEST=~/Downloads/conkeror
 URL_CONKEROR=http://launchpadlibrarian.net/53257451/conkeror_0.9.2%2Bgit100804-1ubuntu1_all.deb
@@ -53,4 +53,3 @@ dl-soft $FILE_CONKEROR $URL_CONKEROR
 # Is the soft already installed?
 install-soft $FILE_XULRUNNER xulrunner
 install-soft $FILE_CONKEROR conkeror
-

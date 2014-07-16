@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 DDIR=$HOME/Downloads
 URL=http://mirrors.ircam.fr/pub/apache/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.tar.gz

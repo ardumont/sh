@@ -1,6 +1,6 @@
-#!/bin/bash
+#!bash
 
-#!/bin/bash
+#!bash
 #aide -> fichier /root/help/my_emerge
 
 #les fonctions
@@ -97,5 +97,3 @@ main(){
 init
 
 main $*
-
-

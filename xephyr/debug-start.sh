@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 XDP=:20
 DP=$XDP.0

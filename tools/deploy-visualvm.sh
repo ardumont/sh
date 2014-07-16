@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 DDIR=$HOME/Downloads
 URL=https://java.net/projects/visualvm/downloads/download/release136/visualvm_136.zip

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 install.sh alien libaio-dev
 

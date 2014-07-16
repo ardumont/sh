@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 HREPO=$HOME/repo/perso
 REPO=$HREPO/emacs-live-packs

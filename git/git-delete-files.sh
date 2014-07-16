@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 [ ! -d .git ] && echo "Error: must run this script from the root of a git repository" && exit 1
 

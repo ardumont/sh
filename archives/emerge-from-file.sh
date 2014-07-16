@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 #aide -> fichier /root/help/my_emerge
 
 #les fonctions

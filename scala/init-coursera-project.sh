@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 [ $# -ne 1 ] && echo "Use: $0 <FOLDER-NAME>" && exit 1
 

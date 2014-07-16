@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Script to determine if a package is installed or not
 

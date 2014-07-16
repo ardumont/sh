@@ -1,3 +1,3 @@
-#!/bin/bash
+#!bash
 
 killall change-background-screen.py

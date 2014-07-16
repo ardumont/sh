@@ -1,3 +1,3 @@
-#!/bin/bash
+#!bash
 
 install.sh tuxguitar tuxguitar-jsa

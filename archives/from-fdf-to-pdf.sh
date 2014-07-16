@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # conversion command
 PDFTK=$(which pdftk)
@@ -20,4 +20,3 @@ for i in $(ls *.fdf); do
     # execute the conversion
     $PDFTK $FORM_INPUT fill_form $i output $OUTPUT_FILENAME
 done
-

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 REPO=$1
 USER=${2-ardumont}

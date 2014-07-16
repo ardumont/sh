@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 # Use: $0
 # Install stumpwm from git source
 

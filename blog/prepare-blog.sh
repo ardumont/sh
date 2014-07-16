@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 # install some scripts to ease the reading on bash repl
 [ ! -d ~/repo/perso/sh ] && git clone git://github.com/ardumont/sh.git ~/repo/perso/sh

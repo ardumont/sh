@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # the first command to help set the commands and other non optionnal setup
 _set()
@@ -19,7 +19,7 @@ _set()
     GENTOO_USR=${GENTOO_HOME}/usr
     GENTOO_DEV=${GENTOO_HOME}/dev
     GENTOO_PROC=${GENTOO_HOME}/proc
-    
+
     # mounting option (do we have to mount the drives)
     opt_mount=1
     # umount option (to unmount the drives used for chrooting the environment)
@@ -81,7 +81,7 @@ process_opt()
 				shift;;
 		esac
 	done
-    
+
 }
 
 #programme principal
@@ -160,4 +160,3 @@ main $*
 
 #sortie du programme
 exit 0;
-

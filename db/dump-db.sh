@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 if [ $# -ne 2 ]; then
   echo "Use : $0 <database> <file>";

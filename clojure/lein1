@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 export LEIN_VERSION="1.7.1"
 

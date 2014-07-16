@@ -1,3 +1,3 @@
-#!/bin/bash
+#!bash
 
 mu index --maildir=~/.mails

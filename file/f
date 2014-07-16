@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 [ $1 = "-h" ] && \
     echo "Use: $0 (<FOLDER-FROM>) <REGEXP>...

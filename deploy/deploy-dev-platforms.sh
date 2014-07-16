@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 deploy-haskell.sh
 deploy-scala-env.sh

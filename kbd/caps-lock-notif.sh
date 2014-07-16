@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # Use: $0
 # Send a notification when CAPS LOCK on
 

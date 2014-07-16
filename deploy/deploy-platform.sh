@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 WDIR=$(dirname $0)
 VERSION=$1

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # source: http://wiki.eclipse.org/How_to_report_a_deadlock#jstackSeries_--_jstack_sampling_in_fixed_time_intervals_.28tested_on_Linux.29
 

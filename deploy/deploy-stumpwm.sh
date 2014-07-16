@@ -1,3 +1,3 @@
-#!/bin/bash
+#!bash
 
 $(dirname $0)/deploy-wm.sh stumpwm

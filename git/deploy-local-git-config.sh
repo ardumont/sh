@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 USER=${1-"eniotna.t@gmail.com"}
 

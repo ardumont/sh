@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 ########################################################################################################################
 # Set variables - interrupt, extension1, extension2, and the audio file name
@@ -48,4 +48,4 @@ else
     exit 1
 fi
 
-exit 0 
+exit 0

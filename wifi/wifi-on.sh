@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 # start wifi
 
 WDIR=$(dirname $0)

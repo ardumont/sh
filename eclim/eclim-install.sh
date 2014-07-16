@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Source:
 # - http://eclim.org/install.html

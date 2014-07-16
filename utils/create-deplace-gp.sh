@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 #initialisation des variables
 init(){

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # Use: $0
 # Make the submodule progress to the origin/HEAD of their respective current branch
 

@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 # Use: This script deploy emacs-live and emacs-live-packs from my git repositories
 

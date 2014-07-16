@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # emulate stumpwms run-or-raise with ratpoison
 # $1: Windowname to look for
 # $2: Command to start if the Windowname to look for is not found yet, if this is not provided, we use the Windowname

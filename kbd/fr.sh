@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 setxkbmap -model "pc105" -layout "fr"
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 EVM_FOLDER=/usr/local/evm
 EVM_HOME=$HOME/.evm

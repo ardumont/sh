@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 DDIR=$HOME/Downloads
 URL=http://www.scala-lang.org/files/archive/scala-2.10.4.tgz

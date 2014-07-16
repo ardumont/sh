@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # source: https://help.github.com/articles/using-jekyll-with-pages
 
 # pre-requisite

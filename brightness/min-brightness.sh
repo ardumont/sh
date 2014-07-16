@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Use: $0
 # Set the min brightness for the screen

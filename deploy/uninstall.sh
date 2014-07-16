@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 # This script is destined to simplify the uninstallation between debian and ubuntu
 # Use: uninstall.sh list-of-packages

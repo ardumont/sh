@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Working directory of the script
 WDIR=$(dirname $0)

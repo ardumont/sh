@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 SRC=$HOME/repo/perso
 REPO_TEAM=$SRC/common-sh

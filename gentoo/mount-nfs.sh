@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 _set(){
 	#serveur
@@ -29,4 +29,3 @@ echo "montage de ${SOURCES}"
 ${MOUNT} ${FLAG} ${IP}:${SOURCES} ${SOURCES}
 
 _unset
-

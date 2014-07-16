@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 PROJ_NAME=$1
 
@@ -10,7 +10,7 @@ git clone $CB$PROJ_NAME.git
 # go inside it
 cd $PROJ_NAME
 # remove the old reference
-git remote rm origin 
+git remote rm origin
 # add the new one
 git remote add origin $GH$PROJ_NAME
 # update the master branch

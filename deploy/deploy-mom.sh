@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 URL=http://mirror.ovh.net/ftp.ovh.net/MoM/MoM-4.1.15.tar.gz
 DDIR=$HOME/Downloads

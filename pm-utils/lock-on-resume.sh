@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Action script to ensure the session is locked when resuming
 #

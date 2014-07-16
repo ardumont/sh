@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 # http://riemann.io/quickstart.html
 

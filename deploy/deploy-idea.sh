@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 # Use
 # $0 <URL-INTELLIJ-IDEA-ARCHIVE>

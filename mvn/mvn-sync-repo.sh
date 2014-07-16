@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 # Use
 # $0 /path/to/repo-which-contains-the-pom.xml-file

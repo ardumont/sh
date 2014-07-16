@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # Use: $0
 # If no display variable set, log a simple message and exit
 # Otherwise, launch the keyboard mapping.

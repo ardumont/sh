@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 # Script to launch audio servers for music making.
 

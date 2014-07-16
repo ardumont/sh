@@ -1,3 +1,3 @@
-#!/bin/bash
+#!bash
 
 xmodmap -display $DISPLAY -pke

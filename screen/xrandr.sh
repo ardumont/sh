@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 # Use: reference some use case for xrandr
 

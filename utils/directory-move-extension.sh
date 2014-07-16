@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 if [ $# -ne 3 ]; then
   echo -e "\tCeci est un script servant a renommer toutes les extensions "\
@@ -16,6 +16,4 @@ for i in $1/*; do
   if [ -d $i ]; then
     directory-move-extension.sh $i $2 $3;
   fi
-done      
-  
-  
+done

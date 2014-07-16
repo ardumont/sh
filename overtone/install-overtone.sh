@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 WDIR=$(dirname $0)/../deploy
 

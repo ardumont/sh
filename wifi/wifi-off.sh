@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 # shutdown wifi
 
 WDIR=$(dirname $0)

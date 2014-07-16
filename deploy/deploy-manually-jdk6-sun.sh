@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 
 BIN=jdk-6u32-linux-x64.bin
 FOLDER=jdk1.6.0_32

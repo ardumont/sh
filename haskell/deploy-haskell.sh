@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!bash -xe
 
 PACKAGES="haskell-platform libghc-zlib-dev hlint"
 

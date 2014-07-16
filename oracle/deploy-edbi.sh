@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 #Use; Run as root
 

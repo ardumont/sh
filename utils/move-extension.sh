@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 
 if [ $# -ne 3 ]; then
   echo -e "\tCeci est un script servant a renommer toutes les extensions "\
@@ -24,18 +24,16 @@ if [ $dir_name = "php" ]; then
 fi;
 
 #sinon on renomme le contenu de ce repertoire
-for i in $1/*; do 
+for i in $1/*; do
   #recuperation du nom complet du fichier
   name=$(basename $i);
   #recuperation du nom sans l'extension
   nom=`echo $name | sed "s/\(.*\)\.\(.*\)/\1/g"`;
   #puis uniquement l'extension
   ext=`echo $name | sed "s/\(.*\)\.\(.*\)/\2/g"`;
- 
+
   if [ $ext = $2 ]; then
     echo "mv $i $1/$nom.$3";
     #mv $i $pathname/$nom.$3;
   fi
-done      
-  
-  
+done

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!bash
 # Use: $0
 
 SERVER=http://server:8080

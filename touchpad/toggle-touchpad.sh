@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!bash -e
 
 # Use: $0
 # Toggle automatically on/off the touchpad depending its state

@@ -1,5 +1,5 @@
-#!/bin/bash
+#!bash
 
 result=`md5sum -b $@`
 
-zenity --info --text="Hash MD5:\n$result" 
+zenity --info --text="Hash MD5:\n$result"

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!bash -x
 # Use:
 # make a bootable disk
 
