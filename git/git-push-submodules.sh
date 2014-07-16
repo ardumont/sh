@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # Use: $0
 # Make the submodule push their current HEAD to the remote branch
 

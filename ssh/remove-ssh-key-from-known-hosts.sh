@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 IP=$1
 

@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 result=`md5sum -b $@`
 

@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 FILE=~/.ssh-agent-identity
 

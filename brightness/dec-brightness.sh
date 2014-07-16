@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 # Use: $0 <brightness increment>
 # Decrement the current brightness by the brightness increment passed as parameter

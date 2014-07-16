@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 # Use: a simple script to help in backup rapidly some heavy app (eclipse for one example)
 # $0                 add in the git index all the modified and new files, add the deleted ones in the index too then commit with the

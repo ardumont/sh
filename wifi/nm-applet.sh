@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # Use: $0 {start|stop|restart|status}
 # Service Wrapper around nm-applet
 

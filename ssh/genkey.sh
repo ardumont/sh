@@ -1,4 +1,4 @@
-#!bash -e
+#!/usr/bin/env bash -e
 
 [ $# -ne 1 ] && echo "Use: $0 <email-address>" && exit 1
 

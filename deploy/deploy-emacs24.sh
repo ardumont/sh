@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 WDIR=$(dirname $(readlink -f $0))
 

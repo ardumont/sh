@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 ########################################################################################################################
 # Set variables - interrupt, extension1, extension2, and the audio file name

@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 if [ $# -ne 1 ]; then
     echo "Use: $0 <BRANCH_NAME>"

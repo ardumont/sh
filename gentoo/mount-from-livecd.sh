@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 #ne pas toucher a l'ordre
 
 #mount -t ext3 /dev/sda5 /mnt/gentoo/

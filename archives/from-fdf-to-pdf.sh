@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # conversion command
 PDFTK=$(which pdftk)

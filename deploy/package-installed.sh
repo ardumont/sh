@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # Script to determine if a package is installed or not
 

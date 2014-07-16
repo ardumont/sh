@@ -1,4 +1,4 @@
-#!bash -xe
+#!/usr/bin/env bash -xe
 
 GCUTIL=gcutil-1.8.0.tar.gz
 URL=https://code.google.com/p/google-compute-engine-tools/downloads/detail?name=$GCUTIL

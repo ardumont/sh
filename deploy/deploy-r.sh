@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 # Use
 # deploy the r package

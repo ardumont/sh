@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # Use: $0
 # Will trigger syndaemon if no existing instance exists

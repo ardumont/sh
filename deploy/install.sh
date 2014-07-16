@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # This script is destined to simplify the installation between distributions (debian, ubuntu, nixos, etc...)
 # Use: $0 list-of-packages
 # Ex:  $0 byobu tmux emacs23...

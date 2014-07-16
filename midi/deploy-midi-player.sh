@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 install.sh fluidsynth fluid-soundfont-gm jackd
 

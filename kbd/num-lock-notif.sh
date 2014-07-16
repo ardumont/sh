@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # Use: $0
 # Send a notification when NUM LOCK on
 

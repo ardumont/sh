@@ -1,4 +1,4 @@
-#!bash -xe
+#!/usr/bin/env bash -xe
 
 XDP=:1
 DP=$XDP.0

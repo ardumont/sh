@@ -1,4 +1,4 @@
-#!bash -e
+#!/usr/bin/env bash -e
 
 git fetch --all
 

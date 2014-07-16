@@ -1,4 +1,4 @@
-#!bash -xe
+#!/usr/bin/env bash -xe
 
 sudo aptitude purge -y ruby1.8 rubygems
 

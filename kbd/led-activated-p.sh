@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # Use: $0
 # send the number corresponding to led activated or not
 # 0 no one is activated

@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # must be launched by the user postgres
 
 [ -z $1 -o -z $2 ] && echo "Use: create-postgresql-user-and-db.sh <username> <dbname>" && exit 1;

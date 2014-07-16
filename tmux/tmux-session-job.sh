@@ -1,4 +1,4 @@
-#!bash -x
+#!/usr/bin/env bash -x
 
 # Goal: This script targets the templating creation of a tmux session to avoid repeatedly creating the same panes over
 # and over again

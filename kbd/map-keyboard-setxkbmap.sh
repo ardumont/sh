@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 # Use: $0
 # Result: caps-lock is control, altgr is alt
 

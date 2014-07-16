@@ -1,4 +1,4 @@
-#!bash -xe
+#!/usr/bin/env bash -xe
 
 # from http://docs.docker.io/en/latest/installation/ubuntulinux/#ubuntu-raring-saucy
 

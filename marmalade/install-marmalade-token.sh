@@ -1,4 +1,4 @@
-#!bash -e
+#!/usr/bin/env bash -e
 
 # This will request your token file and install it on ~/.marmalade/token
 # This will overwrite it if already present. This is highly dependent on the marmalade api!

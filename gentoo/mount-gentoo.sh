@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # the first command to help set the commands and other non optionnal setup
 _set()

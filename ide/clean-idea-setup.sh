@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # Clean idea files from the current location
 

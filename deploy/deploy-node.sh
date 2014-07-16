@@ -1,4 +1,4 @@
-#!bash -xe
+#!/usr/bin/env bash -xe
 # Use: $0
 # Install nodejs from source
 

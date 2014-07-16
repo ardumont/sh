@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 [ $# -ne 2 ] && echo "Use: $0 <PROJECT_FOLDER> <PROJECT_NAME>
 PROJECT_FOLDER Folder to make an eclipse project

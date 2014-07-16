@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 sudo sed -i 's/raring/saucy/' /etc/apt/sources.list
 sudo sed -i 's/olivia/petra/' /etc/apt/sources.list

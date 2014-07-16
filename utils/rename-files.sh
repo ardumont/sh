@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 for fichier in $(ls *._jpg_);
 do

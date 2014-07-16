@@ -1,3 +1,3 @@
-#!bash
+#!/usr/bin/env bash
 
 setxkbmap -display $DISPLAY -option

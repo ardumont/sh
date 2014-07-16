@@ -1,4 +1,4 @@
-#!bash
+#!/usr/bin/env bash
 
 # Use: reference some use case for xrandr
 
