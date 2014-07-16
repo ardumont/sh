@@ -1,3 +1,3 @@
 #!bash
 
-xmodmap -display $DISPLAY ~/.Xmodmap
+xmodmap $DISPLAY:0 ~/.Xmodmap
