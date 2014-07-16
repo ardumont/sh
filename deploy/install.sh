@@ -1,5 +1,5 @@
 #!bash
-# This script is destined to simplify the installation between debian and ubuntu
+# This script is destined to simplify the installation between distributions (debian, ubuntu, nixos, etc...)
 # Use: $0 list-of-packages
 # Ex:  $0 byobu tmux emacs23...
 
@@ -8,7 +8,7 @@ PACKAGES=$*
 [ -z "$PACKAGES" ] && echo "Nothing to install - STOP." && exit 1;
 
 function package-install() {
-    sudo aptitude install -y $*
+    [  -f /etc/NIXOS ] && nix-env -i $* || sudo aptitude install -y $*
 }
 
 # ubuntu
