@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-xmodmap $DISPLAY:0 ~/.Xmodmap
+xmodmap -display $DISPLAY ~/.Xmodmap
