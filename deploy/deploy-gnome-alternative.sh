@@ -1,4 +1,4 @@
-#/bin/bash -x
+#/bin/bash
 
 REMOVE_FLAG=$1
 

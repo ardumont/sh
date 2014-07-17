@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
 
 URL=http://dist.groovy.codehaus.org/distributions/groovy-sdk-2.1.7.zip
 DDIR=$HOME/Downloads

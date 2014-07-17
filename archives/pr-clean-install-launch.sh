@@ -1,4 +1,4 @@
-#/bin/bash -xe
+#/bin/bash
 
 ############## SETUP
 
@@ -26,4 +26,3 @@ cd $DIR_RESOURCE
 
 # launch jetty
 mvn -Djetty.port=$JETTY_PORT jetty:run
-

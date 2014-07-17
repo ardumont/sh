@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
 # Use: $0
 # Toggle automatically on/off the touchpad depending its state

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 
 DIR=$1
 if [ -z $DIR ]; then

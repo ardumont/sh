@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
 
 [ $# -ne 1 ] && echo "Use: $0 <FOLDER-NAME>" && exit 1
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
 
 # export JAVA_HOME=/usr/lib/jvm/jdk1.7.0/
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64

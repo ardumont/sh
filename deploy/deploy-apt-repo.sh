@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 
 # Use:
 # deploy new repository inside /etc/apt/sources.list

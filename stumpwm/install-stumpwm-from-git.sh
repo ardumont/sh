@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 # Use: $0
 # Install stumpwm from git source
 

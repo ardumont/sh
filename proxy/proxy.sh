@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 
 # Use: $0 <on|off>
 # on:  Will trigger on the proxy environment

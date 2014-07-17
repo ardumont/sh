@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
 
 URL=http://services.gradle.org/distributions/gradle-1.8-all.zip
 DDIR=$HOME/Downloads
