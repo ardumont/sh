@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
+SRC=$1
+DEST=$2
+
 rsync \
     -avz \
-    -e "ssh -l root" \
+    -e ssh \
     --stats \
-    --delete \
     --progress \
-    --exclude=".cache"
-    --exclude="livework"
+    --delete \
+    --exclude ".*-old" \
+    --exclude ".*-obsolete" \
+    --exclude ".cache" \
+    --exclude "livework" \
     $SRC $DEST
