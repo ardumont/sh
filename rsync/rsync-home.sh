@@ -8,6 +8,4 @@ rsync \
     --progress \
     --exclude=".cache"
     --exclude="livework"
-    --exclude=".gnupg"
-    --exclude=".ssh"
     $SRC $DEST
