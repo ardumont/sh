@@ -23,7 +23,8 @@ mkswap -L swap /dev/sda2
 mkfs.ext4 -L root /dev/sda3
 
 mount /dev/disk/by-label/root /mnt/
-mkdir /mnt/boot && mount /dev/disk/by-label/boot /mnt/boot
+mkdir /mnt/boot
+mount /dev/disk/by-label/boot /mnt/boot
 swapon /dev/disk/by-label/swap
 
 nixos-generate-config --root=/mnt
