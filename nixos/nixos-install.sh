@@ -27,7 +27,7 @@ mkdir /mnt/boot
 mount /dev/disk/by-label/boot /mnt/boot
 swapon /dev/disk/by-label/swap
 
-nixos-generate-config --root=/mnt
+nixos-generate-config --root /mnt
 
 [ -f /etc/wpa_supplicant.conf ] && cp /etc/wpa_supplicant.conf /mnt/etc/
 
