@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-
 # nixos install
+
+set -x
+set -e
 
 # pre-requisite manual steps:
 
