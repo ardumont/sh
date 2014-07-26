@@ -31,4 +31,3 @@ nixos-generate-config --root=/mnt
 wget https://raw.githubusercontent.com/ardumont/dot-files/master/nixos/configuration.nix --output-document /mnt/etc/nixos/configuration.nix
 
 nixos-install
-reboot
