@@ -2,7 +2,7 @@
 
 # from http://docs.docker.io/en/latest/installation/ubuntulinux/#ubuntu-raring-saucy
 
-install.sh linux-image-extra-`uname -r`
+install.sh linux-image-extra-`uname -r` apparmor-utils
 
 curl https://get.docker.io/ubuntu/ | sudo sh
 
