@@ -1,0 +1,82 @@
+mint@mint ~ $ mdadm --assemble --scan
+mdadm: must be super-user to perform this action
+(reverse-i-search)`': mdadm --assemble --scan^C
+(reverse-i-search)`': ^C
+(reverse-i-search)`': ^C
+(reverse-i-search)`md': ^Cadm --assemble --scan
+mint@mint ~ $ sudo mdadm --assemble --scan
+mdadm: /dev/md/3 has been started with 1 drive.
+mint@mint ~ $ man mdadm
+mint@mint ~ $ sudo mount /dev/md/3 /media/linux/
+mount: unknown filesystem type 'LVM2_member'
+mint@mint ~ $ fdisk /dev/md
+last_lba(): I don't know how to handle files with mode 40755
+You will not be able to write the partition table.
+fdisk: unable to read /dev/md: Is a directory
+mint@mint ~ $ fdisk -l /dev/md
+last_lba(): I don't know how to handle files with mode 40755
+mint@mint ~ $ sudo fdisk -l /dev/md
+last_lba(): I don't know how to handle files with mode 40755
+mint@mint ~ $ sudo fdisk -l /dev/md/3
+
+Disk /dev/md/3: 995.4 GB, 995356311552 bytes
+2 heads, 4 sectors/track, 243006912 cylinders, total 1944055296 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disk identifier: 0x00000000
+
+Disk /dev/md/3 doesn't contain a valid partition table
+mint@mint ~ $ ^Cdo fdisk -l /dev/md/3
+mint@mint ~ $ pvs
+  /dev/mapper/control: open failed: Permission denied
+  Failure to communicate with kernel device-mapper driver.
+  WARNING: Running as a non-root user. Functionality may be unavailable.
+  /run/lock/lvm/P_global:aux: open failed: Permission denied
+  Unable to obtain global lock.
+mint@mint ~ $ sudo pvs
+  PV         VG     Fmt  Attr PSize   PFree
+  /dev/md3   vg1001 lvm2 a--  927.00g    0 
+mint@mint ~ $ sudo lvdisplay /dev/VolGroup01
+  Volume group "VolGroup01" not found
+  Skipping volume group VolGroup01
+mint@mint ~ $ sudo lvdisplay /dev/vg1001
+  --- Logical volume ---
+  LV Path                /dev/vg1001/lv
+  LV Name                lv
+  VG Name                vg1001
+  LV UUID                4wSJ8q-0YNt-TBXz-Ybjp-6Ldb-f18d-vzn506
+  LV Write Access        read/write
+  LV Creation host, time , 
+  LV Status              available
+  # open                 0
+  LV Size                927.00 GiB
+  Current LE             237311
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           252:0
+   
+mint@mint ~ $ sudo mdadm --assemble --scan^C
+mint@mint ~ $ mount
+/cow on / type overlayfs (rw)
+proc on /proc type proc (rw,noexec,nosuid,nodev)
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)
+udev on /dev type devtmpfs (rw,mode=0755)
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)
+/dev/sdc1 on /cdrom type ext4 (ro,noatime,data=ordered)
+/dev/loop0 on /rofs type squashfs (ro,noatime)
+none on /sys/fs/fuse/connections type fusectl (rw)
+none on /sys/kernel/debug type debugfs (rw)
+none on /sys/kernel/security type securityfs (rw)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev)
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)
+none on /run/shm type tmpfs (rw,nosuid,nodev)
+none on /run/user type tmpfs (rw,noexec,nosuid,nodev,size=104857600,mode=0755)
+gvfsd-fuse on /run/user/mint/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,user=mint)
+/dev/sdd1 on /media/mint/ddd58ab5-319e-4715-8077-823c2a4b358f type ext4 (rw,nosuid,nodev,uhelper=udisks2)
+/dev/mapper/vg1001-lv on /media/mint/1.41.12-2228 type ext4 (rw,nosuid,nodev,uhelper=udisks2)
+/dev/sda1 on /media/mint/eff03b71-2bfb-4753-a43e-5cfbc4a77743 type ext4 (rw,nosuid,nodev,uhelper=udisks2)
+m
