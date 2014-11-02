@@ -15,4 +15,6 @@ rsync \
     --exclude ".*-obsolete" \
     --exclude ".cache" \
     --exclude "livework" \
+    --exclude ".nix-channel" \
+    --exclude ".nix-defexpr" \
     $SRC $DEST
