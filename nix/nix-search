@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+[ $# -ne 1 ] && echo "Use: $0 <PACKAGE-TO-LOOKUP>" && exit 1
+
+PACKAGE=$1
+
+nix-env -qaP | grep -i $PACKAGE
