@@ -7,6 +7,9 @@
 # -k:   Ignore modifier keys when monitoring keyboard activity
 # -t:   Only disable tapping and scrolling, not mouse movements, in response to keyboard activity.
 
+# Checkk if syndaemon present, if not, we exit immediately
+which syndaemon 2>&1 >/dev/null || exit 0
+
 SYN_PID=$(pgrep syndaemon)
 
 ([ -z "$SYN_PID" ] && echo "Lauching syndaemon to disable touchpad when typing..." && syndaemon -t -k -i 2 &) || echo "Syndaemon already running..."
