@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+[ $# -ne 1 -a $# -ne 2 ] && echo "Use: $0 <REPO-NAME> (<REPO-USER>)
+REPO-NAME the name of the github repository
+REPO-USER the name of the github user (optional and by default 'ardumont')" && exit 1
+
 REPO=$1
 USER=${2-ardumont}
 
