@@ -4,4 +4,4 @@
 
 PACKAGE=$1
 
-nix-env -qaP | grep -i $PACKAGE
+nix-env -qaP | grep -i $PACKAGE | peco
