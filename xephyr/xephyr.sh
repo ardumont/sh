@@ -33,6 +33,9 @@ case "$MANAGER" in
     "stumpwm")
         stumpwm &
         ;;
+    "android")
+        android &
+        ;;
     *)
         ;;
 esac
