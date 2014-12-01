@@ -37,6 +37,6 @@ case "$MANAGER" in
         ;;
 esac
 
-gnome-terminal &
+urxvt &
 
 # ssh -XfC -c blowfish tony@localhost some-apps
