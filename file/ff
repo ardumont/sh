@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+[ $1 = "-h" ] && \
+    echo "Use: $0 (<FOLDER-FROM>) <REGEXP>...
+FOLDER-FROM  The folder from where to start. If not specified, run the search from the current folder.
+REGEXP       The expression to look for
+
+Example - Search for a folder or file named \"hello you\" in ~admin/bin:
+f ~admin/bin hello you" && \
+    exit 1
+
+# Search from the folder or the current folder if not specified
+[ -d $1 ] && FOLDER=$1 && shift || FOLDER=.
+
+REGEXP="*"$(echo "$*" | sed 's/[ ]/*/g')"*"
+
+find $FOLDER -iname "$REGEXP" | grep -v .git | grep -v .hg
