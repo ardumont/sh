@@ -1,0 +1,2 @@
+* * * * * ~/bin/cron/battery-manager.sh
+*/5 * * * * ~/bin/cron/reload-proxy.sh
