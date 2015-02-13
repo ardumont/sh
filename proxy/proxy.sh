@@ -19,6 +19,7 @@ then
     echo "Setting proxy configuration : $PROXY_HOST:$PROXY_PORT"
 
     # gconftool-2 --direct --config-source xml:readwrite:$GCONF_MANDATORY --type string --set /system/proxy/mode "manual"
+    gconftool-2 --direct --config-source xml:readwrite:$GCONF --type string --set /system/proxy/mode "manual"
 
     gconftool-2 --direct --config-source xml:readwrite:$CONF --type string --set /system/http_proxy/host "$PROXY_HOST"
     gconftool-2 --direct --config-source xml:readwrite:$CONF --type int    --set /system/http_proxy/port "$PROXY_PORT"
@@ -42,6 +43,7 @@ else
     echo "Removing proxy configuration."
 
     # gconftool-2 --direct --config-source xml:readwrite:$GCONF_MANDATORY --type string --set /system/proxy/mode "none"
+    gconftool-2 --direct --config-source xml:readwrite:$GCONF --type string --set /system/proxy/mode "none"
 
     gconftool-2 --direct --config-source xml:readwrite:$CONF --unset /system/proxy/mode
     gconftool-2 --direct --config-source xml:readwrite:$CONF --unset /system/http_proxy/host
