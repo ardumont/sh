@@ -13,6 +13,7 @@ parser.add_argument('-t', '--target', dest='target_folder_or_file', nargs='?', d
 parser.add_argument('-f', '--filter', dest='filter_files' , nargs='?', default='*', help='Filter pattern on files to apply. Default to all files.')
 # flags
 parser.add_argument('-v', '--verbose'  , dest='verbose'  , default=False, action='store_const', const='True', help='Verbose output (default: false)')
+parser.add_argument('-r', '--recursive', dest='recursive', default=False, action='store_const', const='True', help='Recursive (default: false)')
 
 args = parser.parse_args()
 
@@ -61,10 +62,13 @@ def rename_folder_and_its_files(target, filter_files, verbose):
             if verbose: ("file: " + f)
             rename_filename(f, verbose)
 
-def main(target, filter_files, verbose):
+def main(target, filter_files, recursive, verbose):
     if os.path.isdir(target):
-        rename_folder_and_its_files(target, filter_files, verbose)
+        if recursive:
+            rename_folder_and_its_files(target, filter_files, verbose)
+        else:
+            rename_filename(target, verbose)
     else:
         rename_filename(target, verbose)
 
-main(args.target_folder_or_file, args.filter_files, args.verbose)
+main(args.target_folder_or_file, args.filter_files, args.recursive, args.verbose)
