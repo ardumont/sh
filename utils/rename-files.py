@@ -25,9 +25,12 @@ def files_from(directory, filter_files):
 
 def rename_according_to_naming_conventions(s):
     """Rename according to conventions (no ',', ';', ':', ' ' or '_' replaced by '-')."""
-    return modify_name(modify_name(modify_name(s, (' \'', '_\'', '-\''), '\''), (',', ';', ':'), ''))
+    return modify_name(modify_name(modify_name(s, (' \'', '_\'', '-\''), '\''), (',', ';', ':', '?', '!'), ''))
 
-def modify_name(s, src_replace = ('    ', '   ', '  ', '____', '___', '__', '----', '---', '--', ' _ ', ' - ', ' ', '_'), dest_replace = '-'):
+def modify_name(s, src_replace = ('          ', '        ', '       ', '     ', '    ', '   ', '  ',
+                                  '__________', '________', '_______', '_____', '____', '___', '__',
+                                  '----------', '--------', '-------', '-----', '----', '---', '--',
+                                  ' _ ', ' - ', ' ', '_'), dest_replace = '-'):
     """Modify the filename : replace all the spaces by underscores and convert from upper to lower case."""
     for symbol in src_replace: s = s.replace(symbol, dest_replace);
     return s.lower();
