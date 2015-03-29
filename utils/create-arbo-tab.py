@@ -9,9 +9,9 @@ from optparse import OptionParser
 parser = OptionParser()
 parser.add_option("-t", "--target"          , dest="target", default=".", help="working directory")
 parser.add_option("-f", "--filter"          , dest="filter", default="*", help="to filter the files")
-parser.add_option("-v",	action="store_true" , dest="opt_verbose"        , help="verbose mode",default=False)
-parser.add_option("-p",	action="store_true" , dest="opt_pretend"        , help="display mode",default=False)
-parser.add_option("-R",	action="store_true" , dest="opt_recursive"      , help="recursive mode",default=False)
+parser.add_option("-v",	"--verbose"  , action="store_true" , dest="opt_verbose"        , help="verbose mode"  , default=False)
+parser.add_option("-n",	"--dry-clean", action="store_true" , dest="opt_dryclean"       , help="display mode"  , default=False)
+parser.add_option("-r",	"--recursive", action="store_true" , dest="opt_recursive"      , help="recursive mode", default=False)
 
 # retrieve the arguments of the script
 (options, args) = parser.parse_args()
@@ -19,11 +19,11 @@ target = options.target               # the directory where to modify the filena
 filter_files = options.filter         # the files filter
 # and the options
 opt_verbose = options.opt_verbose     # verbose or not
-opt_pretend = options.opt_pretend     # execute the script or pretend to execute
+opt_dryclean = options.opt_dryclean   # execute the script or pretend to execute
 opt_recursive = options.opt_recursive # recursivity or not
 
-src_replace = (' ', '_')
-dest_replace = '-'
+src_replace = ' '
+dest_replace = '_'
 
 ######### functions #########
 
