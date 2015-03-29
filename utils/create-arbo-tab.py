@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import sys,os,commands,string,glob
 from optparse import OptionParser
@@ -7,60 +7,54 @@ from optparse import OptionParser
 
 # parse the arguments/options of the script
 parser = OptionParser()
-parser.add_option("-t","--target",		dest="target",	default=".",	help="working directory")
-parser.add_option("-f","--filter",		dest="filter",	default="*",	help="to filter the files")
-parser.add_option("-v",	action="store_true",	dest="opt_verbose",		help="verbose mode",	default=False)
-parser.add_option("-p",	action="store_true",	dest="opt_pretend",		help="display mode",	default=False)
-parser.add_option("-R",	action="store_true",	dest="opt_recursive",	help="recursive mode",	default=False)
+parser.add_option("-t", "--target"          , dest="target", default=".", help="working directory")
+parser.add_option("-f", "--filter"          , dest="filter", default="*", help="to filter the files")
+parser.add_option("-v",	action="store_true" , dest="opt_verbose"        , help="verbose mode",default=False)
+parser.add_option("-p",	action="store_true" , dest="opt_pretend"        , help="display mode",default=False)
+parser.add_option("-R",	action="store_true" , dest="opt_recursive"      , help="recursive mode",default=False)
 
 # retrieve the arguments of the script
 (options, args) = parser.parse_args()
-target=options.target		# the directory where to modify the filenames
-filter=options.filter		# the files filter
+target = options.target               # the directory where to modify the filenames
+filter_files = options.filter         # the files filter
 # and the options
-opt_verbose=options.opt_verbose		# verbose or not
-opt_pretend=options.opt_pretend		# execute the script or pretend to execute
-opt_recursive=options.opt_recursive	# recursivity or not
+opt_verbose = options.opt_verbose     # verbose or not
+opt_pretend = options.opt_pretend     # execute the script or pretend to execute
+opt_recursive = options.opt_recursive # recursivity or not
 
-src_replace=' '
-dest_replace='_'
+src_replace = (' ', '_')
+dest_replace = '-'
 
 ######### functions #########
 
-# rename the directory and then filter its content
-def list_files_directory(directory,filter):
+def list_files_directory(directory, filter_files):
 	"""Rename the name of the directory and then filters its content."""
 	# filter the files of the directory
-	directory += os.sep + filter
+	directory += os.sep + filter_files
 	# load the arg_files from the folder 'arg_directory'
 	files = glob.glob(directory)
 	return files
 
-# modify the filename : replace all the spaces by underscores and convert from upper to lower case
 def modify(name):
 	"""Modify the filename : replace all the spaces by underscores and convert from upper to lower case."""
-	renamed = string.replace(name,src_replace,dest_replace).lower();
-	return renamed
+	return string.replace(name, src_replace, dest_replace).lower();
 
-# move all the 'files' to the directory 'dest'
-def move(files,dest):
+def move(files, dest):
 	"""Move all the 'files' to the directory 'dest'."""
 	for f in files:
 		# retrieve the name of the file
 		(path,name) = os.path.split(f)
-		# to create the file destination
-		dest_file = dest + os.sep + name
 		# to move it at the wished destination
-		os.rename(f,dest_file)
+		os.rename(f, dest + os.sep + name)
 
 # main program
 if os.path.isdir(target):
 	# remove the trailing slash (has a strange behaviour if not removed)
 	if target.endswith(os.sep):
-		target=target[0:-1]
+		target = target[0:-1]
 	# execute the main function
 	# list the content of the directory
-	files = list_files_directory(target,filter)
+	files = list_files_directory(target, filter_files)
 	# for each files found
 	for f in files:
 		if os.path.isdir(f):
@@ -68,7 +62,7 @@ if os.path.isdir(target):
 			continue
 		elif os.path.isfile(f):
 			# we retrieve only the name of the file to work on it
-			(path,name) = os.path.split(f)
+			(path, name) = os.path.split(f)
 			# we retrieve the artist's name and first name (before the -)
 			# it will then become the name of the directory
 			# if it doesn't already exist
@@ -91,18 +85,17 @@ if os.path.isdir(target):
 				if not os.path.isdir(dest):
 					# create the directory
 					os.mkdir(dest)
-					# then list all the files from the directory 
+					# then list all the files from the directory
 					# 'target' to move to the directory 'dest'
-					files_to_move = list_files_directory(target,filtrage)
+					files_to_move = list_files_directory(target, filtrage)
 					print "mv " + filtrage + " " + dest
 					# move files_to_move to the directory 'dest'
-					move(files_to_move,dest)
+					move(files_to_move, dest)
 				# relaunch a listing since the contents may have changed
-				files = list_files_directory(target,filter)
+				files = list_files_directory(target,filter_files)
 			else:
 				print "bad format, impossible to retrieve the artist's name for the file " + f
 
 else:
 	print "the target '" + target + "' is not a directory..."
 	print "skipping..."
-
