@@ -7,9 +7,8 @@ import argparse
 
 # parse the arguments/options of the script
 parser = argparse.ArgumentParser(description='Process (recursively) files from a target folder to rename folder and files with convention (lower case and - separated).')
-# required
-parser.add_argument('-t', '--target', dest='target_folder_or_file', nargs='?', default=".", help='Target file or folder to rename. Default to current folder.')
 # optional
+parser.add_argument('-t', '--target', dest='target_folder_or_file', nargs='?', default=".", help='Target file or folder to rename. Default to current folder.')
 parser.add_argument('-f', '--filter', dest='filter_files' , nargs='?', default='*', help='Filter pattern on files to apply. Default to all files.')
 # flags
 parser.add_argument('-v', '--verbose'  , dest='verbose'  , default=False, action='store_const', const='True', help='Verbose output (default: false)')
@@ -50,16 +49,19 @@ def rename_folder_and_its_files(target, filter_files, verbose):
     files = files_from(new_target, filter_files)
     for f in files:
         if os.path.isdir(f):
-            if verbose: print("folder: " + f)
+            if verbose: print("Folder: " + f)
             rename_folder_and_its_files(f, filter_files, verbose)
         elif os.path.isfile(f):
-            if verbose: ("file: " + f)
+            if verbose: print("File: " + f)
             rename_filename(f, verbose)
+        else:
+            if verbose: print("Not a folder nor a file, skip.")
 
-def main(target, filter_files, recursive, verbose):
-    if recursive and os.path.isdir(target):
-        rename_folder_and_its_files(target, filter_files, verbose)
+def scan_and_rename(file_or_folder, filter_files, recursive, verbose):
+    """Scan and rename file_or_folder according to naming conventions."""
+    if recursive and os.path.isdir(file_or_folder):
+        rename_folder_and_its_files(file_or_folder, filter_files, verbose)
     else:
-        rename_filename(target, verbose)
+        rename_filename(file_or_folder, verbose)
 
-main(args.target_folder_or_file, args.filter_files, args.recursive, args.verbose)
+scan_and_rename(args.target_folder_or_file, args.filter_files, args.recursive, args.verbose)
