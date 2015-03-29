@@ -2,6 +2,7 @@
 
 import os,string,glob
 import argparse
+import functools
 
 ######### parser #########
 
@@ -47,7 +48,7 @@ def rename_according_to_naming_conventions(s, user_specific_patterns):
 
 def modify_name(s, src_replace, dest_replace):
     """Modify the filename : replace all the spaces by underscores and convert from upper to lower case."""
-    return reduce(lambda result, symbol: result.replace(symbol, dest_replace), src_replace, s)
+    return functools.reduce(lambda result, symbol: result.replace(symbol, dest_replace), src_replace, s)
 
 def rename_filename(full_old_name, user_specific_patterns, dryrun, verbose):
     """Rename full_old_name to new. Returns the new_name once done."""
