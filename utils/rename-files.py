@@ -43,6 +43,7 @@ def rename_filename(full_old_name, verbose):
     if old_name != new_name:
         full_new_name = path + os.sep + new_name
         os.rename(full_old_name, full_new_name) # to move it at the wished destination
+        if not os.path.exists(full_new_name):
         return full_new_name
     return full_old_name
 
