@@ -44,15 +44,9 @@ def rename_filename(full_old_name, verbose):
         return full_new_name
     return full_old_name
 
-def rename_folder(target, verbose):
-    """Rename the folder according to conventions if needs to. Returns the name of the folder."""
-    if target.endswith(os.sep):
-        target = target[0:-1] # fixme: still need this?
-    return rename_filename(target, verbose)
-
 def rename_folder_and_its_files(target, filter_files, verbose):
     """Rename the folder according to conventions. Applies it to its files too."""
-    new_target = rename_folder(target, verbose)
+    new_target = rename_filename(target, verbose)
     files = files_from(new_target, filter_files)
     for f in files:
         if os.path.isdir(f):
@@ -63,11 +57,8 @@ def rename_folder_and_its_files(target, filter_files, verbose):
             rename_filename(f, verbose)
 
 def main(target, filter_files, recursive, verbose):
-    if os.path.isdir(target):
-        if recursive:
-            rename_folder_and_its_files(target, filter_files, verbose)
-        else:
-            rename_filename(target, verbose)
+    if recursive and os.path.isdir(target):
+        rename_folder_and_its_files(target, filter_files, verbose)
     else:
         rename_filename(target, verbose)
 
