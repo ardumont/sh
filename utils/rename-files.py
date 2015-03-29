@@ -42,8 +42,8 @@ def rename_according_to_naming_conventions(s, user_specific_patterns):
     s4 = modify_name(s3, ('()', '( )', '(  )', '{}', '{ }', '{  }', '[]', '[ ]', '[  ]'), '')
     s5 = modify_name(s4, ('..........', '.........', '........', '.......', '......', '.....', '....', '...', '..'), '.')
     return modify_name(s5, (' _ ', ' - ', ' ', '_',
-                            '__________', '_________', '________', '_______', '_____', '____', '___', '__',
-                            '----------', '---------', '--------', '-------', '-----', '----', '---', '--'), '-')
+                          '__________', '_________', '________', '_______', '_____', '____', '___', '__',
+                          '----------', '---------', '--------', '-------', '-----', '----', '---', '--'), '-')
 
 def modify_name(s, src_replace, dest_replace):
     """Modify the filename : replace all the spaces by underscores and convert from upper to lower case."""
@@ -66,6 +66,8 @@ def rename_filename(full_old_name, user_specific_patterns, dryrun, verbose):
     (path, old_name) = os.path.split(full_old_name) # retrieve the name of the file
     (old_name_without_ext, old_filename_ext) = os.path.splitext(old_name) # retrieve the name of the file
     new_name = rename_according_to_naming_conventions(old_name_without_ext, user_specific_patterns)
+    l = len(new_name)
+    new_name = new_name[0: l - 1 if l > 1 else l] if new_name.endswith('.') else new_name
     if verbose: print("old_name_without_ext: '" + old_name_without_ext + "'\nnew_name_without_ext: '" + new_name + "'")
     if old_name_without_ext != new_name:
         full_new_name = path + os.sep + new_name + old_filename_ext.lower()
