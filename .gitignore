@@ -2,3 +2,5 @@
 /btsync/.sync/
 #*#
 /deploy/target/
+*.pyc
+
