@@ -7,7 +7,7 @@
 setxkbmap \
     -model "pc105" \
     -layout "us" \
-    -option \
+    -option eurosign:e \
     -option ctrl:nocaps \
-    -option terminate:ctrl_alt_bkspc \
+    -option terminate:ctrl_alt_backspace \
     -option altwin:meta_alt
