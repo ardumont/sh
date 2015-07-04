@@ -5,4 +5,4 @@
 SRC=$1
 DEST=$2
 
-rsync -avz -e ssh $SRC $DEST
+rsync -avuz -e ssh $SRC $DEST
