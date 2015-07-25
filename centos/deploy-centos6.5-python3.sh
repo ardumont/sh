@@ -10,6 +10,7 @@
 # make
 # sudo make altinstall
 
+sudo yum groupinstall -y "Development tools"
 # install the right epel
 sudo yum install -y https://dl.iuscommunity.org/pub/ius/stable/CentOS/6/x86_64/ius-release-1.0-14.ius.centos6.noarch.rpm
-sudo yum install -y python34u python34u.pip
+sudo yum install -y python34u python34u.pip postgresql-devel libffi-devel
