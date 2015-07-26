@@ -14,4 +14,4 @@ f ~admin/bin hello you" && \
 
 REGEXP="*"$(echo "$*" | sed 's/[ ]/*/g')"*"
 
-find $FOLDER -iname "$REGEXP"
+find $FOLDER -iname "$REGEXP" -print0
