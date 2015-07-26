@@ -14,4 +14,6 @@ rsync \
     --exclude "Downloads" \
     --exclude ".nix-channel" \
     --exclude ".nix-defexpr" \
+    --exclude ".nix-profile" \
+    --exclude ".sync" \
     $*
