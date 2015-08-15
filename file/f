@@ -9,9 +9,11 @@ Example - Search for a folder or file named \"hello you\" in ~admin/bin:
 f ~admin/bin hello you" && \
     exit 1
 
+# batch processing options (-> | xargs -0 options)
+[ $1 = '-print0' ] && OPTIONS="-print0" && shift || OPTIONS=""
 # Search from the folder or the current folder if not specified
 [ -d $1 ] && FOLDER=$1 && shift || FOLDER=.
 
 REGEXP="*"$(echo "$*" | sed 's/[ ]/*/g')"*"
 
-find $FOLDER -iname "$REGEXP" -print0
+find $FOLDER -iname "$REGEXP" $OPTIONS
