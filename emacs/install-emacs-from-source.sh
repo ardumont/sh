@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-install.sh texinfo build-essential automake autoconf libdbus-1-dev libgconf2-dev libgif-dev libgpm-dev libgtk2.0-dev libjpeg-dev libm17n-dev libncurses5-dev libotf-dev librsvg2-dev libtiff4-dev libXpm-dev
+install.sh texinfo build-essential automake autoconf libdbus-1-dev libgconf2-dev libgif-dev libgpm-dev libgtk2.0-dev libjpeg-dev libm17n-dev libncurses5-dev libotf-dev librsvg2-dev libtiff5-dev libXpm-dev
 
 EMACS_SOURCE_FOLDER=$HOME/repo/perso/emacs
 
