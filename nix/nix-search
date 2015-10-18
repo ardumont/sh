@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
-[ $# -ne 1 ] && echo "Use: $0 <PACKAGE-TO-LOOKUP>" && exit 1
+[ $# -lt 1 ] && echo "Use: $0 <PACKAGE-TO-LOOKUP>" && exit 1
 
 PACKAGE=$1
+shift
+OPTIONS=$*
 
-nix-env -qaP --description | grep -i $PACKAGE | peco
+nix-env $OPTIONS -qaP --description | grep -i $PACKAGE | peco
