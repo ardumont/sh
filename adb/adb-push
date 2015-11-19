@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# source: http://stackoverflow.com/questions/13145872/android-recursive-copy-with-adb-push
+
+if [ $# -ne 2 ]; then
+    cat <<EOF
+Usage:
+$0 <directory-on-computer-to-send> <directory-on-device-to-receive-it>
+
+Example:
+$0 ~/backups/DCIM /sdcard
+EOF
+    exit 1;
+fi
+
+src="${1}";
+trgt="$(basename ${1})";
+dst="$(echo "${2}" | grep '/$')";
+
+# remove trailing '/' if need be
+if [ -n "${dst}" ]; then
+    dst="${dst%/*}";
+fi;
+
+# prepare directories on device before pushing them.
+if [ -d "${src}" ]; then
+    cd "${src}/..";
+    trgt="${trgt}/";
+    find "${trgt}" -type d -exec adb shell mkdir "${dst}/{}" \;
+    cd -
+fi;
+
+adb push -p "${src}" "${dst}/${trgt}";
