@@ -21,8 +21,7 @@ class TestFiles(unittest.TestCase):
         self.assertEqual(
             files.rename_according_to_naming_conventions('les _ copains - d-\'abord!?,', "")
             , 'les-copains-d\'abord')
-        
-        
+
+
 if __name__ == '__main__':
     unittest.main()
-            

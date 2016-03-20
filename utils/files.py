@@ -167,7 +167,4 @@ def scan_and_rename(file_or_folder, filter_files_pattern,
         rename_folder_and_its_files(file_or_folder, filter_files_pattern,
                                     user_patterns, dryrun, verbose)
     else:
-        if os.path.isdir(file_or_folder):
-            rename_foldername(file_or_folder, user_patterns, dryrun, verbose)
-        else:
-            rename_filename(file_or_folder, user_patterns, dryrun, verbose)
+        rename_filename(file_or_folder, user_patterns, dryrun, verbose)
