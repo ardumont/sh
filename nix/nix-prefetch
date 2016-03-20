@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]; then
+    cat <<EOF && exit 1
+Use: $0 <PACKAGE-NAME>
+
+Prefetch all nix sources needed for a package.
+
+EOF
+fi
+
+PACK=$1
+
+nix-store -r $(grep -l outputHash $(nix-store -qR $(nix-instantiate '<nixpkgs>' -A $PACK) | grep '.drv$'))
