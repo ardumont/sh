@@ -2,4 +2,5 @@
 
 # Use: $0
 
-xscreensaver-command -lock
+(which gnome-screensaver-command && gnome-screensaver-command --lock) || \
+    (which xscreensaver-command && xscreensaver-command -lock)
