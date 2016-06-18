@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+INPUT=$1
+OUTPUT=$2
+
+avconv -y -i $INPUT -c:v libx264 -c:a copy $OUTPUT

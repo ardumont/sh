@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DEVICE=$1
+# wipe fs signature making a backup of the device
+
+echo "This will wipe the $DEVICE's fs signature, are you sure?"
+read yes
+
+if [ "y" = "$yes" -o "yes" = "$yes" ]; then
+    sudo wipefs --all --backup $DEVICE
+fi
