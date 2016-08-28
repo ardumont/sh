@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -x
+
+[ $# = 0 ] && echo "Use: $0 <DEVICE> (<MAP_DEVICE>)" && exit 1
+
+DEVICE=$1
+MAP_DEVICE=${2-c0}
+
+sudo cryptsetup luksOpen $DEVICE $MAP_DEVICE
+sudo fsck -y /dev/mapper/$MAP_DEVICE
+sudo cryptsetup luksClose $MAP_DEVICE

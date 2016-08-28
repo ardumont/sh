@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -x
+
+[ $# = 0 ] && echo "Use: $0 <DEVICE> (<MAP_DEVICE> <MOUNT_POINT>)" && exit 1
+
+DEVICE=$1
+MAP_DEVICE=${2-c0}
+MOUNT_POINT=${3-/mnt/$(basename $DEVICE)}
+
+# Prepare the mount point
+[ ! -d $MOUNT_POINT ] && sudo mkdir -p $MOUNT_POINT && sudo chown ${USER}: $MOUNT_POINT
+
+sudo cryptsetup luksOpen $DEVICE $MAP_DEVICE
+sudo mount /dev/mapper/$MAP_DEVICE $MOUNT_POINT
