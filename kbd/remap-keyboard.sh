@@ -25,9 +25,6 @@ WDIR=$(dirname $0)
 CAPS=$(xmodmap -display $DISPLAY | grep lock | awk '{print $2}')
 
 if [ "$CAPS" = "Caps_Lock" ]; then
-    log "xmodmap customisation..."
     $WDIR/map-keyboard-xmodmap.sh
     # $WDIR/map-keyboard-setxkbmap.sh
-else
-    log "xmodmap already customized!";
 fi

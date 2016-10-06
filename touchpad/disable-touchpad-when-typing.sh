@@ -12,4 +12,4 @@ which syndaemon 2>&1 >/dev/null || return 0
 
 SYN_PID=$(pgrep syndaemon)
 
-([ -z "$SYN_PID" ] && echo "Lauching syndaemon to disable touchpad when typing..." && syndaemon -t -k -i 2 &) || echo "Syndaemon already running..."
+[ -z "$SYN_PID" ] && syndaemon -t -k -i 2 &
