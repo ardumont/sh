@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+OUTPUT=$(pwd)/output
+mkdir -p $OUTPUT
+
+while read f;
+do
+    # echo "f: $f"
+    if [ -d "$f" ]; then
+        continue
+    fi
+
+    if ! avprobe "$f" 2>&1 | grep Stream | grep Audio | grep mp3; then
+        name=$(basename "$f")
+        echo "avconv -i '$f' -c:a mp3 '$OUTPUT/$name'"
+        avconv -i "$f" -c:a mp3 "$OUTPUT/$name"
+    fi
+done
