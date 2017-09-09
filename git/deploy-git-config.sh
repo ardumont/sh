@@ -2,7 +2,7 @@
 
 USER=${1-"eniotna.t@gmail.com"}
 
-git config --global user.name "Antoine R. Dumont"
+git config --global user.name "Antoine R. Dumont (@ardumont)"
 git config --global user.email $USER
 
 # emacs
