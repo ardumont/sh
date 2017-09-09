@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+rm -f Release.gpg
+gpg --local-user archive@ardumont.me \
+    --detach-sign \
+    --output Release.gpg.tmp \
+    "$1"
+
+mv Release.gpg.tmp Release.gpg
