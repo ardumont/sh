@@ -5,3 +5,5 @@
 *.pyc
 
 ssh-aliases
+deploy-nix-stuff
+my-hm
